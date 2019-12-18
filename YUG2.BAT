@@ -1,0 +1,16 @@
+Echo Off
+Cls
+Depic Gaij
+Music -R
+SvChk
+Depic
+If ErrorLevel 255 Goto End
+Heg3D
+Depic HegLos
+:End
+Cls
+Music -R
+Echo •
+Echo πﬁ∞—Ç™èIóπÇµÇΩÇ»ÇÁ§
+Echo Notic[Ret]Ç∆ÇµÇƒÇ›ÇÍ°
+
