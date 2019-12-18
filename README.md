@@ -1,6 +1,6 @@
 # Yugekitai_II
 
-<img src="https://github.com/kikeroga3/Yugekitai/blob/master/graphic/ygk035.png">
+<img src="https://github.com/kikeroga3/Yugekitai_II/blob/master/ScreenShot/Yug2_1.png">
 
 NEC PC-9801版アドベンチャーゲーム「遊撃隊II - 前衛・ヘガス我狼院の復讐 -」のソースです。
 改変、再利用、自由に使ってもらってかまいませんが、作者は責任も保障も負いません。
