@@ -1,0 +1,40 @@
+
+*S.
+
+*00
+Screen Off :GCls :View 17,8,Gp157a
+Copy 14,120 64,8 34,8 15 0
+Copy 14,120 0,0 64,8 15 0
+GGet :Screen On
+*01
+Cls :Line 136 :Row 2 :ここは、新校舎２階の廊下。
+Line +4 :Row 1 :［１］職員室
+Row 1 :［２］トイレ
+Row 1 :［３］渡り廊下
+Line 149 :Row 26 :［４］３階へ上がる
+Row 26 :［５］１階に降りる
+Select 02,To,Cr,3F,1F
+
+- 職員室 -
+*02
+Screen Off :GCls :View 17,8,Gp186D4
+GGet :Screen On :Line 136 :Row 2 :斎藤「職員室だ…くっ、非道い有様だ。ス、スミダ先生‥くっ、くくっ‥！！」_
+Jump 00
+
+*To
+Line 136 :Row 2 :斎藤「トイレに行く必要は、無い‥」_
+Jump 01
+
+*Cr
+Line 136 :Row 2 :斎藤「いや、まだ、毒ガスが、蔓延しているハズだ。
+Row 2 :　だから、防火シャッターを閉めてあるので、行けないぞ」_
+Jump 01
+
+*3F
+Scn FN3D4
+
+*1F
+Scn FN1D4
+
+*E.
+

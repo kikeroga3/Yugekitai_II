@@ -1,0 +1,503 @@
+
+- ｻﾌﾞﾙｰﾁﾝ -
+*Tw
+Copy 40,60 0,137 0,136 15 1
+Ret
+
+- ﾀﾙｶｽ･ﾓﾆﾀ点滅 -
+*Tr
+Wait 1 :Palette 4,CDB
+Wait 1 :Palette 4,AB9
+Wait 1 :Palette 4,CDB
+Wait 1 :Palette 4,EFD
+Ksnc Tr
+Ret
+
+- ﾀﾙｶｽ･乱射 -
+*Gn
+Wait 5 :Copy 4,12 40,128 42,48 3 0
+Rnd 3 :If Flg0=1 Then 00
+If Flg0=2 Then 01
+If Flg0=3 Then 02
+Copy 6,20 44,128 40,108 3 0 :Jump 03
+*00 :Copy 6,20 50,128 46,108 3 0 :Jump 03
+*01 :Copy 6,20 56,128 52,108 3 0 :Jump 03
+*02 :Copy 6,20 62,128 58,108 3 0
+*03 :Effect 13 :Wait 3
+Copy 4,12 40,140 42,48 3 0
+Copy 24,20 44,148 40,108 3 0 :Ret
+
+- ﾒｲﾝ･ﾙｰﾁﾝ -
+*S.
+Screen Off :GCls :View 28,8,Gp208o
+GGet :Line 136 :Row 2 :野笛「斎藤君たちは、屋上か？
+Screen On :Row 2 :　まだ、無事でいてくれればいいが‥！」
+Pause :Line 136 :Row 2 :声「ノブエ」_
+Row 2 :野笛「！？」_
+GCls :View 17,8,Gp381
+Line 136 :Row 2 :背後から、自分の名を　呼ぶ声があった。
+Row 2 :　そして、野笛は　その声に　聞き覚えがあった。　忘れられるはずのない声。
+Row 2 :　その主は‥…_
+Grp 0 :Screen Off :GCls :View 17,8,Gp382
+Copy 80,30 0,158 0,128 15 0
+GGet :Mask 0,0 80,17 255 0
+Mask 17,1 46,15 0 0
+Screen On :Grp 1 :Line 136 :野笛「ナンシー‥‥どうして、君が　ここに…！」
+Pause :Line 136 :Row 2 :ナンシー「ノブエ‥‥会いたかった…」_
+Row 2 :野笛「僕もだ！！ナンシー‥！」
+Pause :Line 136 :Row 2 :ナンシー「駄目よ！来ないで…！」
+Row 2 :野笛「！！」
+Pause :Line 136 :Row 2 :野笛「…‥なぜだ…ナンシー、君には‥‥！」
+Pause :Mask 0,16 80,4 255 0
+View 17,8,Gp382
+Cnt 30
+*L0
+Wait 2 :Copy 57,150 17,9 17,8 15 0
+Loop L0
+GGet :Mask 0,17 80,4 0 0
+Line 136 :Row 2 :野笛「影が　ついていない‥‥！」
+Pause :Line 136 :Row 2 :ナンシー「‥‥あの人を　助けて、ノブエ‥！」
+Row 2 :野笛「！？」_
+GCls :View 17,8,Gp422
+GGet :Line 136 :Row 2 :ナンシー「助けて…！ノブエ‥！」
+Row 2 :野笛「！‥‥ナンシィ！？」
+Pause :Line 136 :Row 2 :ナンシー「助けて…」
+Row 2 :野笛「！‥‥ナンシィ！？」_
+Palette 1,897 2,AB9 3,DEC 5,231
+Wait 10 :Palette 1,AB9 2,BCA 3,EFD 5,564
+Wait 10 :Palette 1,CDB 2,CDB 5,897
+Wait 10 :Cls :Palette 1,EFD 2,DEC 5,BCA
+Wait 10 :Palette 2,EFD 5,EFD
+Wait 50 :Screen Off :GCls :View 17,8,Gp382
+Copy 10,70 64,8 16,58 15 0
+Copy 10,70 64,78 26,58 15 0
+Copy 80,30 0,158 0,128 15 0
+Line 137 :Row 2 :野笛「！」
+Call Tw
+Effect 25 :Screen On :_
+GCls :View 17,8,Gp383
+Cnt 9
+*L1
+Wait 13 :Copy 46,119 16,9 17,8 12 0
+Loop L1
+Wait 13 :Screen Off :View 17,8,Gp376
+Screen On
+*K0
+Wait 3 :Palette 4,000
+Wait 1 :Palette 4,EFD
+Ksnc K0
+Screen Off :View 0,8,Gp378
+Copy 12,65 0,83 52,70 15 0
+Copy 24,35 16,128 16,93 4 0
+Copy 80,35 0,163 0,128 15 0
+Effect 36 :Screen On :Palette 8,FFF
+Col 8 :Line 136 :Row 2 :野笛「こッ‥これはッ！！」_
+GCls :View 17,8,Gp376
+GGet :Col 7 :Line 136 :Row 2 :野笛「メガキング級・タルカス式騎獣戦闘車（Ｍｅｇａ　Ｋｉｎｇ　Ｃｌａｓｓ
+Row 2 :　Ｔｙｐｅ“ＴＡＲＵＫＵＳ”Ａｒｍｅｄ　Ｍｏｎｓｔｅｒ）！！」
+Pause :Line 155 :Row 1 :　こんなものが、なぜ、ここにぃッ！！」
+Call Tw
+Line 136 :Row 2 :野笛「統合的逆進化！！‥破壊の為の破壊のみを目的として　創造された
+Row 2 :　創造への反逆者！！　狂気の産物（クレイジー・タンク）！！_
+Screen Off :GCls :Grp 0 :View 17,8,Gp379
+Screen On :Grp 1 :Line 136 :Row 2 :ヘガス『復讐は　まだ、終わっていないぞ…ノブエ！！』_
+Screen Off :GCls :View 17,8,Gp376
+Line 137 :Row 1 :野笛「ヘガス！？」
+Call Tw
+Screen On :_
+Screen Off :GCls :View 17,8,Gp428
+Screen On :Wait 30 :Line 137 :Row 1 :野笛「！！」
+Call Tw
+Wait 10 :Palette 4,333
+Wait 10 :Palette 4,AAA
+Wait 10 :Palette 4,FFF 5,333
+Wait 10 :Palette 5,AAA
+Wait 10 :Palette 1,786 3,AB9 5,FFF
+Wait 10 :Palette 1,897 3,BCA
+Wait 10 :Palette 1,9A8 3,CDB
+Wait 20 :GCls :View 17,8,Gp385
+Wait 30 :Palette 2,AB9
+Wait 10 :Palette 2,CDB
+Wait 10 :Palette 1,675 2,EFD
+Wait 10 :Palette 1,9A8
+Wait 10 :Palette 1,CDB 3,231
+Wait 10 :Palette 1,EFD 3,564
+Wait 10 :Palette 3,897
+Wait 10 :Palette 3,BCA
+Wait 10 :Palette 3,EFD
+Wait 50 :Screen Off :View 0,8,Gp378
+View 42,40,Gp378d
+Copy 80,35 0,163 0,128 15 0
+Effect 25 :Screen On :_
+GCls :View 17,8,Gp380
+Line 136 :Row 2 :ヘガス「…‥‥‥…」
+Call Tr
+GCls :View 17,8,Gp387
+Line 136 :Row 2 :ヘガス「逃れたか…シールドの効きめが、まだ、なくなっていないらしい‥
+Row 2 :　だが、いつまで　保つか…？」
+Call Tr
+Screen Off :GCls :View 1,8,Gp450
+Copy 80,24 0,160 0,136 15 0
+Effect 36 :Screen On :_
+Screen Off :GCls :View 0,8,Gp386
+As 2 View 35,8,Gp386a
+GGet :Screen On :Effect 36
+Col 2 :Line 136 :Row 2 :野笛「ハァ‥ハァ！！」_
+Screen Off :GCls :View 2,8,Gp429
+Screen On
+*K1
+Wait 2 :Copy 14,46 2,54 24,40 4,0
+Wait 2 :Copy 14,46 2,54 24,41 4,0
+Ksnc K1
+Screen Off :GCls :View 0,8,Gp386
+As 2 View 35,8,Gp386b
+GGet :Copy 22,120 0,0 35,8 12 0
+As 2 View 35,8,Gp386a
+Copy 4,15 34,73 68,8 15 0
+Screen On :Cnt 15
+*L2
+Wait 4 :Copy 4,15 64,8 34,73 15 0
+Effect 13 :Wait 4 :Copy 4,15 68,8 34,73 15 0
+Loop L2
+Cls :Effect 10 :Line 136 :Row 2 :野笛「ぐァッ‥！！」
+Cnt 4
+*L3
+Wait 18 :Copy 30,120 34,4 35,8 12 0
+Wait 18 :Loop L3
+Screen Off :GCls :View 17,8,Gp406
+Screen On :Effect 37 :Col 8 :Line 136 :Row 2 :野笛（…肋骨が、折れた‥！！　コートが　衝撃を吸収しないのだ…！！
+Row 2 :　シールドが　消えかかっている…！！）
+Wait 15 :Palette 4,897 5,9A8 6,BCA
+Copy 45,120 17,8 18,8 4 0
+Wait 15 :Palette 4,564 5,897 6,CDB
+Copy 45,120 17,8 18,8 4 0
+Wait 15 :Palette 4,231 5,786 6,DEC
+Copy 45,120 17,8 18,8 4 0
+Wait 15 :Palette 4,000 5,675
+_:Screen Off :GCls :View 0,8,Gp378
+Copy 16,20 0,8 46,108 15 0
+Copy 80,35 0,163 0,128 15 0
+Screen On :Effect 36
+Col 3 :Line 136 :Row 2 :野笛「終わりか‥！」_
+Screen Off :GCls :View 17,8,Gp428
+Screen On :_
+Screen Off :View 2,8,Gp429
+Copy 14,46 64,8 24,40 15 0
+Screen On :Wait 9 :Copy 14,46 2,54 24,38 4,0
+Wait 6 :Copy 14,46 2,54 24,42 4,0
+Wait 6 :Copy 14,46 2,54 24,46 4,0
+Wait 9 :Copy 14,46 2,54 24,44 4,0
+Effect 17 :_
+GCls :View 17,8,Gp380
+Col 7 :Line 136 :Row 2 :ヘガス「終わりだ‥‥ナンシー…」
+Call Tr
+Screen Off :GCls :View 17,8,Gp406a
+Line 137 :Row 1 :野笛「まだだーっ！！」
+Call Tw
+Screen On :_
+Screen Off :GCls :View 17,8,Gp428
+View 39,63,Gp428a
+Screen On :Wait 40 :Copy 10,35 64,8 36,55 15 0
+Effect 39 :Wait 20 :Copy 14,60 64,43 24,8 15 0
+Effect 10 :_
+Screen Off :View 17,8,Gp408
+Effect 25 :Line 137 :Row 1 :ヘガス「おお！！」
+Call Tw
+Screen On :_
+Screen Off :GCls :View 2,8,Gp429
+Copy 14,46 64,54 24,40 15 0
+GGet :Screen On :Line 136 :Row 2 :ヘガス「くっ‥！！早く、切りかわれ！！」
+*K2
+Wait 2 :Palette 2,BCA
+Wait 2 :Palette 2,EFD
+Ksnc K2
+Screen Off :GCls :View 0,8,Gp378
+Copy 4,12 42,48 40,140 15 0
+Copy 24,20 40,108 44,148 15 0
+Mask 0,0 80,21 255 0
+Mask 17,1 46,15 0 0
+Screen On :Cnt 21
+*L4 :Call Gn
+Loop L4
+Screen Off :GCls :View 2,8,Gp429
+Copy 14,46 64,54 24,40 15 0
+Mask 0,17 80,4 0 0
+Screen On :Cnt 15
+*L5
+Wait 2 :Palette 2,BCA
+Wait 2 :Palette 2,EFD
+Loop L5
+Copy 14,46 2,8 24,40 15 0
+Line 136 :Row 2 :ヘガス「…いない。当然か、姿を隠すのに　充分な時間を与えてしまった‥！」_
+Screen Off :GCls :View 17,8,Gp387
+Copy 14,40 64,8 28,20 15 0
+Copy 14,40 64,48 42,20 15 0
+Line 137 :Row 1 :ヘガス「だが、逃しはせン‥！！」
+Call Tw
+Screen On :_
+Screen Off :GCls :View 17,8,Gp380
+Copy 12,50 64,8 16,30 15 0
+Screen On :Line 136 :Row 2 :ヘガス「音波探知機、作動（ディティクター・オン）！！
+Row 2 :　建造物内の動体反応を探れ！！」_
+Screen Off :GCls :View 17,8,Gp437
+GGet :Grp 0 :Col 8 :Line 136 :Row 2 :野笛「ハァ‥ハァ‥」
+Screen On :Grp 1 :Pause :Effect 42 :Line 136 :Row 2 :野笛「！」
+Pause :Line 136 :Row 2 :野笛（音波探知か‥！　僕の動体反応を　調べている‥！）
+Pause :Line 136 :Row 2 :おそるべき事だった。
+Row 2 :　毎秒２万サイクル以上の振動数を　もつ超音波。
+Row 2 :　人間には、聴きとれぬ筈の　その振動を　野笛の耳は、聴いていた。
+Pause :Line 136 :Row 2 :ＩＱ２万の彼は、もともと　思考能力が　常人よりも　遥かに優れ、
+Row 2 :　神経も　かなり、過敏であったのだ！！　それが アームリングの力により、さらに
+Row 2 :　感覚は、鋭く 研ぎ澄まされた！！
+Pause :Line 136 :Row 2 :野笛は　呼吸を止め、瞬きをするのも　止めた。_
+Screen Off :GCls :View 17,8,Gp380
+Copy 12,50 64,8 16,30 15 0
+Screen On :Col 7 :Line 136 :Row 2 :ヘガス「下の階に　反応が　二つ‥！　誰だ？」_
+GCls :View 17,8,Gp387
+Line 136 :Row 2 :ヘガス「キリィ達か‥！？　それとも、野笛の仲間…！」_
+Screen Off :GCls :View 0,8,Gp378
+Copy 24,35 16,128 16,93 4 0
+Mask 0,17 80,4 255 0
+Screen On :Effect 36
+*K3
+Wait 2 :Copy 24,34 16,128 16,94 4 0
+Wait 2 :Copy 24,35 16,128 16,93 4 0
+Ksnc K3
+Screen Off :GCls :Mask 0,17 80,4 0 0
+View 17,8,Gp437
+Screen On :Wait 60 :Copy 4,20 64,8 40,40 15 0
+GGet :Flg1=0 :Flg2=0 :Flg3=0 :Flg4=0 :Flg5=0 :Flg6=0 :Flg7=0 :Flg8=0
+Col 8 :Line 136 :Row 2 :野笛「‥‥行った…。しかし、この程度で　諦める筈がない」_
+*04
+Cls :Line 136 :Row 2 :野笛「…‥‥…」
+Line +4 :Row 1 :［１］考える
+Row 1 :［２］思い出す
+Row 1 :［３］移動する
+Select 05,15,19
+
+- ｶﾝｶﾞｴﾙ -
+*05
+If Flg1=0 Then 06
+Line 136 :Row 2 :野笛「地学室に　置いてある筈だ‥急ごう…！」_
+Jump 04
+*06
+Line 136 :Row 1 :〔考える〕
+Line +4 :If Flg3=0 Then 07
+If Flg4=0 Then 07
+If Flg5=1 Then 11
+*07
+Row 1 :［１］ヘガスの事
+Row 1 :［２］ナンシーの事
+Row 1 :［３］仲間の事
+Select 08,09,10
+*08
+Line 136 :Row 2 :野笛「彼は‥完全に　狂っている‥何が、彼を　あんなにも　狂わせたのだ‥！」_
+Flg3=1 :Jump 04
+*09
+Line 136 :Row 2 :野笛「ナンシー‥！！　さっき、見たのは　一体‥幻だった？　いや、しかし‥！」_
+Flg4=1 :Jump 04
+*10
+Line 136 :Row 2 :野笛「そうだ‥！　斎藤君達は、どうしたろう‥！！？」_
+Flg5=1 :Jump 04
+*11
+Row 1 :［１］自分の事
+Row 1 :［２］戦車の事
+Select 12,14
+*12
+Line 136 :If Flg6=0 Then 13
+If Flg7=0 Then 13
+Row 2 :野笛「レイカノンで、太刀打ち出来る　相手じゃない‥！！
+Row 2 :　もっと、強力な　武器が要る‥！！」_
+Flg2=1 :Jump 04
+*13
+Row 2 :野笛「このコートは、もはや 殆ど、ただの布切れだ。
+Row 2 :　銃弾を受ければ、普通に　穴が　あくだろう‥！」_
+Flg6=1 :Jump 04
+*14
+Line 136 :Row 2 :野笛「タルカス！！　あの騎獣戦車は、チタニウム合金で　造られている上に
+Row 2 :　さらには、おそらく　重分子構造処理による　改造も　うけているだろう！！
+Row 2 :　‥さっきは、たまたま　砲身に撃ち込んで、内部のメカを　破壊する事に成功したが
+Row 2 :　もう、あんな隙は　二度と見せないだろう‥」_
+Flg7=1 :Jump 04
+
+- ｵﾓｲﾀﾞｽ -
+*15
+If Flg2=0 Then 16
+Line 155 :Row 1 :　だが、やるしかない、か！！」
+Call Tw
+Line 136 :Row 2 :野笛「強力な武器！！　あった！！　一つだけ…！　しかし、あれは　未完成品…
+Row 2 :　今の段階で　使うのは、非常に危険だ‥！！_
+Flg1=1 :Jump 04
+*16
+Line 136 :Row 1 :〔思い出す〕
+Line +4 :Row 1 :［１］ヘガスの事
+Row 1 :［２］ナンシーの事
+Select 17,18
+*17
+Line 136 :Row 2 :野笛「ヘガス…友達だった‥！」_
+Jump 04
+*18
+Line 136 :Row 2 :野笛「彼女は　今、アメリカにいる筈だ‥一体、どうして‥？」_
+Jump 04
+
+- ｲﾄﾞｳ -
+*19
+If Flg5=1 Then 20
+Line 136 :Row 2 :野笛「い、いや、闇雲に　動き回るのは、危ない‥
+Row 2 :　まずは、どこに行くべきか、考えなくては‥」_
+Jump 04
+*20
+Line 136 :Row 1 :〔移動する〕
+Line +4 :Row 1 :［１］屋上
+Row 1 :［２］地学室
+Select 21,23
+*21
+If Flg8=0 Then 22
+Line 136 :Row 2 :野笛「ここは、屋上だ。落ち着け‥野笛　裕一！」_
+Jump 04
+*22
+Screen Off :GCls :View 17,8,Gp159o
+GGet :Grp 0 :Screen On :Grp 1 :Line 136 :Row 2 :野笛「誰も　いない‥！　無事に　闘い終えたのだろうか…
+Row 2 :　それとも　まさか、全滅など‥！」_
+Flg8=1 :Jump 04
+*23
+Line 136 :If Flg1=1 Then 24
+Row 2 :野笛「地学室‥！　何か、思い出しそうだが‥…」_
+Jump 04
+*24
+Row 2 :野笛「よし、地学室に　行こう‥こうなったら、『新兵器』を使う‥！！」_
+Grp 0 :Screen Off :GCls
+Grp 1 :Jump 25
+
+- ﾃﾝﾒﾂ -
+*Pk
+Wait 3 :Palette 4,000
+Wait 1 :Palette 4,EFD
+Ksnc Pk
+Ret
+
+- ﾄﾐ&ﾐﾂｷ -
+*25
+View 17,8,Gp448
+Effect 25 :Screen On :_
+Screen Off :GCls :View 17,8,Gp388
+Col 7 :Line 137 :Row 1 :きぃやあああぁぁぁぁっ
+Call Tw
+Screen On :Call Pk
+Screen Off :GCls :View 17,8,Gp423
+GGet :Mask 0,0 80,25 255 0
+Mask 17,1 46,15 0 0
+Screen On :Cnt 3
+*L6
+Effect 41
+Wait 7 :Copy 46,130 17,68 17,38 15 0
+Copy 46,30 17,8 17,168 15 0
+Wait 7 :Copy 46,160 17,38 17,8 15 0 :Wait 7 :Copy 46,160 17,38 17,8 15 0
+Wait 7 :Copy 46,160 17,38 17,8 15 0 :Wait 7 :Copy 46,160 17,38 17,8 15 0
+Wait 7 :Cls :Loop L6
+Wait 7 :Copy 46,130 17,68 17,38 15 0
+Copy 46,30 17,8 17,168 15 0
+Wait 7 :Copy 46,160 17,38 17,18 15 0 :Wait 7 :Copy 46,160 17,18 17,8 15 0
+Wait 28 :Palette 1,897 3,AB9 5,231
+Wait 13 :Palette 1,AB9 3,BCA 5,564
+Wait 13 :Palette 1,CDB 3,CDB 5,9A8
+Wait 13 :Palette 1,EFD 3,DEC 5,CDB
+Wait 13 :Palette 3,EFD 5,EFD
+Wait 50 :Screen Off :GCls :View 4,8,Gp445
+Screen On :Wait 60 :Copy 10,6 64,72 36,8 12 0
+Wait 3 :Copy 10,14 64,64 36,8 12 0
+Wait 3 :Copy 10,22 64,56 36,8 12 0
+Wait 3 :Copy 10,30 64,48 36,8 12 0
+Wait 3 :Copy 10,38 64,40 36,8 12 0
+Wait 3 :Copy 10,46 64,32 36,8 12 0
+Wait 3 :Copy 10,54 64,24 36,8 12 0
+Wait 3 :Copy 10,62 64,16 36,8 12 0
+Wait 3 :Copy 10,70 64,8 36,8 12 0
+Cnt 7
+*L7
+Wait 3 :Copy 10,120 36,0 36,8 12 0
+Loop L7
+Effect 13 :Copy 10,70 17,8 64,8 12 0
+Wait 3 :Copy 10,72 64,49 36,56 12 0
+Wait 24 :Copy 10,63 64,122 36,65 12 0
+Effect 15 :Wait 15 :Copy 12,93 4,8 34,35 12 0
+Wait 21 :Copy 18,76 4,112 32,37 12 0 :Copy 18,15 22,128 32,113 12 0
+_:Screen Off :GCls :View 17,8,Gp384
+Mask 0,17 80,8 0 0
+Screen On :Line 136 :Row 2 :富沢「こ‥この化物は…！！？」_
+Screen Off :GCls :View 0,8,Gp378
+Copy 12,55 0,28 52,73 15 0
+Copy 24,35 16,128 16,93 4 0
+Copy 80,35 0,163 0,128 15 0
+Effect 36 :Screen On :_
+Screen Off :GCls :View 17,8,Gp389
+Line 137 :Row 1 :富沢「君は、逃げろ！！
+Call Tw
+Line 145 :Row 2 :　こいつの狙いは、太陽の戦士‥即ち、俺達だけだ！！」
+Screen On :Row 2 :弥月「と、富沢さん！！」_
+Screen Off :GCls :View 0,8,Gp378
+Copy 12,56 64,72 50,72 12 0
+Copy 4,12 42,48 40,140 3 0
+Copy 24,20 40,108 44,148 3 0
+Mask 0,17 80,4 255 0
+Screen On :Cnt 12
+*L8 :Call Gn
+Loop L8
+Copy 12,68 64,8 50,64 12 0
+Cnt 8
+*L9
+Wait 2 :Call Gn
+Copy 13,124 49,20 50,8 12 0
+Loop L9
+Wait 30 :Screen Off :View 17,8,Gp447
+Copy 8,80 72,88 36,48 12 0
+Screen On
+Cnt 20
+*R0
+Effect 36 :Wait 5 :Copy 8,80 64,8 36,48 12 0
+Copy 46,160 17,9 17,8 3 0 :Wait 9 :Copy 8,80 72,8 36,48 12 0
+Wait 5 :Copy 8,80 64,88 36,48 12 0
+Copy 46,160 17,9 17,8 3 0 :Wait 9 :Copy 8,80 72,88 36,48 12 0
+Loop R0
+Wait 6 :Screen Off :Effect 18
+GCls :View 17,8,Gp410
+GGet :Mask 0,17 80,4 0 0
+Line 137 :Row 1 :弥月「富沢さァん！！」
+Call Tw
+Screen On :Pause :Line 136 :Row 2 :黒爽「弥月！！」
+Row 2 :弥月「！！」_
+Screen Off :GCls :View 17,8,Gp431
+GGet :Line 137 :Row 1 :弥月「黒爽さんと、斎藤さん！！」
+Call Tw
+Screen On :Pause :Line 136 :Row 2 :斎藤「屋上から　降りてみたら、まるで　道路工事でもしているかのような　振動に
+Row 2 :　銃声のような音‥！」
+Pause :Line 136 :Row 2 :黒爽「体育館に　行っても、誰も　いねえ。
+Row 2 :　壁や　窓も、メチャメチャに　壊れてやがる‥」
+Pause :Line 136 :Row 2 :斎藤「一体、どうなっているんだ！？　解毒剤は、どうなった？　みんなは！」
+Pause :Line 137 :Row 1 :弥月「わからないんです！
+Call Tw
+Line 145 :Row 2 :　私たちも　体育館に行こうと、学校に入ったら、急に　戦車が‥」_
+Row 2 :黒爽「戦車？」_
+Screen Off :GCls :View 17,8,Gp440
+Line 137 :Row 1 :富沢「助けてくれええぇ！！」
+Call Tw
+Screen On :Line 145 :Row 2 :斎藤「富さん！！」
+Row 2 :黒爽「何だ　その情けない　ツラは‥」
+Call Pk
+Screen Off :GCls :View 0,8,Gp378
+View 38,63,Gp378a
+Copy 24,35 16,128 16,93 4 0
+Copy 80,35 0,163 0,128 15 0
+Col 3 :Line 137 :Row 1 :弥月「きゃああああッ！！」
+Row 1 :斎藤「わあ！！わああああッ！！」
+Row 1 :富沢「みんな逃げろおおおお～！！」
+Call Tw
+Screen On :Effect 36
+*K4
+Wait 2 :Copy 24,35 16,93 16,94 4 0
+Wait 2 :Copy 24,35 16,94 16,93 4 0
+Ksnc K4
+Scn Fucker
+
+*E.
+

@@ -1,0 +1,162 @@
+
+- ｻﾌﾞﾙｰﾁﾝ -
+*Tw
+Copy 40,60 0,137 0,136 15 1
+Ret
+
+- 200ﾗｲﾝ･ﾓｰﾄﾞ上で倍化 -
+*2L
+Mode 1 :Copy 40,100 40,0 0,0 15 1
+Screen On :_
+Screen Off :Mode 2 :GCls
+Screen On :Ret
+
+- 点滅 -
+*Pk
+Wait 3 :Palette 4,000
+Wait 1 :Palette 4,FFF
+Ksnc Pk
+Ret
+
+- 怖気なﾌﾝｲｷ -
+*Af
+Wait 5 :If Flg0=1 Then F1
+If Flg0=2 Then F2
+If Flg0=3 Then F3
+F+0 :Palette 4,231 5,453 6,564
+Jump Ks
+*F1 :F+0 :Palette 4,342 5,564 6,675
+Jump Ks
+*F2 :F+0 :Palette 4,453 5,675 6,786
+Jump Ks
+*F3 :Flg0=0 :Palette 4,342 5,564 6,675
+*Ks :Ksnc Af
+Ret
+
+- ﾒｲﾝ･ﾙｰﾁﾝ -
+*S.
+Screen Off :GCls :Palette 7,FFF
+Col 7 :Line 46 :Row 58 :予告
+Call 2L
+View 17,8,Gp9
+Line 136 :Row 2 :安木「やかましい、人ん家の庭先で、ビービー鳴らすんじゃねぇ！！
+Row 6 :何時だと、思ってんだ！！」_
+GCls :View 17,8,Gp10
+Line 136 :Row 2 :野笛「４：００ジャストだよ、安木君」
+Row 2 :安木「の…野笛！、それに、みんなも…！！」
+Row 2 :斎藤「緊急事態なんだ、安木！、君も一緒に来てくれ！！」_
+Screen Off :GCls :Line 41 :Row 57 :ついに！
+Row 52 :遊撃隊、全員集合！
+Call 2L
+Screen Off :View 17,8,Gp11
+Line 155 :Row 3 :便器の中に隠れているんだ！！」
+Call Tw
+Line 136 :Row 2 :野笛「では、何が出たと言うのだね、斎藤君！！」
+Row 2 :斎藤「玄海だ！！…奴は、もう道場には、いない！！
+Screen On :_
+Screen Off :GCls :View 17,8,Gp12
+Copy 16,72 32,8 64,80 15 0 :Mask 64,1 16,18 255 0
+Screen On :Line 136 :Row 2 :斎藤「げ…」
+Row 2 :黒爽「玄海…！！」
+*K0
+Wait 4 :If Flg0=1 Then 00
+Flg0=1 :Copy 16,72 64,8 32,8 15 0
+Jump 01
+*00 :Flg0=0 :Copy 16,72 64,80 32,8 15 0
+*01 :Ksnc K0
+Screen Off :Wait 6 :Mask 64,1 16,18 0 0
+GCls :Line 41 :Row 55 :老人は再び
+Row 51 :発狂の戦士と化した！
+Call 2L
+Screen Off :View 17,8,Gp13
+Line 137 :Row 1 :黒爽「野郎オォ！！」
+Call Tw
+Screen On :Line 145 :Row 2 :斎藤「待て、黒爽！、危険だ！！」_
+Screen Off :GCls :View 17,8,Gp14
+Line 146 :Row 1 :弥月「キャーッ！！」
+Call Tw
+Screen On :Line 136 :Row 2 :黒爽「！！」_
+GCls :View 17,8,Gp15
+GGet :Line 136 :Row 2 :海江田「私は、海江田　徹。東京大学、考古学研究所の研究員で
+Row 6 :第二次神墓調査団の現場主任だ」
+Pause :Line 136 :Row 2 :野笛「過ぎた事など、どうでもいい！！我々が、知りたいのは、事の真相だ！！
+Row 6 :妙なところで、話を逸らすんじゃあない！！
+Row 6 :どのようにして、今のような状況になったのか、その理由と、過程を
+Row 6 :話せばいいんだ！！時間がないのだよ！！」_
+Screen Off :GCls :View 17,8,Gp16
+Line 137 :Row 1 :悠「零戦丸！！紫電丸！！」
+Call Tw
+Screen On :Call Pk
+Screen Off :Wait 6 :GCls :View 17,8,Gp17
+Line 155 :Row 1 :斎藤「おお！！」
+Call Tw
+Screen On :Line 136 :Row 2 :紫電丸「ヌン！！」
+Row 2 :零戦丸「とおぉっ！！」_
+Screen Off :GCls :Line 32 :Row 54 :遊撃隊の前に
+Row 51 :立ち塞がる新参者達
+Row 53 :物語は佳境へ－！
+Row 56 :そして！！
+Call 2L
+Screen Off :GCls :Line 41 :Row 51 :舞台は東京の地下へ！
+Row 51 :－神墓地底迷宮突入！
+Call 2L
+Screen Off :View 17,8,Gp18
+Line 137 :Row 1 :海江田「喝ッ！！」
+Row 1 :弥月「キャーーー！！」
+Row 1 :黒爽「おあぁああぁっ！！」
+Call Tw
+Screen On :Call Pk
+GCls :Wait 6 :View 17,8,Gp19
+GGet :Line 136 :Row 2 :黒爽「こ…こんな所で、突然、でけー声で、叫ぶんじゃねー！！」
+Row 2 :斎藤「小便が、ちびってしまうかと、思ってしまったからねぇ！！」
+Row 2 :海江田「う…うぅッ！！君たちに、ちょっと…！
+Row 6 :緊張感が、足りない…と、思ったんだ…！！メンゴ、メンゴ！！」
+Pause :Line 137 :Row 1 :黒爽「バッカヤロオォ！！」
+Call Tw
+_:Screen Off :GCls :Line 46 :Row 51 :彼らは大丈夫なのか！
+Call 2L
+View 17,8,Gp20
+Line 136 :Row 2 :凪鬼雄「服が、燃えてしまう！…さすがは、イザナミを焼き殺した、太古の炎だ」_
+Screen Off :GCls :View 17,8,Gp22
+Line 155 :Row 1 :斎藤『か…神っ！！』
+Call Tw
+Line 136 :Row 2 :太陽仮面『融点を越える、高熱の炎の中に、平然と立ち尽くす…
+Row 6 :彼の能力は“神”に等しい…！！』
+Screen On :_
+Screen Off :GCls :Line 36 :Row 58 :今！！
+Row 53 :決戦の火ぶたは
+Row 52 :切って落とされた！
+Call 2L
+View 17,8,Gp24
+Line 136 :Row 2 :安木「この肉体の真（まこと）のＰｏｗｅｒを、起動（きどう）させ
+Row 6 :貴方（あなた）の御（おん）相手を、おつとめするしかあるまい…！！」
+Call Pk
+Screen Off :Wait 6 :GCls :Line 36 :Row 58 :今！！
+Row 52 :死を賭して闘う－
+Row 53 :その時が来た！！
+Call 2L
+Screen Off :Grp 0 :GCls :View 2,31,GpTit
+Screen On :Grp 1 :_
+Screen Off :GCls :Line 41 :Row 55 :《決死戦》
+Row 54 :魔界迷宮の罠
+Call 2L
+View 17,8,Gp25
+GGet :Line 136 :Row 2 :斎藤「…黒爽…何だ？…これは…？」
+Row 2 :怒屋「ア…アームリングが、光ってるよ…光りっぱなしだ
+Row 6 :妖気に反応するなんてもんじゃない…そんな、生易しいものじゃ…」
+Call Af
+Cls :Line 136 :Row 2 :黒爽「解説は…野笛に、まかせるぜ…」
+Call Af
+Cls :Line 136 :Row 2 :野笛「…実在したんだ…やっぱり…！、溶けて、無くなったから…
+Row 6 :死体が、残らなかったから、発見できなかったんじゃなかったんだ！！
+Row 6 :…生きていたのだ」
+Call Af
+Screen Off :GCls :Line 41 :Row 55 :１９９９年
+Row 54 :何を見るのか
+Call 2L
+Screen Off :Line 41 :Row 51 :《遊撃隊シリーズ》
+Row 55 :制作快調！！
+Call 2L
+
+*E.
+

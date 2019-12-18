@@ -1,0 +1,512 @@
+
+- ｻﾌﾞﾙｰﾁﾝ -
+*Tw
+Copy 40,60 0,137 0,136 15 1
+Ret
+
+- ﾒｲﾝ･ﾙｰﾁﾝ -
+*S.
+Line 136 :Row 2 :斎藤「この教室‥カギが、掛かっている」
+Row 2 :黒爽「！‥斎藤、さっきのカギで、開かないか？」
+Pause :Line 136 :Row 2 :斎藤「よし、やってみよう」
+Pause :Effect 28 :Line 136 :Row 2 :ガチャ
+Line +4 :Row 2 :斎藤「開いた！」
+Pause :Line 136 :Row 2 :斎藤「開けるよ」
+Pause :Line 136 :Row 2 :黒爽「待て、斎藤。俺に　考えがある」
+Row 2 :斎藤「え？」
+Pause :GCls :View 17,8,Gp176
+GGet :Line 136 :Row 2 :斎藤「開いたぞ！」
+Pause :View 17,8,Gp176l
+Effect 20 :Wait 15 :Effect 21 :Wait 15 :Effect 39
+Line 136 :Row 2 :斉藤達は、飛込みざま、四方に　無差別攻撃をした。_
+Screen Off :GCls :View 17,8,Gp302b
+GGet :Mask 64,1 16,15 255 0
+Grp 0 :Screen On :Grp 1 :Line 136 :Row 2 :斎藤「…いたよ、ファッカーだ。
+Row 2 :　野笛君の撃った　ビームが、脳に　命中している。即死だ」
+Row 2 :黒爽「やっぱり、机の下に　隠れていたんだな」
+Pause :Line 136 :Row 2 :野笛「彼らは、本当に　脳無しなのかな？」
+Row 2 :斎藤「たぶん、そうだろう」
+Row 2 :黒爽「まあいい、カギだ」_
+GCls :View 17,8,Gp281a
+GGet :Line 136 :Row 2 :斎藤「ああ、あったよ。これだ」
+Row 2 :黒爽「おお、確かに！！それじゃ、早速、突入だ！！」
+Pause :Line 136 :Row 2 :斎藤「ああ‥（さようなら。加川君…いや、爆炎のファッカー）」
+Row 2 :野笛（ヘガス‥！！）_
+Grp 0 :GCls :View 17,8,Gp124
+Line 136 :Row 2 :ヘガス「もうすぐだ、ナンシィ‥もうすぐ‥終わる‥全てが…」
+Bgm OrGel
+Grp 1 :_
+Grp 0 :Screen Off :GCls :Bgm 0
+Grp 1 :View 17,8,Gp280
+GGet :Screen On :Col 2 :Line 136 :Row 2 :〔カギを使う〕
+Line +4 :Row 1 :［１］ファッカーの持っていたカギ
+Select Op
+
+- ｼｬｯﾀｰ開く -
+*Op
+Effect 28 :Wait 30
+Effect 46
+Cnt 103
+*L0
+Wait 2 :Copy 22,104 28,22 28,21 12 0
+Loop L0
+GGet :Effect 4 :Line 136 :Row 2 :黒爽「開いたぞ！！」
+Row 2 :斎藤「あと１５分か‥！敵　一人ぐらい、この３人で　かかれば、あっと言う間に
+Row 2 :　決着は　つくだろうね‥！！」
+Pause :Line 136 :Row 2 :野笛「…どうかな。とにかく、油断は　出来ないよ。焦らず、慎重に行動する事だ。
+Row 2 :　今のような　状況だからこそ！！」
+Pause :Line 136 :Row 2 :斎藤「そうだね」
+Row 2 :黒爽「ちょっと、待て！　今の声は、何だ？」
+Pause :Line 136 :Row 2 :斎藤「声！？」
+Row 2 :野笛「シッ！」
+Pause :Line 136 :Row 2 :きゃ～～　誰か！　誰か！　いやあぁ～～
+Pause :Line 136 :Row 2 :黒爽「上からだ！！」
+Row 2 :斎藤「３階！？それとも　屋上かッ！！」
+Pause :Line 136 :Row 2 :野笛「…たぶん、屋上だ！　３階なら、もっと　響いてる！！」_
+Flg1=0 :Flg2=0
+*00
+Cls :Line 136 :Row 2 :斎藤「…‥どうする！？」
+Line +4 :Row 1 :［１］野笛の意見を求める
+Row 1 :［２］黒爽の意見を求める
+Row 1 :［３］自分で考える
+Select 01,02,04
+
+- ﾉﾌｴ､ｲｹﾝ -
+*01
+Line 146 :Row 1 :　その可能性は　大きい！！」
+Call Tw
+Line 136 :Row 2 :野笛「…今の状況下では、罠という可能性もある‥いや、
+Pause :Line 136 :Row 2 :斎藤「し、しかしッ‥エスパー軍団は、全員、倒した筈‥！！」
+Pause :Line 136 :Row 2 :野笛「我々の知らない　敵かもしれん！　どちらにしろ、今、屋上に　行くのは、
+Row 2 :　マイナスになる！…それは、確かだ」_
+Jump 00
+
+- ｸﾛｻﾜ､ｲｹﾝ -
+*02
+Line 136 :If Flg1=1 Then 03
+Row 2 :黒爽「女生徒みたいだな‥！！ガスを吸わずに　残っていたのか！？」_
+Flg1=1 :Jump 00
+*03
+Row 2 :黒爽「…‥聞き憶えのある声だ！！放っては　おけねえ！！」
+Row 2 :斎藤「くっ‥黒爽！！」_
+Flg2=1 :Jump 00
+
+- ﾑﾏ点滅 -
+*Mu
+Wait 3 :Palette 9,CDB A,DEC C,DEC D,CDB E,DEC
+Wait 2 :If Flg63=0 Then M0
+Flg63=0 :Palette 9,897 A,BCA C,EFD D,EFD E,CDB
+Jump M1
+*M0
+Flg63=1 :Palette 9,EFD A,EFD C,BCA D,897 E,EFD
+*M1
+Ksnc Mu
+Ret
+
+- ｻｲﾄｳ､考ｴﾙ -
+*04
+Line 136 :If Flg2=1 Then 05
+Row 2 :斎藤（時間は、あと　１５分‥今、屋上へ行って、時間を潰すとなると、毒ガスを
+460 Row 2 :　吸った　生徒達の命が、あぶなくなるゥ‥！！）_
+Jump 00
+*05
+Row 2 :斎藤（もし‥罠ではなく、本当に　助けを求めているのだとしたら‥！
+Row 2 :　このまま　放っておいたら、僕達は、助けを呼ぶ人間を　無視して、見殺しに
+Row 2 :　する事になるっ‥！！くっ！どうすれば‥！！）
+Pause :Line 136 :Row 2 :声『どうした！？サムライ！！』
+Row 2 :斎藤「え！？」
+Line +4 :Row 2 :その声は、斎藤の耳にではなく、直接、頭の中に　届いてきた。
+Pause :Line 136 :Row 2 :声『娘の声が、聞こえないのか！？　助けを　呼ぶ声がァ！！』
+Row 2 :斎藤「なッ‥だ‥誰だ、僕に　話しかけてくるのは！？」
+Pause :Line 136 :Row 2 :声『屋上に　来るのだ、１分以内に！！来なければ、娘は　骨　一つ、残さずに
+Row 2 :　この世から、消え去る…まあ…』
+Row 2 :斎藤「！？」
+Pause :Line 136 :Row 2 :声『髪の毛だけは、残るが…フフ‥フフフ‥』
+Row 2 :斎藤「！！…まさかッ！！」
+Pause :Line 136 :Row 2 :斎藤「まさか‥最初に　やっつけた筈なのに‥！！」
+Pause :Line 136 :Row 2 :黒爽「斎藤、‥俺は　行くぜ！」
+Row 2 :斎藤「！」
+Pause :Line 136 :Row 2 :野笛「行ってくれ、斎藤君！」
+Row 2 :斎藤「し‥しかしッ！！」
+Pause :Line 136 :Row 2 :野笛「解毒剤の‥ヘガスの事は、僕に　任せてくれ、何とかしてみせる」
+Row 2 :斎藤「し、しかし、君　一人では‥！」
+Pause :Line 136 :Row 2 :野笛「今の“声”は、僕にも　聞こえたよ」
+Row 2 :黒爽「ああ、俺にもな！」
+Pause :Line 136 :Row 2 :野笛「放っては　おけないだろ？　罠だと　わかっていても‥」
+Row 2 :斎藤「…‥‥‥！」
+Pause :Line 136 :Row 2 :野笛「行くんだ！‥１分、過ぎてしまうぞ！！ヘガスの目的は、僕との対決‥‥！！
+Row 2 :　どうせ　最後には、１対１で　やらねばならない！！　だからッ！
+Row 2 :　だから‥こっちは、僕が　やる！　急げ！！」
+Pause :Copy 6,45 64,8 36,55 15 0
+GGet :Line 136 :Row 2 :野笛は、走り出した。
+Effect 31 :Line +4 :Row 2 :斎藤「野笛君！！」_
+Row 2 :黒爽「野笛に　任せよう‥！！」
+Pause :Line 136 :Row 2 :野笛「１５分後に　また、会おう！！」
+Row 2 :斎藤「…‥‥！！」_
+Screen Off :GCls :View 28,8,Gp208k
+GGet :Screen On :Col 7 :Line 136 :Row 2 :黒爽「斎藤！！俺達は、屋上に　急ぐぞっ！！」
+Row 2 :斎藤「わかってる！！」
+Pause :Line 136 :Row 2 :黒爽「あの声は、確かに‥！」
+Row 2 :斎藤「？」_
+Grp 0 :Screen Off :GCls :View 17,8,Gp292b
+GGet :Screen On :Grp 1 :Line 136 :Row 2 :黒爽「！！」
+Row 2 :斎藤「あっ！！」
+Pause :View 17,8,Gp292c
+GGet :Line 136 :Row 2 :斎藤「霧魔だ！！さっきより、でかくなってる！！」
+Row 2 :黒爽「霧魔！？‥あれが‥！」_
+Screen Off :GCls :View 17,8,Gp303
+Screen On :Effect 26 :Wait 30
+Palette 4,AB9 5,BCA 6,AB9
+Wait 6 :Palette 4,897 5,AB9 6,897
+Wait 6 :Palette 4,786 6,675
+Wait 6 :Palette 6,564
+_:Screen Off :GCls :View 17,8,Gp027
+GGet :Screen On :Line 136 :Row 2 :黒爽「ヌ！！」_
+Palette 4,564 5,EFD 6,9A8
+Row 2 :斎藤「アァッ！！」_
+GCls :View 17,8,Gp250
+Line 136 :Row 2 :弥月「…‥‥‥！」_
+Screen Off :GCls :View 17,8,Gp027
+GGet :Palette 4,564 5,EFD 6,9A8
+Screen On :Line 137 :Row 1 :斎藤「じょ‥女生徒が、中にっ‥！！」
+Call Tw
+Pause :Line 136 :Row 2 :黒爽「弥月だ」
+Row 2 :斎藤「エッ！？」
+Pause :Line 136 :Row 2 :黒爽「玄海　弥月‥！」
+Row 2 :斎藤「何！？」_
+Screen Off :GCls :View 17,8,Gp303
+Copy 4,20 64,8 38,60 15 0
+GGet :Palette 4,786 5,AB9 6,564
+Screen On :Line 136 :Row 2 :弥月「黒爽さん‥斎藤さん！！こっちに　来ちゃ、駄目！！」
+Row 2 :斎藤「なぜっ！！なぜ、君が　ここにィッ！？」
+Pause :Line 146 :Row 1 :斎藤「！！」
+Call Tw
+Line 136 :Row 2 :声「愚礼賢が、毒ガスを　撒いた時…」
+Pause :Line 136 :Row 2 :声「たまたま、ここに　いたのだそうよ‥その娘」
+Row 2 :斎藤「！！‥その声は！！」_
+Screen Off :GCls :View 17,8,Gp293
+GGet :Screen On :Wait 30 :Palette 1,453 3,786 4,DEC 5,120 6,DEC
+Wait 6 :Palette 1,564 3,897 4,CDB 5,342 6,CDB
+Wait 6 :Palette 1,675 3,9A8 5,564 6,BCA
+Line 137 :Row 1 :斎藤「キリィッ！！」
+Call Tw
+Pause :Line 136 :Row 2 :黒爽「なッ！！なんで、てめえがァ！？」
+Pause :Line 136 :Row 2 :キリィ「私を…改良人間（リメイク）を　甘く、見てもらっては、困るわね‥
+Row 2 :　ヒトの身体というものは、ある程度の訓練によって、傷を　修復する機能を
+Row 2 :　フル活動させる事が、出来る」
+Pause :Line 136 :Row 2 :キリィ「私は、その訓練を受けた上に　体内で、分泌する　特殊な有用薬物の化学
+Row 2 :　反応により、細胞組織の復元を　異常な速さにまで、高める事が　出来るのよ！
+Row 2 :　胴体や、腕に　２つや　３つ、小さな穴を　開けられたぐらいで、死にはしないわ‥」
+Pause :Line 136 :Row 2 :斎藤「くっ！！」
+Row 2 :キリィ「お生憎様‥」
+Pause :Line 146 :Row 1 :キリィ「お生憎様ね！！」
+Call Tw
+Line 136 :Row 2 :斎藤「くうぅっ！！」
+Pause :Line 136 :Row 2 :斎藤「殺してやる。貴様だけは、どうしても　ガマンできない…！」
+Row 2 :キリィ「ホホホ、望むところよ！！」
+Pause :Line 136 :Row 2 :声『そうは　させん！！お前達は　ここで、死ぬのだ！！』
+Row 2 :斎藤「！！？」
+Row 2 :黒爽「ヌン！？」_
+Screen Off :GCls :View 17,8,Gp294
+GGet :Palette 5,675
+Screen On :Line 136 :Row 2 :黒爽「何だ、奴は‥！」
+Wait 30 :Effect 15 :Palette 5,453
+Wait 10 :Palette 5,342
+Wait 10 :Palette 5,120
+Effect 18 :Wait 10 :Palette 5,000
+Pause :Line 137 :Row 1 :斎藤「バ‥馬鹿な！！そんな！！
+Row 1 :　そんなまさかッ！こんな事が‥！？」
+Call Tw
+_:Screen Off :GCls :View 17,8,Gp304
+GGet :Line 137 :Row 1 :斎藤「アンドレ！！」
+Call Tw
+Screen On :Effect 47
+Line 145 :Row 2 :アンドレ「また、会ったな。サムライ‥！！」
+Pause :Line 136 :Row 2 :斎藤「死んだ筈だ！！絶対に　死んだ筈だ！！この目で、見たぞ。お前の体が、
+Row 2 :　霧魔に　喰われ、骨も　残さずに　朽ち果てるところを‥！！」
+Pause :Line 136 :Row 2 :アンドレ「確かに！！わしの肉体は、霧魔の餌食となり、消え失せた！！だが‥
+Row 2 :　強力な　テレパシストである　このわしの思念は、再び、霧魔を　呼び戻した！！」
+Row 2 :斎藤「！！…霧魔を‥呼び戻しただと‥！？」
+Pause :Line 136 :Row 2 :アンドレ「霧魔は‥霊能生命体！ その体を構成する　エーテルは、人間の持つ
+Row 2 :　それと、同質のものなのだ。つまり‥」
+Row 2 :斎藤「…？どういう事だ！？」_
+GCls :View 17,8,Gp294
+GGet :Line 136 :Row 2 :アンドレ「つまりは、こういう事だ！」
+Row 2 :斎藤「！？」
+Pause :Effect 27
+Palette 1,897 3,BCA 5,342
+Wait 7 :Palette 1,AB9 3,DEC 5,675
+Wait 8 :Palette 1,CDB 3,EFD 5,9A8
+Wait 9 :Palette 1,EFD 5,CDB
+Wait 10 :Palette 5,EFD
+Wait 11 :Mask 17,1 46,15 255 7
+View 17,8,Gp295
+GGet :Wait 3 :Mask 17,1 46,15 0 0
+Wait 4 :Palette 9,CDB A,DEC C,DEC D,CDB E,DEC
+Wait 3 :Palette 9,EFD A,EFD C,BCA D,897 E,EFD
+Line 136 :Row 2 :斎藤「な‥！！」
+Row 2 :弥月「いやああぁっ！！」
+Call Mu
+Cls :Line 136 :Row 2 :斎藤「うっ‥！！うおぉっ！！」
+Row 2 :黒爽「…‥‥！！」
+Row 2 :アンドレ『エーテル組織を　結合させる事により、霧魔と、合体したのよ！！』
+Call Mu
+Cls :Line 137 :Row 1 :斎藤「自らがッ‥
+Row 1 :　自らが、霧魔と化したのか！！」
+Row 1 :アンドレ『その通りイィ！！』
+Call Tw
+Call Mu
+Screen Off :GCls :View 17,8,Gp027
+GGet :Palette 4,564 5,EFD 6,9A8
+Screen On :Line 136 :Row 2 :黒爽「…何てこった！」
+Row 2 :斎藤「はぁああぁ‥化け物めええぇぇ‥！！」
+Pause :Line 136 :Row 2 :アンドレ『おっと、この娘の　どこから、喰らってやろうか』
+Row 2 :斎藤「！！」
+Row 2 :黒爽「！！」_
+Screen Off :GCls :View 17,8,Gp314
+GGet :Mask 64,1 15,9 255 0
+Screen On :Wait 30 :Copy 8,32 72,8 20,84 8 0
+Wait 10 :Copy 8,32 64,8 20,84 8 0
+Line 136 :Row 2 :アンドレ『腕か…？足か…？
+Effect 40 :Wait 10 :Copy 8,32 64,40 20,84 8 0
+Wait 10 :Copy 8,32 72,40 20,84 8 0
+Wait 30 :Copy 8,32 72,8 38,60 8 0
+Wait 10 :Copy 8,32 64,8 38,60 8 0
+Row 2 :　それとも、この可愛い唇から、奪うとしようか？ん‥？』
+Effect 40 :Wait 10 :Copy 8,32 64,40 38,60 8 0
+Wait 10 :Copy 8,32 72,40 38,60 8 0
+_:GCls :View 17,8,Gp047
+GGet :Line 136 :Row 2 :キリィ「…‥‥‥…」
+Pause :Line 136 :Row 2 :黒爽「‥…まじかよ」
+Row 2 :斎藤「‥…やめろ、その娘には、手を　出すな！！」
+Pause :Line 136 :Row 2 :黒爽「ヒキョーだぞ！！小娘を　人質に　とるなんて！！」
+Pause :Line 136 :Row 2 :アンドレ『この娘の命が　惜しいのなら、武器を　捨てるのだ‥！！
+Row 2 :　この屋上から、校庭に　向かって、投げ捨てろ！！』
+Row 2 :黒爽「何ィ！？」
+Row 2 :斎藤「マッ‥マサムネを　捨てろというのかっ！！」_
+Flg1=0 :Flg2=0
+*06
+Cls :Line 136 :Row 2 :斎藤「くっ‥どうすれば！？」
+Line +4 :Row 1 :［１］武器を捨てる
+Row 1 :［２］獅子の如く闘う
+Row 1 :［３］説得してみる
+Select 11,07,08
+
+- ﾀﾀｶｳ -
+*07
+Line 136 :Row 2 :斎藤「くっ‥くそう、闘ってやる！！」
+Row 2 :アンドレ『この娘の目玉を　えぐるとしよう』
+Pause :Line 136 :Row 2 :斎藤「まっ！まて！！まってくれ、闘うのは、やめる！！」
+Row 2 :アンドレ『…‥では、早く、武器を　捨てるのだ‥！』_
+Jump 06
+
+- ｾｯﾄｸ -
+*08
+Line 136 :If Flg1=1 Then 09
+Row 2 :斎藤「アンドレ…き、君が、こんな姿に　なったのは、たぶん、僕のせいだ。
+Row 2 :　許してくれとは　言わないが、あの時、僕が　勝ったのは、正々堂々とした
+Row 2 :　一対一の勝負でだ！　だから、君も　人質を　とるなどというのは、やめて…
+Row 2 :　その‥」
+Pause :Line 136 :Row 2 :アンドレ『駄目だ‥失った肉体は　もう、還っては　来ない‥
+Row 2 :　お前にも　わしと、同じ思いを　させてやる‥！』
+Row 2 :斎藤「ひ‥ひい！！」
+Pause :Line 136 :Row 2 :黒爽「斎藤‥お前が、霧魔なんか、残しておくから、こんな‥」
+Row 2 :斎藤「ひ‥非常時だったんだ！！仕方が、無いだろ！？」_
+Flg1=1 :Jump 06
+*09
+If Flg2=0 Then 10
+Row 2 :斎藤「だめだ‥話が、通じるような　相手じゃあない‥！」_
+Jump 06
+*10
+Row 2 :斎藤「キリィ！！お前の仲間のアンドレは、卑怯な奴だ！！
+Row 2 :　こんな　いたいけな　少女を　人質にとって、目玉を　えぐるやら、喰い殺すやら‥
+Row 2 :　同じ人間として、恥ずかしくないのかなァ！！」
+Pause :Line 136 :Row 2 :キリィ「彼は、人間では　無いわ‥」
+Row 2 :斎藤「くっ！！い、言わせておけば…キリィ！！貴様は、どうなんだ！？
+Row 2 :　奴とは、仲間なんだろ！？あの化け物と、仲間なんだろ！！？
+Row 2 :　同じ仲間として、何か、感じないのか！？」
+Pause :Line 136 :Row 2 :キリィ「…‥‥‥…」
+Pause :Line 136 :Row 2 :斎藤「…‥貴様も　同じか、奴と同じ怪物、だ‥人間じゃないよ、心も‥！」_
+Flg2=1 :Jump 06
+
+- ｽﾃﾙ -
+*11
+Line 136 :If Flg1=1 Then 12
+Row 2 :斎藤（て‥天栄の芸術剣・マサムネを　校庭に　捨てろだと‥！？
+Row 2 :　‥‥で…出来ぬゥ‥！！）_
+Jump 06
+*12
+If Flg2=1 Then 13
+Row 2 :斎藤「し‥仕方が、無い。説得しても　きかないんだ‥武器を捨てよう‥」
+Row 2 :黒爽「待て、斎藤！武器を捨てたら、３人とも殺られるぞ‥！！」
+Pause :Line 136 :Row 2 :斎藤「じゃあ、どうすれば‥！！」
+Row 2 :黒爽「もう一度‥！もう一度、説得するんだ！！
+Row 2 :　何とか、奴の気を引いて、時間を　かせげ！！」_
+Jump 06
+
+- ﾏｻﾑﾈ･ｽｸﾛｰﾙ -
+*Ro
+Cls :Wait 10 :Effect 41
+Cnt 40
+*R0
+Wait 1 :Copy 3,55 0,0 70,56 15 0
+Copy 60,55 13,56 10,56 15 0
+Copy 46,55 3,0 0,0 15 0
+Loop R0
+Ret
+
+- ﾄﾐｰ･Ninja･Run -
+*Tm
+Wait 18 :Effect 41
+Copy 7,120 64,8 56,8 3 0
+Wait 6 :Copy 15,120 0,8 48,8 3 0
+Wait 6 :Copy 16,60 0,128 40,8 3 0 :Copy 16,60 16,128 40,68 3 0
+Copy 8,120 17,8 56,8 3 0
+Wait 6 :Copy 16,120 0,8 32,8 3 0
+Copy 8,120 56,8 48,8 3 0
+Wait 6 :Copy 16,120 64,8 24,8 3 0
+Copy 8,120 56,8 40,8 3 0
+Wait 6 :Copy 15,120 1,8 17,8 3 0
+Copy 8,120 56,8 32,8 3 0
+Wait 6 :Copy 7,60 11,128 17,8 3 0 :Copy 7,60 27,128 17,68 3 0
+Copy 8,120 56,8 24,8 3 0
+Wait 6 :Cls :Ret
+
+- ｸﾛｻﾜ･ﾃﾚﾊﾟｼｰ -
+*13
+Row 2 :斎藤「わかったよ。武器を捨てりゃあ、いいんだろ‥」
+Row 2 :黒爽「チッ‥しょうがねェなァ‥！」
+Pause :Line 136 :Row 2 :斎藤「く‥くそぅ、絶対絶命かッ‥！！」_
+Effect 42 :Palette 1,675 2,9A8 3,CDB
+Wait 6 :Palette 1,453 2,786 3,AB9
+Wait 6 :Palette 1,231 2,564 3,897
+Wait 6 :Palette 2,342 3,675
+Wait 6 :Palette 3,453
+Cls :Line 136 :Row 2 :黒爽（斎藤…）_
+Row 2 :斎藤「えっ！？」
+Pause :Line 136 :Row 2 :黒爽（こっちを見るな、そのままで、聞いてくれ‥！）_
+Row 2 :斎藤「…！！（黒爽…？君か！？そ、それとも　幻聴‥！？）」
+Pause :Line 136 :Row 2 :黒爽（俺だ。アームリングの機能を使って、お前の心に　直接、話しかけている）
+Pause :Line 136 :Row 2 :斎藤（アームリングに　そんな機能が！？黒爽‥いつのまに　君は、そんな事を‥！）
+Row 2 :黒爽（説明している　ヒマは、無い！！俺の言う通りに　するんだ！）
+Pause :Line 136 :Row 2 :斎藤（何を　すればいい！？）
+Pause :Line 136 :Row 2 :黒爽（…まず、俺は、双鎖庵を　投げ捨てる‥但し、校庭に　向かってではなく
+Row 2 :　上に　いる、キリィっていう　オカマ野郎、めがけてな‥！）
+Row 2 :斎藤（…‥‥‥！）
+Pause :Line 136 :Row 2 :黒爽（その時、キリィにも　あのアンドレにも　一瞬のスキが　できる！そこを狙って
+Row 2 :　お前が、そのマサムネを　あのアンドレの顔、めがけて、投げつけるんだ！！
+Row 2 :　そのスキに　俺が、弥月を‥玄海の孫娘を　救出する！！）
+Pause :Line 136 :Row 2 :斎藤（し‥しかし、そんな事‥！）
+Row 2 :黒爽（やるしかない）
+Pause :Line 137 :Row 1 :アンドレ『どうした！！？何をしている
+Row 1 :　早く捨てるんだあ！！』
+Call Tw
+Pause :Line 136 :Row 2 :黒爽（やるぞ！！）
+Row 2 :斎藤「！！」_
+Screen Off :GCls :View 60,0,Gp289
+Mask 60,0 17,21 255 0
+Copy 16,64 60,0 32,48 15 0
+GGet :Copy 16,64 60,101 32,48 15 0
+Line 137 :Row 1 :黒爽「わかったよ‥！
+Row 1 :　捨ててやらあっ！！」
+Copy 22,60 0,137 0,136 15 1
+Effect 15 :Screen On :Wait 19 :Cnt 101
+*L1
+Wait 1 :Copy 16,164 60,0 60,1 15 0
+Copy 16,64 60,101 32,48 15 0
+Loop L1
+Cls :Line 136 :Row 2 :キリィ「ヌゥッ！？」_
+Screen Off :GCls :Mask 17,1 46,15 0 0
+View 17,8,Gp134
+GGet :Effect 32 :Screen On
+Line 136 :Row 2 :キリィ「な‥何！？何なの！？」
+Row 2 :斎藤「いいぞッ！！うまい具合に絡まった！！」
+Row 2 :黒爽「今だ！！」
+Pause :Line 146 :Row 1 :斎藤「うおおおっ！！」
+Call Tw
+Line 136 :Row 2 :アンドレ『貴様等ッ‥何を‥！！？』_
+Screen Off :GCls :Grp Gp102
+Mask 0,0 80,14 255 0
+Mask 10,7 60,7 0 0
+Screen On :Call Ro
+Call Ro
+Call Ro
+Wait 20 :Screen Off :Grp Zero
+View 17,8,Gp148
+GGet :Mask 0,0 80,25 0 0
+Line 137 :Row 1 :アンドレ『ＧｕｕｕＡＡＨＡＡＡＡ！！』
+Call Tw
+Screen On :Effect 30 :Row 2 :斎藤「や‥やった！！」
+Pause :Line 136 :Row 2 :黒爽「魔物とはいえ、エーテル生物！その昔、“神”が、正宗という男の手を借りて
+Row 2 :　精製した“神刀”の一撃‥こらえきれずに　悲鳴を　あげたかッ！！」_
+Row 2 :弥月「黒爽さん！」
+Pause :Line 136 :Row 2 :黒爽「何だ！」
+Row 2 :弥月「足元に　みぞが‥！」_
+GCls :View 32,38,Gp306
+Effect 13 :Line 136 :Row 2 :ガツッ_
+GCls :View 24,33,Gp307
+Line 136 :Row 2 :ポイ
+Line +4 :Row 2 :黒爽「あっ」
+Row 2 :弥月「きゃっ」_
+Screen Off :GCls :View 17,8,Gp297
+Copy 46,120 17,0 17,30 12 0
+GGet :Copy 46,120 17,38 17,8 12 0
+Col 3 :Line 137 :Row 1 :弥月「いやあああ！！」
+Row 1 :斎藤「黒爽あああ！！
+Row 1 :　何を　やってるんだあああ！！」
+Call Tw
+Screen On :Cnt 30
+*L2
+Wait 3 :Copy 46,119 17,8 17,9 12 0
+Loop L2
+Pause :Line 136 :Row 2 :黒爽「あ‥…」
+Row 2 :キリィ「ホーホホホ、せっかく　助けたのに　残念な事ね‥！！」
+Pause :Line 136 :Row 2 :Row 2 :黒爽「く‥‥糞っ！！」
+Row 2 :斎藤「彼女が、落ちてゆくゥ！！」_
+Screen Off :GCls :View 17,8,Gp255a
+Screen On :Wait 26 :Effect 40
+Palette 4,222
+Wait 3 :Palette 4,666
+Wait 3 :Palette 4,CCC
+Wait 3 :Palette 4,FFF 5,210
+Wait 3 :Palette 5,675
+Wait 3 :Palette 5,EDC 6,210
+Wait 3 :Palette 5,FFF 6,564
+Wait 3 :Palette 6,AB9
+Wait 3 :Palette 6,FFF
+Wait 10 :Palette 4,000 5,000 6,000
+_:Screen Off :GCls :View 0,8,Gp341
+GGet :Mask 0,0 80,24 255 0
+Mask 17,1 46,15 0 0
+Screen On :Call Tm
+Call Tm
+Call Tm
+Wait 20 :Screen Off :GCls :Mask 0,0 80,25 0 0
+View 0,8,Gp325
+GGet :Mask 0,1 17,15 255 0
+Screen On :Col 7 :Line 136 :Row 2 :黒爽「だ‥駄目か～ッ！！」
+Pause :Copy 8,38 0,44 30,20 15 0
+Wait 20 :Copy 8,45 8,44 28,36 15 0
+Wait 15 :Copy 10,36 6,8 36,71 15 0
+Effect 29 :Wait 10 :Copy 16,39 0,89 30,70 15 0
+Line 136 :Row 2 :黒爽「！！あ‥あれは！」_
+Screen Off :GCls :Mask 0,0 80,25 0 0
+View 17,8,Gp316
+GGet :Screen On :Wait 30 :Palette 4,231 5,453
+Wait 10 :Palette 4,342 5,564
+Wait 10 :Palette 4,453 5,675
+Line 137 :Row 1 :黒爽「富沢！！」
+Call Tw
+Pause :Line 136 :Row 2 :弥月「！あなたは‥！！」
+Row 2 :富沢「口を閉じていろ‥舌を咬むぞ…！」
+Pause :Line 136 :Row 2 :黒爽「富沢‥生きて‥生きていたんだなァ！！」_
+Screen Off :GCls :View 25,31,Gp096
+GGet :Grp 0 :Screen On :Line 136 :Row 2 :富沢「ＩＧＡの血を引く、ＮＩＮＪＡが　あれしきの事で、死にはせン‥！
+Row 2 :　爆発の炎に　まかれる　一瞬前に、窓の外に　逃れていたのさ」
+Effect 45 :Grp 1
+Pause :Line 136 :Row 2 :斎藤「す‥すごい！！」
+Row 2 :富沢「フッ…」_
+Grp 0 :GCls :Grp 1 :Scn Act3
+
+*E.
+

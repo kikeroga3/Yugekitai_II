@@ -1,0 +1,233 @@
+
+- ｻﾌﾞﾙｰﾁﾝ -
+*Tw
+Copy 40,60 0,137 0,136 15 1
+Ret
+
+- ﾒｲﾝ･ﾙｰﾁﾝ -
+*S.
+Screen Off :GCls :View 17,8,Gp476
+GGet :Grp 0 :Screen On :Grp 1
+Col 7 :Line 136 :Row 2 :声『ノブエ…ノブエ…』_
+Row 2 :野笛「…‥‥‥…」
+Pause :Line 136 :Row 2 :声『どうした、ノブエ？　なぜ、こっちを向かない‥』
+Pause :Line 136 :Row 2 :野笛「僕は…友を殺した。親友である　ヘガスを…もう、誰とも　顔向けできない…
+Row 2 :　生きる資格すら、無いだろう‥」
+Pause :Palette 6,DEC
+Wait 7 :Palette 6,CDB
+Wait 7 :Palette 6,BCA
+Wait 7 :Palette 6,AB9
+Line 136 :Row 2 :声『‥‥それは、わたしの事だ。 こっちを向いてくれ、ノブエ』_
+Grp 0 :GCls :View 17,8,Gp477
+Grp 1 :Wait 12 :Palette 4,DEC 5,453 6,DEC
+Wait 6 :Palette 4,BCA 5,342 6,CDB
+Wait 6 :Palette 4,987 5,231 6,BCA
+Wait 6 :Palette 4,897 5,120
+Line 136 :Row 2 :野笛「！」_
+Grp 0 :Screen Off :GCls :View 17,8,Gp483
+GGet :Mask 0,0 80,17 255 0
+Mask 17,1 46,15 0 0
+Screen On :Grp 1 :Line 136 :Row 2 :野笛「ヘガス…」
+Row 2 :ヘガス「ノブエ…こっちを向いてくれたな‥」
+Pause :Line 136 :Row 2 :野笛「ここは…セントラル・パーク…」
+Pause :Line 136 :Row 2 :ヘガス「きみと、わたしが、最初に　出会った場所だ」_
+Row 2 :野笛「そうだった…しかし、なぜ‥」
+Pause :Line 136 :Row 2 :ヘガス「……ノブエ、すべてのものには、終わりがある。
+Row 2 :　星や、銀河宇宙ですら、その例外ではない。
+Row 2 :　人は…この世の生の宿めを、すべて　果たした　あとに　また‥
+Row 2 :　はじまりの場所に　かえってくる」
+Pause :Line 136 :Row 2 :野笛「ヘガス」_
+Row 2 :ヘガス「はじまりの場所とは、おわりの場所なのだ、ノブエ」
+Pause :Line 136 :Row 2 :野笛「ヘガス‥お別れなのか‥」_
+Row 2 :ヘガス「どうやら、天国への切符が　とれそうなんでね」
+Pause :Line 136 :Row 2 :野笛「冗談だろう？」_
+Row 2 :ヘガス「ふふふ‥冗談だ」
+Pause :Line 136 :Row 2 :野笛「ふ‥ふふふ」_
+Grp 0 :GCls :View 17,8,Gp478
+GGet :Grp 1 :Line 136 :Row 2 :ヘガス「ノブエ、彼女も　来ている」
+Row 2 :野笛「！」
+Pause :Line 136 :Row 2 :野笛「…‥ナンシー…」_
+Row 2 :ナンシー「ノブエ、…ノブエ！！」_
+Grp 0 :GCls :View 0,8,Gp479
+GGet :Grp 1 :Line 136 :Row 2 :野笛「おお‥ナンシー‥！！」_
+Row 2 :ナンシー「ノブエ…」
+Pause :Line 136 :Row 2 :野笛「終わったんだ。すべてが……終わったんだね‥？」_
+Row 2 :ナンシー「あなたの　おかげで！」
+Pause :Line 136 :Row 2 :野笛「そうさ‥僕は、いつも　優れている。　君達は、僕が　いなけりゃ、何も
+Row 2 :　できないんだ。　わかっているさ‥だから、もう　いいんだ。　３人は、いつも
+Row 2 :　いっしょだ！　これからは、ずっと…、もう‥離れたりするものか！！
+Row 2 :　ゆこう‥僕も、君たちと、いっしょに‥…」
+Pause :Line 136 :Row 2 :ナンシーは、ゆっくりと、首を　横に振った。
+Pause :Line 136 :Row 2 :野笛「…ナンシー…」_
+Row 2 :ナンシー「あなたを　連れてゆく事は、できないの‥」
+Pause :Line 136 :Row 2 :野笛「しかし‥しかし、僕は‥！」_
+Row 2 :ナンシー「あなたは、私達の事を　忘れない…」_
+Grp 0 :GCls :View 17,8,Gp485
+GGet :Grp 1 :Line 136 :Row 2 :ナンシー「だから、いつも　一緒よ。心は…」
+Row 2 :野笛「…‥ナンシー‥」
+Pause :View 17,8,Gp485a
+Wait 45 :Copy 10,20 64,8 36,60 15 0
+Effect 1 :Wait 15 :Bgm OrGel
+_:Grp 0 :View 17,8,Gp455
+GGet :Grp 1 :Line 136 :Row 2 :ナンシー「元気でね‥ノブエ」
+Pause :Line 136 :Row 2 :ナンシー『いつか‥いつか、また、きっと…』_
+Palette 1,9A8 2,EFD 3,BCA 5,786
+Wait 6 :Palette 1,BCA 3,CDB 5,9A8
+Wait 6 :Palette 1,DEC 3,DEC 5,BCA
+Wait 6 :Palette 1,EFD 3,EFD 5,DEC
+Cls :Wait 6 :Palette 5,EFD
+Mask 17,1 46,15 255 7
+View 0,8,Gp479
+Copy 16,120 0,8 30,8 15 0
+GGet :Palette 1,EFD 3,EFD 4,EFD 5,EFD 6,EFD 9,EFD
+Wait 6 :Mask 17,1 46,15 0 0
+Wait 6 :Palette 1,BCA 3,CDB 4,DEC 5,CDB 6,DEC 9,BCA
+Wait 6 :Palette 1,9A8 3,AB9 4,CDB 5,AB9 6,CDB 9,897
+Wait 6 :Palette 1,786 3,9A8 4,BCA 5,897 9,564
+Wait 6 :Palette 1,675 4,AB9 5,675 9,231
+Wait 6 :Palette 5,564 9,000
+Line 136 :Row 2 :野笛「ナンシー…」
+Pause :Line 136 :Row 2 :ヘガス「さて‥わたしも　ゆくとしよう」
+Row 2 :野笛「！！」_
+Grp 0 :GCls :View 17,8,Gp483
+GGet :Grp 1 :Line 136 :Row 2 :野笛「…‥ヘガス」_
+Row 2 :ヘガス「さらばだ、ノブエ！」
+Pause :Mask 0,17 80,3 255 0
+Copy 12,120 64,8 34,8 15 0
+Wait 32 :Palette 1,786 3,AB9 4,9A8 5,564 6,CDB
+Wait 7 :Palette 1,897 3,BCA 4,BCA 5,675 6,DEC
+Wait 7 :Palette 1,9A8 3,CDB 4,DEC 5,786 6,EFD
+Wait 7 :Palette 4,EFD
+Wait 7 :View 17,8,Gp483a
+Wait 30 :View 17,8,Gp483b
+Effect 15 :Wait 30 :View 17,8,Gp483c
+Wait 30 :View 17,8,Gp483d
+Cnt 150
+*L0
+Wait 3 :Copy 46,149 17,9 17,8 15 0
+Loop L0
+Grp 0 :Screen Off :GCls :View 17,8,Gp480
+Mask 0,17 80,3 0 0
+Line 137 :Row 1 :野笛「ヘ…ヘガスッ！！」
+Call Tw
+Screen On :Grp 1 :_
+Grp 0 :GCls :View 17,8,Gp486
+Grp 1 :Line 136 :
+Row 2 :野笛「ヘガス～～、僕を　置いていかないでくれ～～、僕を　ひとりぼっちに
+Row 2 :　しないでくれえぇ～～！！」
+Flg0=0 :Cnt 85
+*K0
+Wait 3 :If Flg0=3 Then 00
+F+0 :Jump 01
+*00 :Copy 12,80 50,9 50,8 15 0 :Flg0=0
+*01 :Ksnc K0
+Grp 0 :GCls :View 17,8,Gp481
+Grp 1 :Wait 30 :Palette 1,786 3,BCA 5,564
+Wait 7 :Palette 1,9A8 3,DEC 5,786
+Wait 7 :Palette 1,BCA 3,EFD 5,9A8
+Wait 7 :Palette 1,DEC 5,BCA
+Wait 7 :Palette 1,EFD 5,DEC
+Wait 7 :Palette 5,EFD
+Wait 40 :Grp 0 :Screen Off :GCls
+Bgm 0
+View 17,8,Gp482
+Grp 1 :Screen On :Effect 26
+Line 136 :Row 2 :野笛「…‥‥‥…」_
+GCls :View 17,8,Gp487
+Effect 26
+*K1
+Wait 2 :Palette 4,BCA 5,DEC
+Wait 1 :Palette 4,786 5,CDB
+Wait 1 :Palette 4,564 5,EFD
+Ksnc K1
+Screen Off :GCls :View 17,8,Gp482
+GGet :Screen On :Line 136 :Row 2 :野笛「ヘガス…」
+Wait 9 :Pause :Line 136 :Row 2 :富沢「派手に　やったな、大将」
+Row 2 :野笛「！」_
+GCls :View 17,8,Gp496
+GGet :Line 136 :Row 2 :富沢「よう」
+Row 2 :野笛「富沢君‥」
+Pause :Line 136 :Row 2 :富沢「元気か？」
+Row 2 :野笛「まあ‥お互いにね…他の　みんなは？」
+Pause :Copy 4,35 64,8 28,55 15 0
+GGet :Line 136 :Row 2 :富沢「今、黒爽とかが、ハシゴ　持ってきてくれるってよ」
+Row 2 :野笛「女の子が　一緒に‥いたようだが」
+Pause :Copy 4,15 64,43 48,45 15 0
+GGet :Line 136 :Row 2 :富沢「ああ、あれだよ。　一年前の時の　玄海老人（じじい）の孫娘。
+Row 2 :　そっちの木の　上の方に　引っ掛かってるぜ」
+Row 2 :野笛「ん？」
+Pause :Mask 0,17 80,8 255 0
+View 17,128,Gp496a
+Cnt 65
+*L1
+Wait 2 :Copy 46,1 17,192 17,7 15 0
+Copy 46,185 17,7 17,8 15 0
+Loop L1
+Copy 23,65 74,0 17,128 15 1
+GGet :Mask 0,17 80,8 0 0
+Line 136 :Row 2 :弥月「いや～ん、見ないで下さ～い」_
+Row 2 :野笛「…‥‥‥…」
+Row 2 :富沢「な」
+Pause :Line 136 :Row 2 :野笛「…よく　助かったもんだ」
+Pause :Line 136 :Row 2 :富沢「そりゃあ、お互い様だろ？」
+Row 2 :野笛「ふふ‥」_
+Screen Off :GCls :View 17,8,Gp488
+Line 137 :Row 1 :斎藤「おお～い、３人とも無事か～！？」
+Row 1 :黒爽「今、降ろしてやるからな～！！」
+Call Tw
+Effect 33 :Screen On :_
+Screen Off :GCls :View 17,8,Gp497
+Line 155 :Row 1 :冨沢「さ‥斎藤～！
+Row 1 :　早く　降ろしてくれぇ～！！」
+Call Tw
+Screen On :Line 136 :Row 2 :野笛「…‥‥‥！」
+Row 2 :弥月「黒爽さァん！！」_
+GCls :View 17,8,Gp482
+GGet :Line 136 :Row 2 :野笛「僕には‥僕には　まだ、帰ってくる場所がある‥！
+Row 2 :　僕の帰りを　待っていてくれる　仲間が‥！！」
+Pause :Line 136 :Row 2 :野笛「！」
+Pause :Mask 19,17 14,6 255 0
+Copy 12,50 64,78 20,128 12 0 :Palette 7,897
+Cnt 25
+*L2
+Wait 3 :Copy 12,101 20,80 20,78 12 0
+Loop L2
+_:Screen Off :GCls :View 17,8,Gp492
+Mask 19,17 14,6 0 0
+Screen On :_
+Screen Off :View 17,8,Gp482
+Copy 12,120 64,8 20,8 12 0 :Palette 7,897
+GGet :Screen On :Col 2 :Line 136 :Row 2 :野笛（ナンシー‥‥ヘガス‥‥！）
+Pause :Cnt 25
+*L3
+Wait 3 :Copy 12,118 20,8 20,10 12 0
+Loop L3
+Copy 14,70 36,58 0,8 15 0
+Wait 20
+Copy 10,8 64,16 36,66 15 0 :Wait 7
+Copy 10,8 0,16 36,66 15 0
+Copy 10,10 64,24 36,74 15 0 :Wait 7
+Copy 10,10 0,24 36,74 15 0
+Copy 10,10 64,34 36,84 15 0 :Copy 4,7 72,9 44,59 15 0 :Wait 7
+Copy 10,10 0,34 36,84 15 0 :Copy 4,7 8,9 44,59 15 0
+Copy 10,10 64,44 36,94 15 0 :Copy 4,10 74,16 46,66 15 0 :Wait 7
+Copy 10,10 0,44 36,94 15 0 :Copy 4,10 10,16 46,66 15 0
+Copy 10,6 64,54 36,104 15 0 :Copy 4,8 74,26 46,76 15 0 :Wait 7
+Copy 10,6 0,54 36,104 15 0 :Copy 4,8 10,26 46,76 15 0
+Copy 10,6 64,60 36,110 15 0 :Copy 4,10 74,34 46,84 15 0 :Wait 7
+Copy 10,6 0,60 36,110 15 0 :Copy 4,10 10,34 46,84 15 0
+Copy 10,8 64,66 36,116 15 0 :Copy 4,12 74,44 46,94 15 0 :Wait 7
+Copy 10,8 0,66 36,116 15 0 :Copy 4,12 10,44 46,94 15 0
+Copy 10,4 64,74 36,124 15 0 :Copy 4,10 74,56 46,106 15 0 :Wait 7
+Copy 10,4 0,74 36,124 15 0 :Copy 4,10 10,56 46,106 15 0
+Copy 4,5 74,66 46,116 15 0 :Wait 7
+Copy 4,5 10,66 46,116 15 0
+Copy 4,6 74,71 46,121 15 0 :Wait 7
+Copy 4,6 10,71 46,121 15 0
+Copy 4,4 74,77 46,127 15 0 :Wait 7
+Copy 4,4 10,77 46,127 15 0
+_:Grp 0 :Screen Off :GCls :Mask 0,0 80,25 0 0
+Grp 1 :Screen On :Scn Ending
+
+*E.
+

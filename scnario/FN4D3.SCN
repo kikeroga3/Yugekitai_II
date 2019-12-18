@@ -1,0 +1,61 @@
+
+*S.
+
+*00
+Screen Off :GCls :View 17,8,Gp157
+If Flg10=1 Then 01
+View 27,8,Gp029
+GGet :Screen On :Line 136 :Row 2 :男子生徒「よぉ、斎藤」
+Row 2 :斎藤「ああ、へのし君か」
+Pause :Line 136 :Row 2 :へのし「？…日本刀、持って、何してんだ？」
+Row 2 :斎藤「あ、あ、い、いや、ちょっとね」
+Pause :Line 136 :Row 2 :へのし「さっき、女の子が、君や　黒爽のこと、さがしてたぞ。新入生だったな。
+Row 2 :　ショートカットのカワイイ娘」
+Pause :Line 136 :Row 2 :斎藤「さがしてた‥？僕を？‥まあ　いいや、ところで、君も　早く帰るんだ。
+Row 2 :　ここに　いると、危険なんだ」
+Pause :Line 136 :Row 2 :へのし「何か、あったの？」
+Row 2 :斎藤「ちょっとね」
+Pause :Line 136 :Row 2 :へのし「どうせ、すぐ　帰ろうと思ってたから‥じゃ、バイバイ」
+Pause :Flg10=1 :View 17,8,Gp157
+*01
+GGet :Screen On :Line 136 :Row 2 :ここは、新校舎４階の廊下。
+Line +4 :Row 1 :［１］音楽室
+Row 1 :［２］地学室
+Row 1 :［３］トイレ
+Line 149 :Row 26 :［４］３階に降りる
+Select 02,03,To,3F
+
+- 音楽室 -
+*02
+View 17,8,Gp013aD3
+Line 136 :Row 2 :斎藤「いない‥帰ったのか‥‥！？」_
+Flg3=1 :Jump 00
+
+- 地学室 -
+*03
+Line 136 :Row 2 :斎藤「地学室には、カギが掛かっていて、入れない‥」
+Pause :Jump 01
+
+- ﾄｲﾚ -
+*To
+Screen Off :GCls :View 17,8,Gp143
+GGet :Screen On
+*T0
+Line 136 :Row 2 :新校舎４階のトイレ。
+Line +4
+Row 1 :［１］辺りを見る
+Row 1 :［２］用を足す
+Row 1 :［３］トイレから出る
+Select T1,T2,00
+*T1
+Line 136 :Row 2 :斎藤「誰も‥いないね」
+Pause :Jump T0
+*T2
+Line 136 :Row 2 :斎藤「尿意は、無い‥必要ない」
+Pause :Jump T0
+
+*3F
+Scn FN3D3
+
+*E.
+

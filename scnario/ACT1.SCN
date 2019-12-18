@@ -1,0 +1,159 @@
+
+- ｻﾌﾞﾙｰﾁﾝ -
+*Tw
+Copy 40,60 0,137 0,136 15 1
+Ret
+
+- ﾒｲﾝ･ﾙｰﾁﾝ -
+*S.
+Mode 2
+Screen Off
+GCls :View 17,8,Gp092
+GGet :Grp 0 :Screen On :Grp 1
+Line 136 :Row 2 :斎藤「新井は、母なる大地に還ったんだね…」
+Row 2 :黒爽「ああ…」
+Pause :Line 136 :Row 2 :斎藤「そうだ…陽子ちゃん！！」_
+Screen Off :GCls :Mask 0,1 17,15 255 0
+Mask 64,1 11,15 255 0
+View 0,8,Gp510
+Screen On :Line 136 :Row 2 :陽子「う～ん…」_
+Row 2 :斎藤「大丈夫かい？陽子ちゃん…もう、終わったんだ…悪い夢は、全て…」
+Copy 10,90 64,8 40,15 15 0
+_:Copy 80,18 0,154 0,136 15 0
+GGet :Line 136 :Row 2 :陽子「ここは　どこ…？あなたは、誰…？」_
+Row 2 :斎藤「よ…陽子ちゃん…ぼくだよ。ぼくが、わからないのかい！？」_
+Row 2 :陽子「ようこ…それ…誰のこと…？」
+Pause :Line 136 :Row 2 :斎藤「こ…これは…」
+Row 2 :野笛「記憶喪失！一度に莫大な量のエネルギーを失ったせいか…！！
+Row 2 :　彼女は…忘れてしまっている」
+Pause :Line 136 :Row 2 :陽子「ようこって…私のこと…？」
+Pause :Copy 16,50 0,8 32,15 15 0
+GGet :Line 136 :Row 2 :斎藤「おお…もう、何も言わなくていいんだ…！！かわいそうなベイベェ…！！」
+Pause :View 17,8,Gp510a
+GGet :Effect 37
+Line 137 :Row 1 :陽子「イキナリ何すんのよ、助平ェェ！」
+Call Tw
+Line 145 :Row 2 :斎藤「びっ！！」_
+Grp 0 :Screen Off :GCls :View 17,8,Gp142D1
+Mask 0,0 80,25 0 0
+Screen On :Grp 1
+Line 136 :Row 2 :斎藤（‥…あれから、もうすぐ一年になる、か。
+Row 2 :　あの日以来、僕と陽子ちゃんの仲は、深まるどころか、どんどん遠ざかっている。
+Row 2 :　それもこれも…例の、噂のせいだ！）_
+Grp 0 :Screen Off :GCls :View 17,8,Gp177
+GGet :Screen On :Grp 1
+Line 137 :Row 1 :斎藤「いやあ昨日は我ながら、よく戦った
+Row 1 :　もんだ！！腹に手形のアザはできるし、
+Row 1 :　背中と肩に火傷ができるし…！」
+Call Tw
+Pause :Line 137 :Row 1 :斎藤「しかし、命をかけて戦ったんだ！！
+Row 1 :　その想いは絶対に陽子ちゃんに伝わって
+Row 1 :　いるはずさ！！」
+Call Tw
+_:Grp 0 :Screen Off :GCls :View 17,8,Gp176D1
+Screen On :Grp 1:_:View 30,65,Gp176b
+GGet :Line 136 :Row 2 :斎藤（いたいた。相変わらず　君は、後ろ姿もビウチフルだねぇェ…）
+Pause :View 44,70,Gp176e
+GGet :Line 136 :Row 2 :斎藤「！」
+Pause :Line 136 :Row 2 :女生徒Ａ「おはよー、陽子。もう、学校に来ても、大丈夫…なの？」_
+Row 2 :陽子「？大丈夫って…何が？」_
+Row 2 :女生徒Ｂ「私達を　心配させまいとして、何事も　なかったかのような態度を
+Row 2 :　よそおっているのね…かわいそうに…」_
+Row 2 :女生徒Ａ「よほど、恥ずかしい目に会わされたのだわ、きっと」
+Pause :Line 136 :Row 2 :陽子「え？だから…何よ？何の話をしているの？」_
+Row 2 :女生徒Ｂ「だから、ホラ…斎藤君の事よ」
+Row 2 :斎藤「！？」
+Pause :Line 136 :Row 2 :陽子「斎藤君？」_
+Row 2 :女生徒Ａ「いつも、変な…ぎらぎらしてる人、８組の！」_
+Row 2 :斎藤「…‥‥‥…」
+Pause :Line 136 :Row 2 :陽子「あの人が、どうかしたの？」_
+Row 2 :女生徒Ｂ「どうかしたのって…だって、あの人、陽子を犯そうとしたんでしょ？」_
+Screen Off :GCls :View 17,8,Gp175
+Line 137 :Row 1 :陽子「え～～～～っ！？」
+Call Tw
+Screen On :_:Screen Off :GCls :View 17,8,Gp178
+GGet :Line 155 :Row 1 :女生徒Ａ「陽子を犯そうとしたのね！！」
+Call Tw
+Screen On :Line 136 :Row 2 :陽子「そ…そういえば、昨日の　お昼休みは、急に眠くなって、そのまま、ここで
+Row 2 :　寝てしまって…気が　ついたら、裏山にいて、斎藤君が抱きついてきたわ！！」
+Pause :Line 136 :Row 2 :陽子「やめて！！知らなかったわ…私を…どうにかしようとしてたなんて…！」_
+Row 2 :女生徒Ｂ「黒爽君とかのグループに助けてもらったんでしょ？」_
+Row 2 :陽子「え？」
+Pause :Line 136 :Row 2 :女生徒Ａ「６組の怒屋君に　家まで、送ってもらったんだって？
+Row 2 :　あの人、けっこうカッコイイよね」_
+Row 2 :陽子「え、ええ」_
+Row 2 :女生徒Ｂ「でも、無事で良かったわ」_
+Screen Off :GCls :View 17,8,Gp176D1
+View 32,65,Gp176c
+View 44,70,Gp176f
+GGet :Line 137 :Row 1 :斎藤「ちちぃぃちがぁう！！僕はただ…」
+Call Tw
+Screen On :Pause :Line 137 :Row 1 :陽子「キャーーーーッ」
+Call Tw
+Line 145 :Row 2 :斎藤「！！」
+Pause :Line 137 :Row 1 :女生徒Ａ「斎藤だわ！！」
+Row 1 :女生徒Ｂ「斎藤よ！！」
+Row 1 :女生徒Ｃ「斎藤だ！！」
+Call Tw
+Pause :Line 137 :Row 1 :斎藤「呼び捨てかっ！！
+Row 1 :　呼び捨てなのかっ！！」
+Call Tw
+Pause :Line 137 :Row 1 :女生徒Ａ「変態！！」
+Row 1 :女生徒Ｂ「女の敵！！」
+Row 1 :女生徒Ｃ「強姦魔！！」
+Call Tw
+Pause :Line 137 :Row 1 :斎藤「あうぁえ…！あいあぁあ…！？」
+Row 1 :女生徒達「キャーーーーッ」
+Call Tw
+_:Grp 0 :Screen Off :GCls :View 17,8,Gp159D1
+Mask 16,16 48,8 255 0
+Screen On :Grp 1 :Cnt 47
+*L0
+Wait 2 :Copy 46,167 17,9 17,8 15 0
+Loop L0
+Mask 0,0 80,25 0 0
+Line 136 :Row 2 :斎藤「おかげで、現在に至るまで、僕と陽子ちゃんの仲は、一向に進む気配もない…
+Row 2 :　このままでは、二人は　駄目になってしまう…」_
+Screen Off :GCls :View 17,8,Gp018
+Mask 0,16 80,8 255 0
+Screen On :Cnt 30
+*L1
+Wait 1 :Copy 46,180 17,10 17,8 3 0
+Loop L1
+Col 2 :Line 137 :Row 1 :斎藤「もはや、このラヴレタァで、僕の
+Row 1 :　真意を彼女に伝えるしかあるまい！！」
+Call Tw
+Mask 0,0 80,25 0 0
+_:Grp 0 :Screen Off :GCls :Line 80 :Row 36 :ｆｒｏｍ
+Line 97 :Row 18 :東京都立葛飾野高等学校
+Copy 22,10 18,97 18,96 15 1
+Screen On :Grp 1 :_:Grp 0 :Screen Off :GCls :View 17,8,Gp089
+Screen On :Grp 1 :_:Grp 0
+GCls :Col 7 :Line 80 :Row 33 :ＧＲＡＰＨＩＣ
+Line 97 :Row 31 :黒沢　輝夫
+Copy 10,10 31,97 31,96 15 1
+Grp 1 :_:Grp 0 :Screen Off :GCls :View 17,8,Gp201
+Screen On :Grp 1 :_:Grp 0 :GCls :Line 80 :Row 33 :ＰＲＯＧＲＡＭ
+Line 97 :Row 31 :黒沢　幸史
+Copy 10,10 31,97 31,96 15 1
+Grp 1 :_:Grp 0 :Screen Off :GCls :View 28,8,Gp208
+Screen On :Grp 1 :_:Grp 0 :GCls :Line 80 :Row 37 :ＢＧＭ
+Line 97 :Row 31 :黒沢　輝夫
+Copy 10,10 31,97 31,96 15 1
+Grp 1 :_:Grp 0 :Screen Off :GCls :View 28,8,Gp209
+Screen On :Grp 1 :_:Grp 0 :GCls :Line 80 :Row 35 :ＳＴＯＲＹ
+Line 97 :Row 31 :黒沢　輝夫
+Copy 10,10 31,97 31,96 15 1
+Grp 1 :_:Grp 0 :Screen Off :GCls
+View 2,25,SubTTL
+Grp 1 :Screen On :_:Grp 0 :Screen Off :GCls
+Grp 1 :Line 85 :Row 31 :ＡＣＴ　１
+Copy 9,9 31,85 31,84 15 1
+Line 105 :Row 22 :ヘガス我狼陰の復讐
+Copy 18,9 22,105 22,104 15 1
+Screen On :_:Grp 0 :Screen Off :GCls
+
+Scn Act3FS
+
+*E.
+

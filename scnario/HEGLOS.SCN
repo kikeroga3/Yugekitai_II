@@ -1,0 +1,234 @@
+
+- ｻﾌﾞﾙｰﾁﾝ -
+*Tw
+Copy 40,60 0,137 0,136 15 1
+Ret
+
+- ﾒｲﾝ･ﾙｰﾁﾝ -
+*S.
+Screen Off :GCls :View 0,8,Gp364
+Mask 0,0 80,17 255 0
+Mask 17,1 46,15 0 0
+Screen On :Wait 20 :Copy 10,40 6,33 46,60 15 0
+Effect 25 :Copy 6,30 0,33 34,11 15 0
+Col 7 :Line 137 :Row 1 :ヘガス「‥！‥！！」
+Call Tw
+_:GCls :View 17,8,Gp365
+GGet :Line 136 :Row 2 :野笛「終わりだな、ヘガス。
+Row 2 :　君のスーツは　シールドを失い、もはや　ただの布キレ‥！
+Row 2 :　そして、武器も　無くなった！！‥君の負けだ。
+Row 2 :　大人しく　解毒剤を渡して、降伏し給えェ！！」
+Pause :Line 136 :Row 2 :ヘガス「それは…どうかな？」
+Row 2 :野笛「何っ！？」_
+GCls :View 17,8,Gp359
+GGet :Line 136 :Row 2 :ヘガス「重分子配列による　シールド効果の発見は、ＮＡＳＡの宇宙開発において
+Row 2 :　大きな進歩だった！！　人類の未来に貢献した　素晴らしい発見‥！
+Row 2 :　貴様の発見だったな、ノブエ！」
+Pause :Line 136 :Row 2 :ノブエ「何が　言いたい？」
+Pause :Line 136 :Row 2 :ヘガス「最初から、こんなものに　頼るつもりはなかったさ。これで　終わりだと？
+Row 2 :　馬鹿め、本当の闘いは、これからだ‥！」_
+Screen Off :GCls :View 17,8,Gp371
+Line 137 :Row 1 :野笛「ヘガァス！！残念だが、これ以上
+Row 1 :　貴様の　たわ言を　聞いている　ヒマは
+Row 1 :　ないんだあ！！」
+Call Tw
+Screen On
+*K0
+Wait 3 :Palette 4,000
+Wait 1 :Palette 4,EFD
+Ksnc K0
+Screen Off :GCls :View 11,8,Gp363
+GGet :Screen On :Wait 30 :Copy 5,25 11,8 17,8 15 0
+Effect 39 :Wait 5 :Copy 5,25 11,33 17,8 15 0
+Wait 5 :Copy 5,25 11,58 17,8 15 0
+Wait 5 :Copy 5,25 11,83 17,8 15 0
+_:Screen Off :View 17,8,Gp154
+Screen On :_
+Screen Off :View 17,8,Gp313
+Line 137 :Row 1 :野笛「！」
+Call Tw
+Screen On :_
+GCls :View 17,8,Gp369
+_:Screen Off :View 17,8,Gp370
+Screen On :Cnt 10
+*L0
+Wait 12 :Copy 45,120 18,8 17,8 15 0
+Loop L0
+Wait 24 :Screen Off :View 17,8,Gp313
+Screen On :Line 136 :Row 2 :野笛「‥‥‥‥‥！！」_
+Screen Off :GCls :View 17,8,Gp369
+Copy 14,52 64,8 48,76 15 0
+Copy 14,48 64,60 18,80 15 0
+GGet :Screen On :Line 136 :Row 2 :野笛「…‥ヘガス‥！？」
+Pause :Effect 26 :Line 136 :Row 2 :野笛「！！」
+*K1
+Wait 2 :Copy 4,19 64,108 20,96 15 0
+Wait 2 :Copy 4,19 68,108 20,96 15 0
+Wait 2 :Copy 4,19 72,108 20,96 15 0
+Ksnc K1
+Screen Off :GCls :View 17,8,Gp313
+GGet :Screen On :Line 136 :Row 2 :野笛は、一瞬にして　理解した。
+Row 2 :　自分の放った光線は、ヘガスに命中した際、彼の胸ポケットに入っていた
+Row 2 :　解毒剤の瓶にも　穴を開けたのだ。
+Pause :Line 136 :Row 2 :その薬品は、空気に触れると　ガス状に　気化して、空気中に拡がる物だった。_
+Screen Off :GCls :View 17,8,Gp089D1
+GGet :Grp 0 :Screen On :Grp 1 :Line 136 :Row 2 :ガスは、体育館の通路をこえ、新校舎へと抜ける。
+Pause :Line 136 :Row 2 :　新校舎の廊下を走り、教室に入りこんだ。_
+Grp 0 :GCls :View 17,8,Gp176t
+Effect 26 :Grp 1 :Wait 15 :Palette 5,120
+Wait 15 :Palette 5,231
+Wait 15 :Palette 5,342
+Wait 15 :Palette 5,453
+_:Grp 0 :View 17,8,Gp421
+Effect 26 :Grp 1 :Wait 15 :Palette 5,120
+Wait 15 :Palette 5,231
+Wait 15 :Palette 5,342
+Wait 15 :Palette 5,453
+_:Grp 0 :Screen Off :Grp 1 :View 17,8,Gp369
+Copy 14,52 64,8 48,76 15 0
+Copy 14,48 64,60 18,80 15 0
+Effect 26 :Screen On
+Cnt 10
+*L1
+Wait 2 :Copy 4,19 68,108 20,96 15 0
+Wait 2 :Copy 4,19 72,108 20,96 15 0
+Wait 2 :Copy 4,19 64,108 20,96 15 0
+Loop L1
+Wait 2 :Copy 14,48 64,60 18,80 15 0
+Effect 18 :_
+GCls :View 17,8,Gp313
+Line 136 :Row 2 :すべてが、手遅れとなるかに思えた、その１分前の事だった。_
+GCls :View 4,8,Gp409
+Line 136 :Row 2 :野笛「ヘガス‥なぜだ！ヘガス‥！！」_
+GCls :View 17,8,Gp366
+_:Grp 0 :Screen Off :GCls :View 10,28,Gp377a
+GGet :Mask 0,0 80,25 0 0
+Mask 70,3 10,13 255 0
+Line 136 :Row 2 :１９９５年　某月　某日
+Line +4 :Row 2 :ＮｅｗＹｏｒｋ＿Ｃｉｔｙ
+Screen On :Grp 1 :Pause :Line 136 :Row 2 :ヘガス「どうしても、行くのか？」
+Row 2 :野笛「…‥‥‥…」
+Pause :Line 137 :Row 1 :ヘガス「ナンシーは、どうする！！」
+Call Tw
+Pause :Line 136 :Row 2 :野笛「…‥‥‥‥‥君に　やろう」
+Row 2 :ヘガス「！！…！！…！！」
+Pause :Line 136 :Row 2 :野笛「彼女は　きっと、君を…満足させてくれる事だろう‥」
+Pause :View 33,28,Gp377b
+GGet :Line 136 :Row 2 :野笛「ヒ～ヒヒヒヒ～」
+Row 2 :ヘガス「‥‥貴様ッ！！」
+Pause :Copy 4,30 70,28 34,28 15 0
+GGet :Line 136 :Row 2 :野笛「貴様？　君が、僕に　そんな口を　きいていいと、思っているのかい？」
+Row 2 :ヘガス「…‥‥！！」
+Pause :Line 137 :Row 1 :野笛「天才の‥この僕に‥！」
+Call Tw
+Pause :Line 137 :Row 1 :ヘガス「私も　天才だ！」
+Call Tw
+Pause :Line 136 :Row 2 :野笛「ＩＱは、幾つ？」
+Row 2 :ヘガス「う！！」
+Pause :Line 136 :Row 2 :ヘガス「…‥５０００だ‥！」
+Pause :Line 136 :Row 2 :野笛「そう‥５０００。それが、君のＩＱだ‥僕のＩＱは、幾つだ？」
+Pause :Line 136 :Row 2 :ヘガス「…‥２００００だ…」
+Pause :Line 136 :Row 2 :野笛「僕のＩＱと、君のＩＱの差は？」
+Pause :Line 136 :Row 2 :ヘガス「１万‥‥５千…！！」
+Pause :View 32,28,Gp377d
+GGet :Line 150 :Row 1 :バシッ
+Call Tw
+Line 136 :Row 2 :ヘガス「！」
+Pause :Copy 6,65 70,58 38,28 15 0
+GGet :Line 136 :Row 2 :野笛「わかったろう。例え、３人がかりでも　君は、僕に　勝つ事は出来んのだ‥」
+Pause :Line 136 :Row 2 :ヘガス「…‥‥‥！！」
+Row 2 :野笛「…‥これまでの‥…ようだね‥…」
+Pause :View 32,28,Gp377f
+GGet :Line 136 :Row 2 :野笛「ヘガス！」
+Pause :Copy 8,100 60,28 70,28 15 0
+View 51,28,Gp377g
+GGet :Line 137 :Row 1 :ヘガス「見損なったぞ、野笛！！」
+Call Tw
+Pause :View 53,28,Gp377h
+Wait 30 :Copy 8,100 70,28 60,28 15 0
+GGet :Line 136 :Row 2 :野笛「…‥‥‥…」
+Pause :Line 136 :Row 2 :野笛（…これでいいんだ、これで‥…ヘガスの事は　ナンシーが　なぐさめてくれる
+Row 2 :　だろう。彼女は　しっかりした娘だ‥）
+Pause :Line 136 :Row 2 :野笛（あの二人なら、幸せに　なれるさ…僕は、普通の人間じゃない。
+Row 2 :　普通には、生きられない）
+Pause :Line 136 :Row 2 :野笛「僕では…ナンシーを　幸せにする事は、出来ないんだ…！」
+Pause :Line 136 :Row 2 :野笛「さようなら、アメリカ。さようなら、ナンシー。そして…ヘガス…」_
+Copy 10,100 0,28 70,28 15 0
+Mask 70,3 10,13 0 0
+Wait 7 :Palette 0,231 1,897 2,BCA 3,564 4,DEC 5,786
+Wait 7 :Palette 0,564 1,AB9 2,DEC 3,897 4,EFD 5,9A8
+Wait 7 :Palette 0,897 1,CDB 2,FFF 3,BCA 4,FFF 5,CDB
+Wait 7 :Palette 0,CDB 1,EFD 3,EFD 5,EFD
+Wait 7 :Mask 0,0 80,25 255 7
+GCls :View 17,8,Gp366
+Wait 32 :Palette 0,DEC 1,EFD 2,EFD 3,EFD
+Mask 0,0 80,25 0 0
+Wait 7 :Palette 0,AB9 1,CDB 3,DEC
+Wait 7 :Palette 0,675 1,AB9 3,CDB
+Wait 7 :Palette 0,342 1,897 3,BCA
+Wait 7 :Palette 0,000 1,675
+GGet :Line 136 :Row 2 :野笛「あの時‥！あの時、終わった筈なのに！！
+Row 2 :　あの時、別れを　告げた筈なのに‥！！」_
+Screen Off :GCls :View 4,8,Gp409
+Mask 0,0 80,17 255 0
+Mask 17,1 46,15 0 0
+Line 137 :Row 1 :野笛「なぜだ！！」
+Call Tw
+Screen On :_
+Screen Off :GCls :View 17,8,Gp368
+Line 137 :Row 1 :野笛「うおぉッ‥なぜだぁーっ！！」
+Call Tw
+Effect 47 :Screen On :_
+GCls :View 4,8,Gp409
+GGet :Line 136 :Row 2 :ハァ‥　ハァ‥　ハァ‥
+Pause :Line 136 :Row 2 :野笛（…‥‥‥もういい。　運命だったのだ、全てが。
+Row 2 :　神の仕組んだ‥イタズラ…さ。　そう、思おう…！）_
+*00
+Cls :Line 136 :野笛「…‥‥…」
+Line +4 :Row 1 :［１］考える
+Row 1 :［２］ヘガスを見る
+Row 1 :［３］移動する
+Select 01,02,03
+*01
+Line 136 :Row 2 :野笛（考えて、どうにもなるものでもない‥もういい、終わった）_
+Jump 00
+*02
+Line 136 :Row 2 :野笛（ビーム弾は、完全に　心臓の位置を貫いた‥。今更、確認するまでもないが
+Row 2 :　ヘガスは、死んでいる‥）_
+Jump 00
+*03
+Line 136 :Row 2 :野笛（そうだ‥！　屋上に行った　２人は…それに　富沢君！　ここで、立ち止まって
+Row 2 :　いては、だめだ‥！　行かなければ！！）
+Pause :Copy 12,120 64,8 48,8 15 0
+Line 136 :Row 2 :野笛「そうだ、それに　生徒達は、無事、息を　吹き返したかどうか‥！」_
+Screen Off :GCls :View 0,8,Gp373
+Copy 17,60 34,128 0,128 15 1
+Screen On :_
+GCls :View 17,8,Gp381
+Line 136 :Row 2 :野笛「…‥さよならだ、ヘガス…！」_
+Screen Off :GCls :View 4,8,Gp409
+Copy 12,120 4,8 48,8 15 0
+Effect 31
+Screen On :_
+Screen Off :View 0,8,Gp373
+Copy 17,60 34,128 0,128 15 1
+Screen On :Wait 90 :Copy 16,15 0,8 28,45 15 0
+Line 136 :Row 2 :ヘガス（まだだ‥‥）_
+Screen Off :GCls :View 4,8,Gp409
+Copy 12,120 4,8 48,8 15 0
+Screen On :Line 136 :Row 2 :ヘガス（まだ、死ぬわけには、いかん‥まだ…！！
+Row 2 :　私の内側から、聞こえてくる　ナンシーの声の為にも‥！　私自身の為にも！！
+Row 2 :　復讐は、まだ、終わっていない！！）_
+Screen Off :GCls :View 0,8,Gp373
+Copy 16,15 0,8 28,45 15 0
+Copy 34,60 0,128 28,68 15 0
+Copy 17,60 34,128 0,128 15 1
+GGet :Screen On :Line 136 :Row 2 :ヘガス（フ‥フフ‥その想いが…心臓を破壊され、鼓動を失い、動く筈のない　私の
+Row 2 :　手を　動かしている…‥だが、到底、このままでは、私は、もたない‥…）
+Pause :Copy 16,105 0,23 46,8 15 0
+Line 136 :Row 2 :ヘガス（神よ‥‥！　私に　最後の…力を与えてくれ‥！）_
+Grp 0 :GCls :Mask 0,0 80,25 0 0
+Grp 1 :Scn Tarukus
+
+*E.
+

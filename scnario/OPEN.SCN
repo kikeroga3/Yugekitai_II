@@ -1,0 +1,152 @@
+
+- ｻﾌﾞﾙｰﾁﾝ -
+*Tw
+Copy 40,60 0,137 0,136 15 1
+Ret
+
+- ﾒｲﾝ･ﾙｰﾁﾝ -
+*S.
+Mode 1
+Screen Off
+GCls :Line 100
+ＰＲＯＬＯＧＵＥ
+Copy 16,9 0,100 24,46 15 1
+Screen On
+_:Screen Off
+Mode 2 :GCls
+View 17,8,Gp062
+Grp 0 :Screen On :Grp 1
+_:Grp 0 :Screen Off
+View 17,8,Gp001
+Screen On :Grp 1
+_:Grp 0 :Screen Off
+View 17,8,Gp062
+View 17,8,Gp062a
+Screen On :Grp 1
+_:Grp 0 :Screen Off
+View 17,8,Gp058
+Screen On :Grp 1
+Col 7 :Line 136 :Row 2 :『神への貢ぎ物？』
+Row 2 :弥月「！？」_
+Cls :View 17,8,Gp078
+_:View 17,8,Gp063
+GGet :Line 136 :Row 2 :弥月「…‥神様…？」
+Row 2 :太陽仮面『神ではない。私は、太陽仮面。神は、死んだ。
+Row 2 :　天界に　廃墟だけを遺して…』
+Pause :Line 136 :Row 2 :弥月「…‥‥‥…」
+Pause :Line 136 :Row 2 :太陽仮面『その花は、何だね？』_
+Row 2 :弥月「これは…供え物です。一年前、ここで　亡くなった人への…」
+Pause :Line 136 :Row 2 :太陽仮面『…君は…心の　やさしい少女だ』_
+Row 2 :弥月「…‥‥‥…」
+Pause :Line 137 :Row 1 :太陽仮面『だが、一年前に　ここで、
+Row 1 :　死んだ者は、いない！！』
+Call Tw
+_:View 17,8,Gp100
+Row 2 :弥月「えっ！？」
+Effect 47
+Wait 6
+*K0
+Wait 3 :Palette 5,000
+Wait 1 :Palette 5,FFF
+Ksnc K0
+Screen Off :GCls :Wait 6 :View 17,8,Gp063
+GGet :Line 137 :Row 1 :太陽仮面『邪神は、土に還るのを拒み
+Row 1 :　再び、地上に復活したのだ！！
+Row 1 :　全地上制覇の野望を夢見て…！』
+Call Tw
+Screen On :Pause : Line 137 :Row 1 :太陽仮面『知らせねばならない！
+Row 1 :　太陽の戦士達に！！』
+Call Tw
+
+_:Grp 0 :Screen Off :GCls
+Line 100 :一年前
+Copy 6,8 0,100 34,46 15 1
+Mode 1 :Grp 1 :Screen On
+_:Grp 0 :Screen Off :Mode 2 :GCls
+Screen On
+View 9,48,Gp088
+GGet :Grp 1
+Wait 30 :Palette 2,777
+Effect 25 :Wait 6 :Palette 2,FFF
+Wait 4 :Palette 2,000
+Wait 6 :Palette 2,FFF
+Wait 4 :Palette 2,CCC
+Wait 4 :Palette 2,999
+Wait 4 :Palette 2,564
+Wait 30 :Palette 4,BA8
+Wait 6 :Palette 4,875
+Wait 4 :Palette 4,320
+_:Screen Off :GCls :View 17,8,Gp005
+Line 137 :Row 1 :新井「我は、人に或らず！！」
+Call Tw
+Screen On :_
+Screen Off :GCls :View 17,8,Gp006
+GGet :Line 164 :Row 1 :　玄海！！陽子を　これに！！」
+Call Tw
+Line 136 :Row 2 :新井「なぜなら…そう！！神人の力が、時空を超え、俺の中に集まりつつある！！
+Row 2 :　俺と…陽子の中に。…井ノ頭　陽子！
+Row 2 :　我とは、別の血を引く女を使い、失われし、神の力！！…呼び戻す
+Screen On :_
+Palette 4,DDD 5,BBB
+Wait 6 :Palette 4,BCC 5,999
+Wait 4 :Palette 4,ABB 5,777
+Wait 6 :Palette 4,9A9 5,444
+Wait 4 :Palette 5,333
+Cls :Line 146 :Row 1 :斎藤「ああっ！！陽子ちゃん！！」
+Call Tw
+Line 136 :Row 2 :玄海「お連れしました…新井様…」_
+Line 154 :Row 2 :新井「見ていろ。宇宙を支配する　スサノオが、復活する瞬間を…！！」
+_:Screen Off :GCls :View 17,16,Gp090
+Screen On
+_:Screen Off :GCls :View 17,8,Gp008
+Line 137 :Row 1 :斎藤「あぁらぁいぃいぃぃィッ！！」
+Call Tw
+Screen On :_
+Screen Off :GCls :Mask 17,16 46,8 255 0
+View 17,8,Gp005
+As 2 View 17,8,Gp005a
+Screen On :Cnt 60
+*L0
+Copy 42,180 18,9 18,8 12 0
+Wait 2 :Loop L0
+View 17,8,Gp005b
+Mask 17,16 46,8 0 0
+Col 3 :Line 137 :Row 1 :新井「ハアアァアァァァ…！！」
+Call Tw
+Wait 30 :Palette 4,131
+Effect 35 :Wait 6 :Palette 4,353
+Wait 4 :Palette 4,575
+Wait 6 :Palette 4,8A8
+_:Screen Off :GCls :View 17,8,Gp091
+Screen On :Col 7 :Line 136 :Row 2 :玄海「ふ…復活した…スサノオが…旧世界最強の神が…！…もう…誰にも止める事は
+Row 2 :　できぬ…この世界は…滅亡……」_
+Screen Off :GCls :Mask 0,0 17,17 255 0
+Mask 63,0 17,17 255 0
+View 11,8,Gp010
+Screen On :Cnt 6
+*L1
+Wait 6 :Copy 52,120 12,8 11,8 3 0
+Copy 52,120 11,8 12,8 12 0
+Loop L1
+_:Screen Off :GCls :Mask 0,0 80,25 0 0
+View 17,8,Gp008
+Line 137 :Row 1 :斎藤「うおおおおッ！！」
+Call Tw
+Screen On
+*K1
+Wait 3 :Palette 3,000
+Wait 1 :Palette 3,FFF
+Ksnc K1
+Screen Off :GCls :Wait 6 :View 9,48,Gp088
+GGet :Screen On :Line 136 :Row 2 :新井「グレート痺れ光線～」
+Effect 27 :Wait 30 :Palette 1,675 2,FFF
+Wait 3 :Palette 1,342 2,000
+Wait 2 :Palette 1,675 2,FFF
+Wait 3 :Palette 2,675
+Wait 3 :Palette 1,342 2,564
+Line 145 :Row 2 :斎藤「あは～～～～～～～」_
+Grp 0 :GCls :View 2,32,GpTTL
+Grp 1 :_:Grp 0 :GCls :Grp 1 :Scn Prof
+
+*E.
+

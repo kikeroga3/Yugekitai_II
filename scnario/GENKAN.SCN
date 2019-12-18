@@ -1,0 +1,422 @@
+
+- ｻﾌﾞﾙｰﾁﾝ -
+*Tw
+Copy 40,60 0,137 0,136 15 1
+Ret
+
+- ﾒｲﾝ･ﾙｰﾁﾝ -
+*S.
+
+If Flg17=0 Then 00
+If Flg14=0 Then 00
+If Flg12=0 Then 00
+If Flg11=0 Then 00
+If Flg10=0 Then 00
+If Flg5=0 Then 00
+If Flg2=0 Then 00
+Jump 09
+
+*00
+Screen Off :GCls :View 17,8,Gp141
+GGet :Screen On :Line 136 :Row 2 :斎藤「いつきても　薄暗くて、汚い所だ。このホコリと、ニオイ‥たまらないや」_
+Flg0=0 :If Flg11=0 Then Kn
+*01
+Cls :Line 136 :Row 2 :ここは、正面玄関です。
+Line +4 :Row 1 :［１］見る
+Row 1 :［２］調べる
+Row 1 :［３］中庭に出る
+Line 149 :Row 26 :［４］旧校舎へ移動
+Row 26 :［５］新校舎へ移動
+Select 02,03,08,FS,FN
+*02
+Line 136 :Row 2 :斎藤「当たり前だけど、下駄箱が、沢山、並んでる。貼り紙も見えるな」_
+Jump 01
+*03
+Line 136 :Row 2 :〔調べる〕
+Line +4 :Row 1 :［１］貼り紙
+Row 1 :［２］下駄箱
+Select 04,05
+*04
+Line 136 :Row 2 :斎藤「なになに‥下駄箱は、キレイにだって？ムダさ」_
+Jump 01
+*05
+Line 136 :If Flg0=1 Then 06
+If Flg0=2 Then 07
+Row 2 :斎藤「中に　クツが、入ってる‥当たり前だな」_
+Flg0=1 :Jump 01
+*06
+Row 2 :斎藤「ラヴレターでも、入ってないかな‥入ってないな」_
+Flg0=2 :Jump 01
+*07
+Row 2 :斎藤「女の子のクツだ。クンクン…臭いな…きっと、ブスな娘に違いない」_
+Flg0=0 :Jump 01
+
+- 中庭 -
+*08
+Screen Off :GCls :View 17,8,Gp089
+GGet :Screen On
+Line 136 :Row 2 :斎藤「はあ‥、誰も　いないな…校舎内に戻ろう」_
+Jump 00
+
+*FS
+Scn Act1FS
+
+*FN
+Scn Act1FN
+
+- ｹﾝ -
+*Kn
+Flg11=1 :Cls :View 33,8,Gp110
+GGet :Line 136 :Row 2 :怒屋「あれ、斎藤じゃない」
+Row 2 :斎藤「ああ、ケンちゃん。今、帰るとこ？」
+Pause :Line 136 :Row 2 :怒屋「まァね。斎藤も？」
+Row 2 :斎藤「いや、僕は、ちょっと…人を　さがしているんだ」
+Pause :Line 136 :Row 2 :怒屋「だれ？」
+Row 2 :斎藤「よ、陽子ちゃんさ」
+Pause :Line 136 :Row 2 :怒屋「井ノ頭　陽子？」
+Row 2 :斎藤「そう」
+Pause :Line 136 :Row 2 :怒屋「ふぅん、今日は　見かけなかったけどなァ‥」
+Row 2 :斎藤「そっかぁ‥」
+Pause :Line 136 :Row 2 :怒屋「もう、帰っちゃったんじゃない？　それよりさ、斎藤！」
+Row 2 :斎藤「ん？」
+Pause :Line 136 :Row 2 :怒屋「ゲーセン寄ってかない？ＵＦＯキャッチャーやろうよ。ＵＦＯキャッチャー」
+Row 2 :斎藤「ああ…君の付けてる、それね‥いや、いい、遠慮しとくよ。僕は、もう少し
+Row 2 :　陽子ちゃんを　さがすとしよう」
+Pause :Line 136 :Row 2 :怒屋「そう？まぁいいや」
+Row 2 :斎藤「まぁいいやって、何それ、君‥」
+Pause :Line 136 :Row 2 :怒屋「６月には、文化祭だな！そろそろ　また、バンドの練習、始めようぜ！」
+Row 2 :斎藤「ああ、そうだね。まあ　君は、とりあえず、毎朝毎夕、寝る前の　うがいと
+Row 2 :　発声練習を欠かさないように」
+Pause :Line 136 :Row 2 :怒屋「ＯＫ！もう　やってるぜ！！じゃあ、バイバイ！！」
+Row 2 :斎藤「ああ、じゃ、」
+Pause :View 17,8,Gp141
+GGet :Effect 31 :Line 136 :Row 2 :斎藤「相変わらず　テンション高いな、彼は…だが、僕は　知っている。あのハイな
+Row 2 :　テンションの裏には、１年前の　あの日から、彼と　陽子ちゃんの仲が、結構、良く
+Row 2 :　なっているという事実がある事を…！彼も敵だ、油断は出来ないな…それよりも
+Row 2 :　陽子ちゃんは、どこに‥？本当に　もう、帰ってしまったのだろうか」_
+Jump 01
+
+*09
+Screen Off :GCls :View 17,8,Gp141
+View 64,8,Gp141d
+Mask 64,0 17,16 255 0
+Copy 8,120 64,8 42,8 15 0
+GGet :Screen On :Line 136 :Row 2 :斎藤「相変わらず、キタナイ所だ…ん？誰か、いるな…？」
+Pause :Line 136 :Row 2 :斎藤「いや‥あの後ろ姿は、どこかで見たような‥」
+Pause :Line 137 :Row 1 :斎藤「ああ‥あのビウチフルな後ろ姿‥！
+Row 1 :　あれは陽子ちゃん！！男と一緒に‥！」
+Call Tw
+Pause :Line 146 :Row 1 :　一体、何をしているゥ！！」
+Call Tw
+Line 136 :Row 2 :斎藤「あ‥あれが、富沢の言っていた　丸刈りの男‥！あ‥あんなに顔を近づけて、
+Pause :Line 136 :Row 2 :斎藤「よく見たら、あいつの着ているのは、詰め襟じゃないか！
+Row 2 :　一体、どういう奴なんだ！？」
+Pause :Copy 6,120 72,8 42,8 15 0
+GGet :Line 150 :Row 1 :斎藤「！！」
+Call Tw
+Line 136 :Row 2 :その時、
+Pause :Line 150 :Row 1 :斎藤「な‥な‥！！」
+Call Tw
+Line 136 :Row 2 :男の顔が、井ノ頭　陽子の顔に　ゆっくりと、近づいていった。_
+Screen Off :GCls :View 17,8,Gp144e
+GGet :Screen On :Effect 11
+Line 137 :Row 1 :斎藤「うわあああっ！！」
+Call Tw
+Line 149 :Row 2 :斎藤は、たまらず　飛び出していた。
+Pause :Line 137 :Row 1 :陽子「キャーーーッ！！」
+Call Tw
+Line 145 :Row 2 :男「ウウッ‥！！」_
+Screen Off :GCls :View 17,8,Gp198
+GGet :Screen On :Line 137 :Row 1 :斎藤「どうだ！！」
+Call Tw
+Line 145 :Row 2 :男「ギギギ‥」
+Row 2 :陽子「何が『どうだ！！』よ！何やってんのよ、斎藤君！やめなさい！！」
+Pause :Line 136 :Row 2 :斎藤「コッ‥コイツは、君に　チューをしようと‥！！」
+Row 2 :陽子「チュー？」
+Pause :Line 146 :Row 1 :陽子「あんたってバカじゃないの！？
+Call Tw
+Line 136 :Row 2 :斎藤「その‥キ‥キッスの事だよ‥！」
+Line 154 :Row 2 :　彼は、私の目に入ったゴミを取ってくれてただけよ！！
+Row 2 :　キスだなんて、そんな‥とんでもない誤解だわ！！」
+Pause :Line 146 :Row 1 :　なんだ、そうだったのか‥！！」
+Call Tw
+Line 136 :Row 2 :斎藤「ゴミ‥？あ‥ああっ！！
+Line 154 :Row 2 :陽子「何だ、そうだったのかじゃないでしょ！！‥放しなさいよ！！」_
+Screen Off :GCls :View 17,8,Gp201b
+View 17,8,Gp201a
+GGet :Screen On :Line 136 :Row 2 :陽子「大丈夫‥？零戦丸くん」
+Row 2 :零戦丸「私は、大丈夫です。ありがとう」
+Pause :Line 136 :Row 2 :斎藤「そ‥その‥君、すまなかった…、あらぬ誤解で、殴ったりして‥‥
+Row 2 :　つい、カッとなって‥」
+Pause :Line 136 :Row 2 :零戦丸「いや、いいんだ。間違いは、誰にでもあるさ」
+Pause :Line 136 :Row 2 :斎藤「す、すいませんでした」
+Pause :View 17,8,Gp199
+Line 136 :Row 2 :零戦丸「じゃあ、私は、これで…」
+Row 2 :陽子「うん、じゃあね」_
+Screen Off :GCls :View 17,8,Gp201b
+GGet :Copy 14,120 64,8 50,8 15 0
+Screen On :Line 136 :Row 2 :斎藤「…‥‥‥…」
+Pause :Line 136 :Row 2 :陽子「さて、私も帰ろっと」
+Pause :Line 136 :Row 2 :斎藤「あ‥あの、陽子ちゃん」
+Row 2 :陽子「あんたって、強姦魔だとばかり思ってたけど、暴行魔も兼ねていたのね…」
+Pause :Line 136 :Row 2 :斎藤「それは、誤解だ！」
+Row 2 :陽子「それにくらべて、転校生の零戦丸君は、たくましいし、さわやかだし
+Row 2 :　落ち着いてるし…」
+Pause :Line 136 :Row 2 :斎藤「転校生？」
+Row 2 :陽子「そうよ」
+Pause :Line 136 :Row 2 :斎藤「れ…」
+Row 2 :陽子「え？」
+Pause :Line 136 :Row 2 :斎藤「零戦丸って名前、トンガッてるよね‥」
+Row 2 :陽子「…‥そういえば…そうね」_
+Screen Off :GCls :View 17,8,Gp227
+GGet :Screen On :Line 136 :Row 2 :陽子「おかしい！私、気付かなかったわ」
+Line +4 :Row 2 :斎藤（ああ‥陽子ちゃんが、笑った‥！）
+Pause :Line 136 :Row 2 :斎藤「あ‥そうだ！陽子ちゃん！！君に渡したいものがあったんだ！！」
+Row 2 :陽子「なあに？」_
+Screen Off :GCls :View 17,8,Gp018
+Mask 0,16 80,8 255 0
+Screen On :Cnt 30
+*L0
+Wait 1 :Copy 46,180 17,10 17,8 3 0
+Loop L0
+Mask 0,0 80,25 0 0
+Col 2 :Line 136 :Row 2 :斎藤「いや、実は、これなんだけどね…」_
+Screen Off :GCls :View 17,8,Gp202a
+GGet :Col 7 :Screen On :Line 136 :Row 2 :陽子「何これ…」
+Row 2 :斎藤「い‥いや、僕の気持ちだよ‥！」
+Pause :Line 136 :Row 2 :陽子「陽子へって、これ‥呼び捨てじゃないのよ‥」
+Row 2 :斎藤「へへへ‥」
+Pause :Line 136 :Row 2 :陽子「あ、この封筒、わらばん紙で作ってある！」
+Row 2 :斎藤「いや、ちょうど、家に　封筒が無くってさ‥でも、大切なのは　中身だよね！
+Row 2 :　開けて、見てくれ！！」
+Pause :View 31,8,Gp202b
+GGet :Line 136 :Row 2 :ぱりっ
+Line +4 :Row 2 :陽子「ああっ！ごはんつぶで、とめてある！信じられない！！」
+Row 2 :斎藤「の‥のりが無くてさ、やむをえず、べべ、弁当から‥」
+Pause :View 26,8,Gp202c
+GGet :Line 159 :Row 1 :ビリーーーッ
+Call Tw
+Line 136 :Row 2 :陽子「中身は、大学ノートの切れはし‥しかも何か、シミのようなものが付いてる…
+Row 2 :　だめだわ、これ‥読めない‥」
+Pause :Line 137 :Row 1 :斎藤「アア～～～ッ！！陽子ちゃん！！
+Row 2 :　君は、何て事をッ…！！」
+Call Tw
+Pause :Line 137 :Row 1 :斎藤「それには、１年前の在らぬ誤解を
+Row 2 :　解く説明、その他、僕のまごごろを
+Row 2 :　しるした愛の詞が‥！！」
+Call Tw
+_:Screen Off :GCls :View 17,8,Gp197
+GGet :Line 146 :Row 1 :斎藤「し‥資格ッ！！」
+Call Tw
+Line 136 :Row 2 :陽子「斎藤君！‥あなたには、女の子に　手紙を出す資格は、無いわ！！」
+Screen On :Pause :Line 136 :Row 2 :陽子「これじゃあ、どんな女の子だって、私と同じ事するわよ！…、手紙書くんなら
+Row 2 :　国語の教科書とか読んで、一般常識を身に付けてからにしなさいよ！」
+Row 2 :斎藤「…アゥァ…」
+Pause :Line 136 :Row 2 :斎藤（確かに　彼女の言う通りだった。しかし、手紙を破られた瞬間、僕の背中を
+Row 2 :　走った電流のようなものに、僕は　何か、マゾフィスティックな快感を憶えていた。
+Row 2 :　タマラナイ刺激だった‥死んでしまうかと、思ったよ！）_
+Screen Off :GCls :View 17,8,Gp201b
+Copy 17,120 0,8 63,8 15 0
+GGet :Screen On :Line 136 :Row 2 :陽子「じゃあね、私、帰る！」
+Row 2 :斎藤「アァッ！」
+Pause :Line 136 :Row 2 :陽子「まごころは　ウレシイけど、それじゃあ、だめね…」
+Pause :View 29,8,Gp201c
+Line 136 :Row 2 :陽子ちゃんは、行ってしまった。_
+Screen Off :GCls :View 17,8,Gp195
+GGet :Screen On :Line 136 :Row 2 :斎藤「やっぱり、駄目だったなあ‥‥」
+Line +4 :Row 2 :斎藤の目は、虚ろだった。
+Pause :Line 136 :Row 2 :斎藤「再起不能だ‥１００万発のパンチを食らったような大打撃だよ‥‥
+Row 2 :　もう、立ち直れない‥‥」
+Pause :View 17,8,Gp254
+GGet :Effect 10
+Line 136 :Row 2 :田中「邪魔だよッ、斎藤くんッ！！」
+Row 2 :斎藤「あっ！！」
+Pause :View 17,8,Gp254
+GGet :Line 136 :Row 2 :斎藤「き‥貴様は、田中ァ‥！まだ、学校に　いたのか…」
+Pause :Line 146 :Row 1 :斎藤「尻を蹴ったというのか！！」
+Call Tw
+Line 136 :Row 2 :田中「今、帰るところさ。君が　そこに立っていると、靴が　とれなかったのでね‥」
+Pause :Line 136 :Row 2 :田中「ハハハ、ごめんごめん、あんまり、蹴り易い位置にあったので、つい足が
+Row 2 :　先に出てしまったのさ！」
+Pause :Line 136 :Row 2 :斎藤「貴様‥今に見ろ、今に‥いつか‥いつか必ず‥‥ブッ殺してやる！！」
+Row 2 :田中「フフ‥こわいこわい、では『ブッ殺』される前に帰るとするか‥」
+Pause :Line 136 :Row 2 :女の子Ａ「あ～ん、まって、源治さまァ～ん」
+Row 2 :女の子Ｂ「カバン、お持ちしますわ～ッ」
+Pause :Line 136 :Row 2 :斎藤「うぐう、うぐうぅ…」
+Line +4 :Row 2 :田中源治と、その親衛隊は去った。_
+Screen Off :GCls :View 17,8,Gp195
+GGet :Screen On :Line 136 :Row 2 :斎藤「駄目だったか…僕の　まごころは、陽子ちゃんに通じなかった…
+Row 2 :　誤解の解けぬまま、２人は、終わるんだ…」
+Pause :Line 136 :Row 2 :斎藤「僕も帰ろう‥もう学校に、用はない…」
+Pause :Line 136 :Row 2 :斎藤「ん‥いや、まてよ、まごころ？‥陽子ちゃんは、何て、言ったろう‥！？
+Row 2 :　たしか『まごころは　ウレシイけど、それじゃあ、だめね‥』と‥！！そう！！
+Row 2 :　まごころは、通じていた！！ただ、それを伝える手法が、間違っていたのだ！！」
+Wait 6 :Palette 8,333 9,111
+Wait 6 :Palette 8,666 9,222
+Wait 6 :Palette 8,999 9,333
+Wait 6 :Palette 8,CCC 9,555
+Wait 6 :Palette 8,FFF 9,777
+Pause :Line 136 :Row 2 :斎藤「それに、国語の教科書を読めと‥そうか！確か、国語の本の最後の方のページ
+Row 2 :　には、手紙の書き方などが、載っていた筈ッ‥！！」
+Wait 6 :Palette 9,000
+Wait 6 :Palette 9,FFF
+Wait 6 :Palette 9,BBB
+Wait 6 :Palette 9,777
+Pause :Line 136 :Row 2 :斎藤「そうか‥彼女は、遠回しに『ちゃんとした手紙を書いてきなさい。そうすれば
+Row 2 :　ちゃんと、読んであげる』と、言っていたに違いない！！」
+Pause :Line 136 :Row 2 :斎藤「そんな彼女の気持ちも考えずに‥僕は‥僕は、なんて、大馬鹿者なんだ！！
+Row 2 :　彼女の事を、考えていなかったのは、この僕の方だ！！まごころを伝えるための
+Row 2 :　努力を怠った‥彼女に　誠意をあらわさなかったのだ‥！！」
+Pause :Line 136 :Row 2 :斎藤「よおし、そうと決まれば、早速、帰りに　文房具屋で、封筒と、のり‥
+Row 2 :　シール等を買っていこうッ！そして、家で、教科書を読んで、手紙を完成させ、
+Row 2 :　明日、もう１度、陽子ちゃんに　アタックだ！！」_
+Screen Off :GCls :View 17,8,Gp141
+View 27,8,Gp201s
+GGet :Line 137 :Row 1 :斎藤「イヤッホウゥ！！」
+Call Tw
+Line 149 :Row 2 :斎藤は、喜びのあまり、あたりを走りまわった。
+Screen On :Pause :Line 136 :Row 2 :斎藤「そうだ！教室に　荷物を置いたままだった！マサムネも‥ヤバイヤバイ、もう
+Row 2 :　少しで、忘れて帰ってしまうところだった！」_
+Grp 0 :GCls
+
+Flg0=0 :Flg1=0 :Flg2=0 :Flg3=0 :Flg4=0 :Flg5=0 :Flg6=0 :Flg7=0 :Flg8=0 :Flg9=0
+Flg10=0 :Flg11=0 :Flg12=0 :Flg13=0 :Flg14=0 :Flg15=0 :Flg16=0 :Flg17=0
+
+View 17,8,Gp169
+View 36,8,Gp169b
+GGet :Grp 1 :Line 136 :Row 2 :斉藤は、３年９組の教室に戻った。
+Pause :Line 136 :Row 2 :男子生徒「ハァ…ハァ…」
+Row 2 :斎藤「ん‥誰かいるぞ」_
+*10
+Cls :Line 136 :Row 2 :斉藤「‥…！？」
+Line +4 :Row 1 :［１］見る
+Row 1 :［２］話す
+Row 1 :［３］なぐる
+Select 11,12,13
+*11
+Line 136 :Row 2 :男子生徒が　１人、頭を抱えて、呻いている‥_
+Jump 10
+*12
+Line 136 :Row 2 :斎藤「きっ‥君！？」
+Row 2 :男子生徒「ぐううう‥！！」_
+Jump 10
+*13
+Screen Off :View 17,8,Gp144d
+Line 137 :Row 1 :斎藤「受け止めたッ！？」
+Call Tw
+Effect 20 :Screen On :_
+Screen Off :GCls :View 17,8,Gp146
+GGet :Line 137 :Row 1 :斎藤「君は‥加川君！？」
+Call Tw
+Screen On :Line 145 :Row 2 :加川「ＨＡ‥‥Ａ‥Ａ‥」
+Pause :Line 136 :Row 2 :斎藤（彼の名は、加川　満。以前、スサノオ事件の時に　協力してくれた、アライの
+Row 2 :　幼なじみだ。だが、その時に　アライから受けた　呪いの後遺症で、アライとの記憶
+Row 2 :　を失っている…）
+Pause :Line 136 :Row 2 :加川「サ‥イトウ‥か」
+斎藤「ど‥どうしたというんだ、そのようすは‥！？」
+Pause :Line 136 :Row 2 :加川「わ‥わからない‥頭に、何か‥ウウッ‥！！」
+Row 2 :斎藤「しっかりしろ」
+Pause :Line 136 :Row 2 :加川「助けて‥ボクが‥ボクでなくなって‥うう‥ああＡＡＡＡＡＡＡＡッ！！」
+Row 2 :斎藤「か‥加川君‥！？」
+Pause :Line 136 :Row 2 :加川「Ａッ！！ＡＲＡＩは…あ‥ぁらぁ‥いィ‥は…ア‥アライじゃあなかった！！
+Row 2 :　あれはッ、アライじゃあ…なッ！！ＡＡＡＡＡ…」
+Pause :Line 137 :Row 1 :斎藤「加川君！今‥アライと言ったか！？
+Row 1 :　アライの事を‥！！」
+Call Tw
+Pause :Line 137 :Row 1 :加川「ＡＡＡＡＡＡッ！」
+Call Tw
+Line 145 :Row 2 :斎藤「！！」
+Pause :Line 136 :Row 2 :斎藤（わかる‥！！加川君の体から、何か、異質の気が、立ちのぼっているッ！！）
+Pause :Line 137 :Row 1 :加川「ひいっ！！」
+Call Tw
+Line 145 :Row 2 :斎藤「…加川君、どうした‥！？」
+Pause :Wait 12 :Palette 4,120
+Wait 11 :Palette 4,342
+Wait 10 :Palette 4,564
+Wait 9 :Palette 4,786 3,120
+Wait 6 :Palette 3,231
+Wait 6 :Palette 3,342
+Wait 6 :Palette 3,453
+Line 136 :Row 2 :斎藤「！！‥うっ！！」_
+Screen Off :GCls :View 17,8,Gp031
+Line 137 :Row 1 :斎藤「加川ッ！！」
+Call Tw
+Effect 10 :Screen On :_:Screen Off :GCls :View 17,8,Gp171
+GGet :Line 155 :Row 1 :　君は、人間ではないのかッ！！」
+Call Tw
+Line 136 :Row 2 :斎藤「…う‥薄いとはいえ、鉄板‥！！それを　紙のように…このＰｏｗｅｒは、
+Row 2 :　人のものではない！そして‥アームリングが感じている‥この反応‥加川君ッ！！
+Screen On :Pause :Line 136 :Row 2 :加川「サイトウ‥‥殺す‥‥駄目だ‥逃げろ、斎…！！…こ‥ろ‥す‥」
+Pause :Line 137 :Row 1 :斎藤「加川君！！」
+Call Tw
+Line 145 :Row 2 :加川「ころす‥」_
+*14
+Cls :Line 136 :Row 2 :斉藤「…くッ、どうすれば‥！？」
+Line +4 :Row 1 :［１］闘う
+Row 1 :［２］逃げる
+Select 16,15
+*15
+Line 136 :Row 2 :斎藤「だめだ！この状況で、逃げるなど‥
+Row 2 :　太陽の聖戦士としての資格が問われるッ！」_
+Jump 14
+*16
+Line 136 :If Flg0=1 Then 17
+Row 2 :斎藤「す‥素手では、不利だ！！たちまち、ひねりつぶされてしまう！！」_
+Flg0=1 :Jump 14
+*17
+Row 2 :斎藤「そうだ！！僕の机に　マサムネがッ‥！！」_
+Screen Off :GCls :Grp Gp230
+Mask 0,0 80,16 255 0
+Mask 17,8 46,8 0 0
+Copy 46,64 17,128 17,64 15 0
+Screen On :Cnt 3
+*L1
+Effect 15 :Copy 16,64 0,0 32,64 15 0
+Wait 6 :Copy 16,64 16,0 32,64 15 0
+Wait 6 :Copy 16,64 32,0 32,64 15 0
+Wait 6 :Copy 16,64 48,0 32,64 15 0
+Wait 6 :Copy 16,64 64,0 32,64 15 0
+Wait 6 :Copy 16,64 0,64 32,64 15 0
+Wait 6 :Loop L1
+Copy 16,64 0,0 32,64 15 0
+Wait 6 :Cls :Effect 22 :_
+Screen Off :Grp ZeRo
+Mask 0,0 80,25 0 0
+View 17,8,Gp160b
+Line 137 :Row 1 :斎藤「止むを得まい！！魔を切り裂く
+Row 1 :　天上の芸術剣・正宗で、相手になろう
+Row 1 :　！！」
+Call Tw
+Screen On
+*L2
+Wait 1 :Palette 5,FFF 6,675
+Wait 1 :Palette 5,565 6,343
+Wait 1 :Palette 5,454 6,232
+Ksnc L2
+Screen Off :GCls :View 2,8,Back1
+GGet :As 2 View 2,8,Kag0
+Screen On :Col 4 :Line 144 :Row 2 :斎藤「止めろ～！！目を覚ませ～！！」
+Pause :As 2 View 2,8,Kag1
+Effect 29 :Line 144 :Row 2 :斎藤「…くうッ、何て　パワァなンだ‥！このままでは、負けるッ！？」
+Pause :As 2 View 2,8,Kag2
+Effect 22 :Line 144 :Row 2 :斎藤「…いけるッ！この調子ならば、勝てるッ！！」_
+Line +4 :Row 2 :しかし、その時‥！_
+Col 7 :Screen Off :GCls :View 17,8,Gp073
+Line 137 :Row 1 :斎藤「加川！！ここは、３階だぞ！！」
+Call Tw
+Effect 32 :Screen On :Wait 15 :Effect 11 :_
+Screen Off :GCls :View 31,30,Gp210
+GGet :Mask 31,10 19,18 255 0
+Screen On :Line 136 :Row 2 :斎藤「加川ァ！！」
+Pause :Cnt 120
+*L3
+Wait 1 :Copy 20,171 31,31 31,30 15 0
+Loop L3
+Mask 0,0 80,25 0 0
+Line 136 :Row 2 :斎藤「いない！！‥！！‥！！‥‥なんてことだ‥！！すばやく着地して、どこかに
+Row 2 :　身を隠したのだ‥！！人間の能力ではない！！一体‥大変な事になった‥危険だ‥
+Row 2 :　一般生徒を校舎から、避難させねば‥！！」_
+Grp 0 :GCls :Grp 1 :Scn FS3D3
+
+*E.
+

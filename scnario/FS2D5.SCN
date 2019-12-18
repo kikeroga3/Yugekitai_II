@@ -1,0 +1,140 @@
+
+- ｻﾌﾞﾙｰﾁﾝ -
+*Tw
+Copy 40,60 0,137 0,136 15 1
+Ret
+
+- ﾒｲﾝ･ﾙｰﾁﾝ -
+*S.
+
+*00
+Screen Off :GCls :View 17,8,Gp140
+GGet :Mask 0,0 80,25 0 0
+Screen On :Col 7 :Line 136 :Row 2 :斎藤「やつら‥このフロアの　どこかに　いるはずだが‥」_
+*01
+Cls :Line 136 :Row 2 :ここは、旧校舎２階の廊下。
+Line +4 :Row 1 :［１］２年の各教室へ
+Row 1 :［２］生物室
+Row 1 :［３］トイレ
+Line 149 :Row 26 :［４］シャッター前
+Select 02,11,To,12
+*02
+Line 136 :Row 2 :〔２年の各教室へ〕
+Line +4
+Row 1 :［１］２年１組
+Row 1 :［２］２年２組
+Row 1 :［３］２年３組
+Line 149 :Row 26 :［４］２年４組
+Row 26 :［５］２年５組
+Row 26 :［６］２年６組
+Line 149 :Row 52 :［７］２年７組
+Row 52 :［８］２年８組
+Row 52 :［９］２年９組
+Select 03,09,05,03,04,05,07,04,05
+*03
+Screen Off :GCls :View 17,8,Gp163
+Jump 06
+*04
+Screen Off :GCls :View 17,8,Gp169
+Jump 06
+*05
+Screen Off :GCls :View 17,8,Gp176
+*06
+Screen On :Line 136 :Row 2 :斎藤「誰も　いない‥気配も　無い‥」_
+Jump 00
+
+- 2年7組(ｷﾘｨ) -
+*07
+If Flg0=0 Then 08
+Line 136 :Row 2 :斎藤「７組の教室には　もう、用は無い」_
+Jump 01
+*08
+Flg0=1 :Scn Act1D5
+
+- 2年2組(ﾌｧｯｶｧ) -
+*09
+If Flg0=1 Then 10
+Line 136 :Row 2 :斎藤「カギが、掛かっている」
+Row 2 :野笛「斎藤君、さっきのカギを‥」
+Pause :Line 136 :Row 2 :斎藤「わかってる」
+Line +4 :Row 2 :ガチャ　ガチャ
+Pause :Line 136 :Row 2 :斎藤「だめだ‥！このカギでは、開かない」_
+Jump 01
+*10
+Scn Act2D5
+
+*11
+Line 136 :Row 2 :斎藤「生物室では、カギを拾ったが‥」_
+Jump 01
+
+*To
+Line 136 :Row 2 :斎藤「時間が、無い‥シャッターを開く　カギは、誰が‥！？」_
+Jump 01
+
+- ｼｬｯﾀｰ前 -
+*12
+Screen Off :GCls :View 17,8,Gp280
+GGet :Mask 64,1 13,11 255 0
+Screen On :Col 2 :Line 136 :Row 2 :斎藤「何とかして、開かねば‥！」_
+*13
+Cls :Line 136 :Row 2 :シャッターの前です。
+Line +4 :Row 1 :［１］見る
+Row 1 :［２］叩く
+Row 1 :［３］レイカノンを使う
+Line 149 :Row 26 :［４］カギを使う
+Row 26 :［５］廊下に戻る
+Select 14,15,16,18,00
+*14
+Line 136 :Row 2 :斎藤「くそっ、この扉さえ開けば、体育館は、すぐ、そこなのに‥！！」_
+Jump 13
+*15
+Effect 12 :Line 136 :Row 2 :斎藤「駄目だ。びくともしない」_
+Jump 13
+
+- ﾚｲｶﾉﾝ -
+*16
+Line 136 :Row 2 :斎藤「野笛君。そいつで、何とかならないかな？」
+If Flg0=1 Then 17
+Row 2 :野笛「ためだ。暖気調整に　まだ、数分　要る‥」_
+Jump 13
+*17
+Row 2 :野笛「やってみよう」_
+Screen Off :GCls :View 17,8,Gp312a
+Col 7 :Line 137 :Row 1 :野笛「光ォーーーーッ！！」
+Call Tw
+Screen On :Copy 12,40 16,8 64,48 15 0
+Wait 36 :Cnt 10
+*L0
+Wait 4 :Copy 12,40 64,8 16,8 15 0
+Effect 39 :Wait 6 :Copy 12,40 64,48 16,8 15 0
+Loop L0
+_:Screen Off :GCls :View 17,8,Gp280
+GGet :Screen On :Col 2 :Line 136 :Row 2 :野笛「だめだ。時間のムダだった‥！！」
+Row 2 :黒爽「あの開発中のやつは、使えないのか？」
+Pause :Line 136 :Row 2 :野笛「駄目だ。まだ、調整が済んでない。使えない事はないが、下手をすれば、
+Row 2 :　暴発の危険がある」
+Row 2 :黒爽「そうか、それじゃあな‥」_
+Jump 13
+
+- ｶｷﾞ使う -
+*18
+If Flg0=1 Then 20
+*19
+Screen Off :GCls :View 28,8,Gp260b
+Screen On :Col 7 :Line 136 :Row 2 :黒爽「どうだ？」
+Row 2 :斎藤「違う‥このカギではないようだ」_
+Jump 12
+*20
+Line 136 :Row 2 :〔カギを使う〕
+Line +4
+Row 1 :［１］生物室で、拾ったカギ
+Row 1 :［２］キリィの持っていたカギ
+Select 19,21
+*21
+Screen Off :GCls :View 28,8,Gp260b
+Screen On :Col 7 :Line 136 :Row 2 :黒爽「どうだ？」
+Row 2 :斎藤「違うな。やはり、このカギでも　ないらしい」_
+Jump 12
+
+*E.
+

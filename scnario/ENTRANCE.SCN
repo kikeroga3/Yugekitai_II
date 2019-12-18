@@ -1,0 +1,110 @@
+
+- ｻﾌﾞﾙｰﾁﾝ -
+*Tw
+Copy 40,60 0,137 0,136 15 1
+Ret
+
+- ﾒｲﾝ･ﾙｰﾁﾝ -
+*S.
+
+*00
+Screen Off :GCls :View 17,8,Gp141
+If Flg9=0 Then 01
+GGet :Screen On :Line 136 :Row 2 :斎藤「人の姿は、見当たらない…」_
+Jump 03
+*01
+If Flg6=0 Then 02
+If Flg8=0 Then 02
+Jump 08
+*02
+View 17,8,Gp141a
+GGet :Screen On :Line 136 :Row 2 :斎藤「一年生だな。ＨＲ（ホームルーム）が終わって、帰るところか…この調子で
+Row 2 :　誰も　いなくなってくれれば、いいのだが…」_
+*03
+Cls :Line 136 :Row 2 :ここは、正面玄関です。
+Line +4 :Row 1 :［１］見る
+Row 1 :［２］話す
+Row 1 :［３］中庭に出る
+Line 149 :Row 26 :［４］旧校舎へ移動
+Row 26 :［５］新校舎へ移動
+Select 04,05,Gd,FS,FN
+
+*Gd
+Line 136 :Row 2 :斎藤「今は、１人でも多くの生徒を　校舎内から、避難させねば…！」_
+Jump 03
+
+*FS
+Scn FS1D3
+
+*FN
+Scn FN1D3
+
+*04
+Line 136 :Row 2 :斎藤「特に‥変わったところは‥ないな」_
+Jump 03
+
+*05
+Line 136 :If Flg9=0 Then 06
+Row 2 :斎藤「玄関には　もう、生徒達は、見当たらないが…」_
+Jump 03
+*06
+If Flg8=0 Then 07
+Row 2 :斎藤「この調子で、どんどん帰ってくれればよいが…」_
+Jump 03
+*07
+View 27,8,Gp038
+GGet :Line 136 :Row 2 :斎藤「ねえ、そこの君、あやしい者を見なかったかい？」
+Row 2 :男子生徒「え？‥知らねえなあ。わっ、何だよソレ、本物？」
+Pause :Line 136 :Row 2 :斎藤「あ、ああ、これは‥もちろん、オモチャさ。浅草で、買ったんだよ」
+Row 2 :男子生徒「すげーな、本物みたい」
+Pause :View 17,8,Gp141a
+GGet :Line 136 :Row 2 :その男子生徒は、去った。_
+Flg8=1 :Jump 03
+
+- ｱｰﾑ･ﾘﾝｸﾞ点滅 -
+*Am
+Wait 1 :Palette 8,CDA
+Wait 1 :Palette 8,DEC
+Wait 1 :Palette 8,FFF
+Ksnc Am
+Ret
+
+- 宣戦布告 -
+*08
+GGet :Screen On :Line 136 :Row 2 :斎藤「生徒達は　もう、見当たらない‥‥？‥何だ、この感じ‥気配は‥」
+Pause :View 17,8,Gp141b
+GGet :Line 136 :Row 2 :斎藤「！！‥…アームリングが、感じているッ‥！？この反応、まさかッ！！」
+Call Am
+Cls :Line 136 :Row 2 :斎藤「姿は、見えないが…！」
+Call Am
+Cls :View 17,8,Gp141
+GGet :Line 137 :Row 1 :斎藤「加川君か！？いるなら、返事をして
+Row 1 :　くれッ！！」
+Call Tw
+Pause :Line 136 :Row 2 :斎藤「異質な気の流れ…これは、窓の方から、ただよってくる…」
+Pause :View 31,8,Gp141c
+GGet :Line 137 :Row 1 :斎藤「！？加川君ッ！！それに‥さっきの
+Row 1 :　オカマも！！」
+Call Tw
+Pause :Line 136 :Row 2 :加川「…‥‥‥…」
+Row 2 :金髪男「ふふふ‥」
+Pause :Line 136 :Row 2 :斎藤「貴様…！！」
+Row 2 :金髪男「宣戦布告よ。遊撃隊・チームリーダー、斎藤浩壱」
+Pause :Line 136 :Row 2 :Row 2 :斎藤「貴様ァ‥一体、加川君に　何をした！？」
+Row 2 :金髪男「やったのは、私ではないわ…それどころか、彼と　私は、同類」
+Pause :Line 136 :Row 2 :斎藤「…何？」
+Row 2 :金髪男「闇討ちに　気をつける事ね…」
+Pause :Line 146 :Row 1 :金髪男「ホホホホホッ」
+Call Tw
+Line 136 :Row 2 :斎藤「まて‥貴様等の目的は、何だ！！」
+Pause :View 17,8,Gp141
+GGet :Effect 31 :Line 137 :Row 1 :斎藤「まてえっ！！」
+Call Tw
+Line 149 :Row 2 :謎の金髪男と　加川君は、風のような疾さで、走り去った。
+Pause :Line 136 :Row 2 :斎藤「何ていう事だ。敵が　２人に増え…いや、あの話し方からすれば、他にも
+Row 2 :　まだ、いるようだ…、たった１人で、闘えるのか…僕はッ！」
+Line +4 :Row 2 :斎藤は、覚悟を決めねばならなかった。_
+Flg9=1 :Jump 03
+
+*E.
+

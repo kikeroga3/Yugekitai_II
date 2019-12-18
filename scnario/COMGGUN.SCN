@@ -1,0 +1,291 @@
+
+- ｻﾌﾞﾙｰﾁﾝ -
+*Tw
+Copy 40,60 0,137 0,136 15 1
+Ret
+
+- ﾃﾝﾒﾂ -
+*Pk
+Wait 3 :Palette 4,000
+Wait 1 :Palette 4,EFD
+Ksnc Pk
+Ret
+
+- ｺﾝﾋﾟｭｰﾀ･ﾎﾞｲｽ(1) -
+*Cv
+Wait 1 :Palette 4,786
+Wait 1 :Palette 4,AB9
+Wait 1 :Palette 4,EFC
+Wait 1 :Palette 4,564
+Ksnc Cv
+Ret
+
+- ｺﾝﾋﾟｭｰﾀ･ﾎﾞｲｽ(2) -
+*Kp
+Wait 1 :Palette 5,897
+Wait 1 :Palette 5,BCA
+Wait 1 :Palette 5,EFD
+Wait 1 :Palette 5,BCA
+Ksnc Kp
+Ret
+
+- ﾒｲﾝ･ﾙｰﾁﾝ -
+*S.
+Screen Off :GCls :View 0,8,Gp462
+Grp 0 :Mask 0,0 80,17 255 0
+Mask 17,1 46,15 0 0
+Screen On :Grp 1 :_
+GCls :View 17,8,Gp463
+_:Screen Off :GCls :View 0,8,Gp461
+Copy 17,17 17,136 0,136 15 0
+Screen On :Line 136 :Row 2 :斎藤「とにかく、みんなが、無事で　良かった」_
+GCls :View 0,8,Gp201e
+GGet :Col 2 :Line 136 :Row 2 :富沢「一般生徒達は　もうすぐ、目を覚ましそうな気配だ」_
+Row 2 :黒爽「解毒ガスが、間に合ったんだな」
+Pause :Line 136 :Row 2 :斎藤「野笛君は、どうしたんだろう？」_
+Row 2 :富沢「捜さなくてはな」
+Pause :Line 136 :Row 2 :斎藤「うん。彼女の話が　本当だとすれば、黒爽の恐ろしい推理が、当たっている
+Row 2 :　という事になるからね」
+Pause :Effect 45
+Cnt 10
+*L0
+Wait 1 :Copy 46,120 17,8 17,7 15 0
+Wait 1 :Copy 46,120 17,7 17,9 15 0
+Wait 1 :Copy 46,120 17,9 17,8 15 0
+Loop L0
+Line 136 :Row 2 :黒爽「ナンだ‥？」_
+Row 2 :弥月「やだぁ‥地震ですか？」_
+GCls :View 17,8,Gp466
+Effect 22 :_
+Screen Off :View 0,8,Gp201e
+Copy 16,73 0,8 18,48 15 0
+Screen On :Line 136 :Row 2 :黒爽「！！」
+Cnt 17
+*L1
+Wait 9 :Copy 18,73 18,48 17,48 12 0
+Loop L1
+Wait 24 :Screen Off :GCls :View 17,8,Gp402
+Col 7 :Line 137 :Row 1 :富沢「伏せろおぉ！！」
+Call Tw
+Screen On :Call Pk
+GCls :View 17,8,Gp141D8
+_:GCls :View 17,8,Gp467
+_:Screen Off :View 17,8,Gp472
+Line 137 :Row 1 :黒爽「何だとォ！？」
+Call Tw
+Effect 11 :Screen On :_
+GCls :View 17,8,Gp412
+Line 136 :Row 2 :ヘガス「素晴らしい攻撃能力だったぞ！　ファッカーの“爆炎”…
+Row 2 :　シールドが　破壊され、幾つかの機能も　失った！！
+Row 2 :　だが、このタルカス、貴様等を　ひねり潰すには、まだまだ、充分な力を
+Row 2 :　備え持っているだろう！！」_
+GCls :View 0,8,Gp489
+Effect 36 :_
+Screen Off :View 0,8,Gp461
+Copy 12,38 64,8 34,90 15 0
+Copy 14,72 2,81 64,8 15 0
+Copy 17,17 17,136 0,136 15 0
+GGet :Screen On :Line 136 :Row 2 :黒爽「斎藤！！」
+Row 2 :斎藤「大丈夫！肩に　かすっただけだ！！」
+Pause :View 27,8,Gp461a
+Effect 30 :Wait 30 :Copy 16,73 0,8 34,55 15 0
+Effect 38 :Wait 15 :Copy 14,72 64,8 36,55 15 0
+_:GCls :View 17,8,Gp465
+Wait 50 :Palette 1,897 2,DEC 3,BCA 5,675
+Wait 10 :Palette 1,AB9 2,EFD 3,DEC 5,897
+Wait 10 :Palette 1,CDB 3,EFD 5,AB9
+Wait 10 :Palette 1,DEC 5,CDB
+Wait 10 :Palette 1,EFD 5,DEC
+Wait 10 :Palette 5,EFD
+Wait 40 :Screen Off :View 0,8,Gp489
+Effect 36 :Screen On :_
+GCls :View 17,8,Gp475
+GGet :Line 136 :Row 2 :斎藤「！！黒爽‥！！」
+Pause :Line 136 :Row 2 :斎藤「も‥もう、駄目なのか…」
+Pause :Line 137 :Row 1 :野笛「ヘェガァアアァあぁス！！」
+Call Tw
+Line 145 :Row 2 :斎藤「！」_
+Screen Off :GCls :View 17,8,Gp412
+Line 137 :Row 1 :ヘガス「！！」
+Call Tw
+Screen On :_
+Screen Off :GCls :View 17,8,Gp444
+Line 137 :Row 1 :斎藤「あ‥ああ！！」
+Call Tw
+Screen On :_
+Screen Off :GCls :View 17,8,Gp451
+Line 137 :Row 1 :斎藤「野笛君！！」
+Call Tw
+Screen On :_
+Screen Off :GCls :View 0,8,Gp462
+Copy 6,30 64,72 26,15 15 0
+Copy 10,24 64,48 38,104 15 0
+Screen On :Line 136 :Row 2 :斎藤「とッ‥時計台の上に！！」_
+GCls :View 17,8,Gp452
+GGet :Line 136 :Row 2 :コンピュータ『エネルギーチャージ完了、ターゲットの指示を願います』
+Call Cv
+Cls :Line 136 :Row 2 :野笛「ターゲット・スコープ、オープン」
+Call Cv
+Cls :Line 136 :Row 2 :コンピュータ『ターゲット・補足しました』
+Call Cv
+Cls :Line 136 :Row 2 :野笛「ロック・オン！！」
+Pause :Mask 0,17 80,8 255 0
+Copy 4,15 64,8 24,50 15 0
+As 2 View 17,80,Gp452a
+Cnt 36
+*L2
+Wait 2 :Copy 46,192 17,10 17,8 12 0
+Loop L2
+_:Screen Off :GCls :View 17,8,Gp412
+Mask 0,0 80,25 0 0
+Screen On :Line 136 :Row 2 :ヘガス「わざわざ、的に　なってくれるとは、有り難い！！」_
+Screen Off :GCls :View 17,8,Gp426
+Mask 0,0 80,17 255 0
+Mask 17,1 46,15 0 0
+Copy 12,48 64,8 40,56 8 0
+Screen On :Wait 15 :Copy 44,96 19,32 17,8 8 0
+Wait 7 :Copy 44,104 19,24 17,8 8 0
+Wait 10 :Copy 44,112 19,8 17,16 8 0
+Effect 17 :Wait 13
+Cnt 5
+*L3
+Wait 5 :Copy 12,48 0,0 34,24 8 0
+Wait 4 :Copy 12,48 64,8 34,24 8 0
+Loop L3
+_:Screen Off :View 0,8,Gp489
+Screen On :Wait 20 :Palette 4,231
+Wait 8 :Palette 4,564
+Wait 8 :Palette 4,9A8
+Wait 8 :Palette 4,DEC
+Wait 8 :Palette 4,EFD
+Wait 13 :Copy 16,40 0,8 26,88 15 0 :Copy 10,40 64,8 42,88 15 0
+Effect 38 :Wait 10
+Copy 16,40 0,48 26,88 15 0 :Copy 10,40 64,48 42,88 15 0
+_:Screen Off :View 17,8,Gp426
+View 29,8,Gp426a
+Copy 12,48 64,8 34,24 8 0
+Effect 25 :Screen On :_
+Screen Off :View 0,8,Gp462
+Copy 16,55 0,8 20,8 15 0
+Copy 10,24 64,48 38,104 15 0
+Line 137 :Row 1 :斎藤「ああーッ！！野笛君ンン！！」
+Call Tw
+Screen On :_
+Screen Off :GCls :View 17,8,Gp414
+GGet :Mask 0,0 80,25 0 0
+Screen On :Line 136 :Row 2 :ヘガス「…‥終わった…」
+Pause :Line 136 :Row 2 :声『お願い…』
+Pause :Line 136 :Row 2 :ヘガス「…‥‥‥…」_
+Palette 0,342 1,675 2,BCA 3,897
+Wait 7 :Palette 0,675 1,897 2,CDB 3,AB9
+Wait 7 :Palette 0,9A8 1,AB9 2,DEC 3,CDB
+Wait 7 :Palette 0,CDB 1,CDB 2,EFD 3,EFD
+Wait 7 :Palette 0,EFD 1,EFD 2,FFF 3,FFF
+Wait 7 :Mask 0,0 80,25 255 7
+GCls :View 17,8,Gp221
+Palette 0,FFF 1,FFF 2,FFF 3,FFF
+GGet :Mask 0,0 80,25 0 0
+Wait 32 :Palette 0,CDB 1,EFD 2,EFD 3,DEC
+Wait 7 :Palette 0,9A8 1,CDB 2,DEC 3,BCA
+Wait 7 :Palette 0,675 1,AB9 3,9A8
+Wait 7 :Palette 0,342 1,9A8 3,786
+Wait 7 :Palette 0,000 1,897 3,564
+Col 8 :Line 136 :Row 2 :ナンシー「お‥願いよ‥ヘガス…」
+Row 2 :ヘガス「‥‥ナンシー‥！」
+Pause :Line 136 :Row 2 :ナンシー「これを…あの人に‥‥渡して‥」_
+Screen Off :GCls :View 17,8,Gp223
+GGet :Mask 64,1 12,15 255 0
+Screen On :Line 136 :Row 2 :ヘガス「ナンシー！なぜだ、あいつは　君を捨てて、一人で　行ってしまったんだぞ！
+Row 2 :　なのに‥君は　まだ、あいつの事を…！」
+Pause :Copy 12,120 64,8 40,8 12 0
+Copy 12,120 0,8 64,8 12 0
+GGet :Line 136 :Row 2 :ナンシー「ヘガス…あなたは、優しいひと…」
+Row 2 :ヘガス「……ナンシー…」_
+Screen Off :Cls :View 17,8,Gp222
+Mask 0,0 80,25 0 0
+Screen On :Line 136 :Row 2 :ナンシー「ご免ね」_
+Screen Off :Cls :Screen On :Wait 30 :Cnt 50
+*L4
+Wait 3 :Copy 12,118 40,8 40,10 12 0
+Loop L4
+Line 136 :Row 2 :ヘガス『あの時…その場に　いなかった　お前を、どんなに　憎んだ事か‥』_
+Grp 0 :Screen Off :GCls :View 17,8,Gp414
+Screen On :Grp 1 :Col 7 :Line 136 :Row 2 :ヘガス「ナンシーを　独りぼっちで、逝かせた　お前を、殺しても、殺しきれぬと…
+Row 2 :　どんなに　思った事か！！
+Row 2 :　果てしなく　ドス黒い　憎しみの想念は、私の心に　狂気の世界を生んだ！！」_
+Grp 0 :Screen Off :GCls :View 17,8,Gp219
+GGet :Screen On :Grp 1 :Line 136 :Row 2 :キリー「我狼陰博士…」
+Pause :Line 136 :Row 2 :ヘガス「君には、素質がある」
+Row 2 :キリー「！」
+Pause :Line 136 :Row 2 :ヘガス「人は　皆、夢を　実現させようと、努力する…私も　その中の　一人だ」
+Row 2 :キリー「何が　言いたい？　ドクター‥」
+Pause :Line 136 :Row 2 :ヘガス「人の強さには、限界がある。　君は、格闘の天才であるが故に
+Row 2 :　それを　知ってしまった！！　人間である限りは、越える事のできぬ“壁”が、
+Row 2 :　存在する事を！！」
+Pause :Line 155 :Row 1 :ヘガス「君に　力を与えよう！
+Row 1 :　キリー・ヘクタザス！！」
+Call Tw
+Line 136 :Row 2 :キリー「ドクター！　こんな所に　呼び出したのは、わざわざ　そんな
+Row 2 :　下らない事を‥！」
+Pause :Line 137 :Row 1 :キリー「！？」
+Call Tw
+Line 145 :Row 2 :ヘガス「君が、たかだか、カラテ・チャンピオンぐらいで、
+Row 2 :　満足できる男ではないという事は、その目を　見れば、わかる！！」
+Pause :Line 146 :Row 20 :キリィ！！」
+Call Tw
+Line 136 :ヘガス「君に　人間以上の力を与えてやろう！！　君の存在を、
+Row 2 :　人間以上の存在にまで、高めてやる！！
+Pause :Line 146 :Row 1 :　我狼陰博士！！」
+Call Tw
+Line 136 :Row 2 :キリー「それは…！！…それこそが、私の夢でしたわ！！
+Pause :Line 136 :Row 2 :ヘガス「実現させてやる‥！！
+Row 2 :　私だけが、それを　可能とする者なのだから‥‥！！」
+Row 2 :キリー「おお‥ドクター！！」
+Pause :Line 136 :Row 2 :ヘガス「そのかわり…君も、私の夢を　実現させるのに、
+Row 2 :　力を　かしてほしい…」
+Row 2 :キリー「！」
+Pause :Line 136 :Row 2 :ヘガス「私の夢は…ある男を　殺す事だ‥‥」
+Palette 3,342
+Wait 6 :Palette 3,564
+Wait 6 :Palette 3,786
+Wait 6 :Palette 3,9A8
+Wait 6 :Palette 3,BCA
+Wait 6 :Palette 3,DEC
+_:Palette 0,342 1,675 2,FFF 3,EFD 4,897
+Wait 7 :Palette 0,675 1,897 3,FFF 4,AB9
+Wait 7 :Palette 0,9A8 1,AB9 4,CDB
+Wait 7 :Palette 0,CDB 1,CDB 4,EFD
+Wait 7 :Palette 0,EFD 1,EFD 4,FFF
+Wait 7 :Mask 0,0 80,25 255 7
+GCls :View 17,8,Gp414
+Palette 0,FFF 1,FFF 2,FFF 3,FFF
+GGet :Mask 0,0 80,25 0 0
+Wait 32 :Palette 0,CDB 1,CDB 2,EFD 3,EFD
+Wait 7 :Palette 0,9A8 1,AB9 2,DEC 3,CBA
+Wait 7 :Palette 0,675 1,897 2,CDB 3,AB9
+Wait 7 :Palette 0,342 1,675 2,BCA 3,897
+Wait 7 :Palette 0,000 1,453 2,AB9 3,675
+Line 136 :Row 2 :ヘガス『…終った…永かった　悪夢が…‥だが、目覚めたあとは‥‥？』_
+Screen Off :GCls :View 17,8,Gp474
+Line 137 :Row 1 :ヘガス「！？」
+Call Tw
+Screen On :_
+Screen Off :GCls :View 17,8,Gp426
+Copy 17,120 0,8 63,8 15 0
+View 32,8,Gp426b
+Effect 27 :Screen On :Wait 40 :View 32,8,Gp426c
+Wait 40 :View 32,8,Gp426d
+_:GCls :View 17,8,Gp453
+GGet :Line 136 :Row 2 :コンピュータ『電磁シールドに　着弾』
+Call Kp
+Cls :Line 137 :Row 1 :野笛「ヘガス！！」
+Call Tw
+Call Kp
+Screen Off :GCls :View 17,8,Gp403
+Line 137 :Row 1 :ヘガス「野笛エェェエェェ！！」
+Call Tw
+Screen On :Call Pk
+Screen Off :GCls :Scn Lament
+
+*E.
+

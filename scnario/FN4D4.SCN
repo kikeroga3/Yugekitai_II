@@ -1,0 +1,559 @@
+
+- ｻﾌﾞﾙｰﾁﾝ -
+*Tw
+Copy 40,60 0,137 0,136 15 1
+Ret
+
+- ﾒｲﾝ･ﾙｰﾁﾝ -
+*S.
+
+*00
+Screen Off :GCls :View 17,8,Gp157
+GGet :Screen On
+*01
+Cls :Line 136 :Row 2 :ここは、新校舎４階の廊下。
+Line +4 :Row 1 :［１］音楽室
+Row 1 :［２］地学室
+Row 1 :［３］トイレ
+Line 149 :Row 26 :［４］３階に降りる
+Select 02,03,To,3F
+
+- 音楽室 -
+*02
+Line 136 :Row 2 :斎藤「富さんは、ここに　いるし…音楽室には、特に用は、無い」_
+Jump 01
+
+*To
+Line 136 :Row 2 :斎藤「少し前に　随分、出した…大丈夫だ」_
+Jump 01
+
+*3F
+Scn FN3D4
+
+- ComG･Gun点滅 -
+*Ng
+Wait 1 :Palette 8,000
+Wait 1 :Palette 8,888
+Wait 1 :Palette 8,CCC
+Wait 1 :Palette 8,FFF
+Wait 1 :Palette 8,CCC
+Wait 1 :Palette 8,888
+Ksnc Ng
+Cls :Ret
+
+- ComG･Gunとﾊﾟｿｺﾝ点滅 -
+*Pc
+Wait 1 :Palette 5,453 8,000
+Wait 1 :Palette 5,EFD 8,888
+Wait 1 :Palette 5,453 8,CCC
+Wait 1 :Palette 5,EFD 8,FFF
+Wait 1 :Palette 5,453 8,CCC
+Wait 1 :Palette 5,EFD 8,888
+Ksnc Pc
+Ret
+
+- ﾍｶﾞｽ顔回転 -
+*He
+Wait 2 :Copy 10,50 10,128 34,16 15 0
+Wait 2 :Copy 10,50 20,128 34,16 15 0
+Wait 2 :Copy 10,50 30,128 34,16 15 0
+Wait 2 :Copy 10,50 40,128 34,16 15 0
+Wait 2 :Copy 10,50 50,128 34,16 15 0
+Wait 2 :Copy 10,50 60,128 34,16 15 0
+Wait 2 :Copy 10,50 70,128 34,16 15 0
+Wait 2 :Copy 10,50 0,128 34,16 15 0
+Loop He
+Ret
+
+- 地学室 -
+*03
+If Flg0=1 Then 04
+Line 136 :Row 2 :斎藤「地学室には、カギが掛かっていて、入れない‥」_
+Jump 01
+*04
+Screen Off :GCls :View 17,8,Gp203g
+GGet :Screen On :Line 136 :Row 2 :野笛「おや、みんな」
+Row 2 :斎藤「野笛君！！」
+Row 2 :富沢「今まで、何を　してたんだ？」
+Call Ng
+Line 136 :Row 2 :野笛「校庭で、空を見ていたよ。一面に広がる青い空間だ。
+Row 2 :　君たちも　眺めに行くと、いい」
+Call Ng
+Line 136 :Row 2 :斎藤「…‥‥‥…」
+Row 2 :富沢「ふむ‥」
+Row 2 :黒爽「青い空か」
+Call Ng
+Line 136 :Row 2 :野笛「…みんなで、押し掛けて、来て‥、何だい？
+Row 2 :　斎藤君は、『プリティ・レモン』の続きを　やりに？」
+Call Ng
+Line 136 :Row 2 :黒爽「…‥‥‥…」
+Row 2 :富沢「…‥‥‥…」
+Row 2 :斎藤「い‥いや、違う、今日は、そうじゃないんだ‥」
+Call Ng
+Line 136 :Row 2 :野笛「ふむ…そうだ！見てくれ‥！！
+Row 2 :　この『新兵器』が、もうすぐ、完成するンだよ！！」
+Row 2 :黒爽「新兵器？」
+Call Ng
+Line 136 :Row 2 :野笛「そう！　前回の光子砲（レイカノン）を　更に　パワーアップさせた、僕の
+Row 2 :　新しい武器！　名付けて、圧縮粒子吹出装置（Ｃｏｍｐｒｅｓｓｅｄ・Ｇｒａｉｎｓ
+Row 2 :　・Ｇｕｎ）！　頭文字をとって、コング・ガンとでも　呼ぼう…とにかく、新型の
+Row 2 :　ビーム兵器さ！」
+Call Ng
+Line 136 :Row 2 :富沢「どれくらい、すごいんだ？」
+Call Ng
+Line 136 :Row 2 :野笛「そうだな‥まだ　完成も　してないし、データも　とってないから、分らんが
+Row 2 :　‥予定では、３台並んだ　戦車ぐらい、撃ち抜けるようには　したいね」
+Row 2 :富沢「なる程‥」
+Call Ng
+Line 136 :Row 2 :黒爽「今すぐ、使えるのか？」
+Row 2 :野笛「いや、それは、無理だ」
+Call Ng
+Line 136 :Row 2 :黒爽「そうか‥」
+Row 2 :野笛「？‥何か、あったのかい？みんな」
+Call Ng
+Line 136 :Row 2 :斎藤「実は‥旧校舎に　毒ガスが、ばらまかれたんだよ。野笛君！」
+Row 2 :野笛「何だって！？」
+Call Ng
+Line 136 :Row 2 :富沢「本当だ。あっちには　まだ、大勢の生徒達が、残っていた。
+Row 2 :　恐らくは…全滅だ！」
+Row 2 :野笛「ちょっと、待ってくれ！？それは、一体‥どういう事なんだ？」
+Call Ng
+Effect 40 :Line 136 :Row 2 :斎藤「つまり…！」
+Row 2 :黒爽・富沢「！！」
+Call Pc
+Cls :Line 136 :Row 2 :斎藤「あれ？野笛君？‥君、コンピュータのスイッチを…」
+Row 2 :野笛「！？」
+Call Pc
+Cls :Line 136 :Row 2 :野笛「いやッ！！入れてないぞ！！コンセントすら…！」
+Call Pc
+Screen Off :GCls :View 0,8,Gp279
+Palette 4,000 5,000 6,000
+Mask 0,16 80,7 255 0
+Screen On :Wait 30 :Palette 4,231 5,120 6,342
+Cnt 3 :Call He
+Palette 4,453 5,231 6,675
+Effect 42 :Cnt 2 :Call He
+Palette 4,675 5,342 6,9A8
+Cnt 1 :Call He
+Palette 4,786 5,453 6,EFD
+Wait 3 :Copy 10,50 10,128 34,16 15 0
+Wait 4 :Copy 10,50 20,128 34,16 15 0
+Wait 5 :Copy 10,50 30,128 34,16 15 0
+Wait 6 :Copy 10,50 40,128 34,16 15 0
+Wait 7 :Copy 10,50 50,128 34,16 15 0
+Wait 8 :Copy 10,50 60,128 34,16 15 0
+Wait 9 :Copy 10,50 70,128 34,16 15 0
+Wait 10 :Copy 10,50 0,128 34,16 15 0
+Copy 80,20 0,178 0,158 15 0
+Copy 80,30 0,158 0,128 15 0
+GGet :Mask 0,0 80,25 0 0
+Line 136 :Row 2 :斎藤「奴は‥！！」
+Row 2 :黒爽「斎藤‥こいつが、お前の言っていた‥！！」
+Pause :Line 137 :Row 1 :野笛「ヘガス！！」
+Call Tw
+Line 145 :Row 2 :黒爽「！！」
+Row 2 :斎藤「！？‥野笛君！？」
+Pause :Line 136 :Row 2 :ヘガス「久しぶりだな‥ノブエ！」
+Row 2 :野笛「なぜだ‥なぜ、君が‥！？一体、これは　どういう‥！？」
+Pause :Line 136 :Row 2 :ヘガス「貴様を　殺しに来た‥」
+Row 2 :野笛「！！」
+Pause :Line 136 :Row 2 :ヘガス「旧校舎の生徒達は、死んではいない。グレイケンの放出した
+Row 2 :　ガスは、兵器用のサッフォー２型を　私が、改良したものだ。
+Row 2 :　解毒剤は、ここにある。この世に　一つしかないが…フフフ」
+Pause :Line 136 :Row 2 :野笛「今‥グレイケンと、言ったのか！？奴を使ったのか！？馬鹿な！！
+Row 2 :　失敗だったはずだ！！あの計画は、中止‥！」
+Row 2 :ヘガス「私が、引き継いだのだ。君が、去った後にね」
+Pause :Line 136 :Row 2 :野笛「“神への冒涜”だ…君が、言ったことだぞ‥！！」
+Row 2 :ヘガス「ジェノフォビアか…君ともあろう者が、凡人のようなことを言う」
+Pause :Line 136 :Row 2 :野笛「ヘガス‥！！」
+Pause :Line 136 :Row 2 :ヘガス「旧校舎の生徒達は、サッフォー新型の効果によって、あと　３０分後には
+Row 2 :　細胞組織の崩壊を起こし始める…そして、死ぬ」
+Row 2 :野笛「！！」
+Pause :Line 136 :Row 2 :斎藤「何だって！？」
+Pause :Line 136 :Row 2 :ヘガス「それまでに　この解毒剤を　私の手から、奪ってみせるんだな…
+Row 2 :　フタを開ければ、気化して、同じように　校内の隅々にまで、行き渡る。
+Row 2 :　簡単なゲームさ…極めて、簡単なゲーム…フフフ‥」
+Pause :Line 136 :Row 2 :黒爽「何て奴だ‥！」
+Pause :Line 136 :Row 2 :斎藤「場所は…どこだ？」
+Row 2 :ヘガス「体育館にいるよ‥ここから、動くつもりはない。そうそう、
+Row 2 :　旧校舎のガスは　もう、消えているから、まっすぐ　そこを通ってくるがいい。
+Row 2 :　もっとも、まっすぐ、来れればの話だが‥！」
+Pause :Line 136 :Row 2 :野笛「ヘガス‥！！」
+Row 2 :ヘガス「…あと　２９分…時間は、貴重に　使うんだな…」
+Pause :Line 137 :Row 1 :野笛「ヘガアァス！！」
+Call Tw
+Line 145 :Row 2 :ヘガス「君が、来るのを　待っている‥」
+Pause :Mask 0,16 80,7 255 0
+View 0,8,Gp279
+Wait 10 :Copy 10,50 10,128 34,16 15 0
+Wait 9 :Copy 10,50 20,128 34,16 15 0
+Wait 8 :Copy 10,50 30,128 34,16 15 0
+Wait 7 :Copy 10,50 40,128 34,16 15 0
+Wait 6 :Copy 10,50 50,128 34,16 15 0
+Wait 5 :Copy 10,50 60,128 34,16 15 0
+Wait 4 :Copy 10,50 70,128 34,16 15 0
+Wait 3 :Copy 10,50 0,128 34,16 15 0
+Palette 4,675 5,342 6,9A8
+Cnt 1 :Call He
+Palette 4,453 5,231 6,675
+Effect 42 :Cnt 1 :Call He
+Palette 4,231 5,120 6,342
+Cnt 1 :Call He
+Wait 2 :Palette 2,CDB 4,000 5,000 6,000
+Wait 6 :Palette 2,AB9
+Wait 6 :Palette 2,897
+Wait 6 :Palette 2,675
+Wait 6 :Palette 2,453
+Copy 80,20 0,178 0,158 15 0
+Copy 80,30 0,158 0,128 15 0
+GGet :Mask 0,0 80,25 0 0
+Line 136 :Row 2 :野笛「…‥何と言う事だ‥…」
+Row 2 :斎藤「野笛君、君と　ヘガスとは、一体‥」_
+Screen Off :GCls :View 17,8,Gp268
+GGet :Line 146 :Row 1 :３人「！！」
+Call Tw
+Line 136 :Row 2 :野笛「…‥親友だ‥。ＮＡＳＡに　いた頃の…！」
+Screen On :Pause :Line 136 :Row 2 :斎藤「君は…旧校舎に　毒ガスを　バラまいた奴の事も　知っていたようだが‥」
+Pause :Line 136 :Row 2 :野笛「…‥‥‥…」
+Row 2 :斎藤「教えてくれ！！野笛！！」
+Pause :Line 136 :Row 2 :野笛「グレイケンは…自己の体内において、およそ　４１６種類もの、有毒ガスを
+Row 2 :　調合し、発生させる事が出来る…」
+Row 2 :黒爽「な‥何ィ！？」
+Row 2 :富沢「…‥…！！」
+Pause :Line 136 :Row 2 :斎藤「何で、そんな化物が‥！」
+Row 2 :野笛「化物…そう、その通りだ。あれは、化物だよ。まさに‥…」
+Pause :Line 137 :Row 1 :斎藤「奴等は　一体、何者なんだ！！」
+Call Tw
+Pause :Line 136 :Row 2 :野笛「…‥‥‥…！」
+Row 2 :斎藤「野笛！！」
+Pause :Line 146 :Row 1 :３人「！！」
+Call Tw
+Line 136 :Row 2 :野笛「湾岸戦争で、使われた　人間兵器だ‥！！」_
+Screen Off :GCls :View 0,8,Gp279
+Copy 80,20 0,178 0,158 15 0
+Copy 80,30 0,158 0,128 15 0
+Palette 2,453 4,000 5,000 6,000
+GGet :Screen On :Flg63=0 :Line 136 :Row 2 :黒爽「こいつは‥ヤバイ事に　なってきたぜ‥！」
+Row 2 :斎藤「…‥‥！」_
+*05
+Cls :Line 136 :Row 2 :斎藤「どうするか‥！」
+Line +4 :Row 1 :［１］見る
+Row 1 :［２］話す
+Select 06,07
+*06
+Line 136 :Row 2 :野笛は、青ざめていた。黒爽も　富沢も　同じだった。
+Row 2 :　そして、おそらく、鏡を見れば、自分も　同じような顔をしているのだろうと
+Row 2 :　斎藤は、思った。_
+Jump 05
+*07
+Line 136 :If Flg63=1 Then 08
+Row 2 :斎藤「奴等の目的は、何だろう‥？」
+Pause :Line 136 :Row 2 :野笛「…ヘガスは、僕を　殺す為に来たと、言っていた‥！
+Row 2 :　それならば、僕一人を狙えばいい！！全校生徒を　毒ガスの眠りに　つかせて、
+Row 2 :　遊撃隊のメンバーを　相手にする必要はない！！」
+Pause :Line 136 :Row 2 :黒爽「裏で、糸を引いてる奴がいる‥！遊撃隊を　邪魔者としている奴が…！！
+Row 2 :　遊撃隊、そのものを消そうとしている者が！！」
+Pause :Line 136 :Row 2 :野笛「わからん‥奴等の目的は、一体、なんなんだ！！」_
+Flg63=1 :Jump 05
+*08
+Row 2 :富沢「これ以上、話している時間は、無いぞ！斎藤！！」
+Row 2 :野笛「行動が、先だ！斎藤君！！」_
+*09
+Cls :Line 136 :Row 2 :斎藤「どうするか‥！」
+Line +4 :Row 1 :［１］闘いを決意する
+Row 1 :［２］逃げる
+Select 11,10
+*10
+Screen Off :GCls :View 17,8,Gp298
+GGet :Line 150 :Row 1 :ボコッ
+Call Tw
+Line 136 :Row 2 :黒爽「斎藤ォ！！こんな時に　てめえは‥！！」
+Screen On :Effect 20 :Pause :Line 150 :Row 1 :ドボッ
+Call Tw
+Effect 37 :Line 136 :Row 2 :野笛「気合いが足りないな、斎藤君ン！！」
+Pause :Line 137 :Row 1 :斎藤「ゆるしてくれ、ゆるして‥！！
+Row 1 :　ちょっと、こわくなってしまっただけ
+Row 1 :　なんだよ‥ゥゥ‥！！」
+Call Tw
+_:Screen Off :GCls :View 0,8,Gp279
+Copy 80,20 0,178 0,158 15 0
+Copy 80,30 0,158 0,128 15 0
+Palette 2,453 4,000 5,000 6,000
+GGet :Screen On :Jump 09
+
+- 決意 -
+*11
+Screen Off :GCls :View 17,8,Gp086
+GGet :Screen On :Line 136 :Row 2 :斎藤「戦おう、みんな。僕たちには、太古神スサノオ・アライとの戦いにおいて、
+Row 2 :　勝利の実績がある。学校は…僕たちのせいで、こうなったようなものだ。
+Row 2 :　僕たちの力で、何とかしなくてはいけない！！」
+Pause :Line 136 :Row 2 :黒爽「ああ、ケンと　ヤスキが、いないのが、ちょっと　心細いがな。俺は　やるぜ」
+Pause :Line 136 :Row 2 :富沢「フッ‥しかし、斎藤の話では、敵は　４人。こちらも　４人で、フェアだ。
+Row 2 :　ちょうど、いいじゃないか」
+Pause :Line 136 :Row 2 :黒爽「案外、そのことも　奴らの計算のうちなのかもしれんな」
+Row 2 :野笛「いや、おそらく、そうだろう。ヘガスは…奴は、そういう男だ」
+Pause :Line 155 :Row 1 :　行くぞ！！」
+Call Tw
+Line 136 :Row 2 :斎藤「作戦を立てているヒマはない…新校舎から、旧校舎に！！
+Row 2 :　そこから、体育館へ　一気に　攻め込む！！_
+Grp 0 :Screen Off :GCls :View 17,3,Gp142y
+Mask 0,0 80,25 255 0
+Mask 17,1 46,15 0 0
+Copy 46,75 17,53 17,128 15 0 :Copy 46,5 17,3 17,8 15 0
+Copy 46,10 17,3 17,13 15 0 :Copy 46,20 17,3 17,23 15 0
+Copy 46,40 17,3 17,43 15 0 :Copy 46,45 17,3 17,83 15 0
+Screen On :Grp 1 :Wait 30 :Effect 46
+Copy 46,5 17,198 17,123 15 0
+Wait 6 :Copy 46,5 17,193 17,118 15 0 :Wait 6 :Copy 46,5 17,188 17,113 15 0
+Wait 6 :Copy 46,5 17,183 17,108 15 0 :Wait 6 :Copy 46,5 17,178 17,103 15 0
+Wait 6 :Copy 46,5 17,173 17,98 15 0 :Wait 6 :Copy 46,5 17,168 17,93 15 0
+Wait 6 :Copy 46,5 17,163 17,88 15 0 :Wait 6 :Copy 46,5 17,158 17,83 15 0
+Wait 6 :Copy 46,5 17,153 17,78 15 0 :Wait 6 :Copy 46,5 17,148 17,73 15 0
+Wait 6 :Copy 46,5 17,143 17,68 15 0 :Wait 6 :Copy 46,5 17,138 17,63 15 0
+Wait 6 :Copy 46,5 17,133 17,58 15 0 :Wait 6 :Copy 46,5 17,128 17,53 15 0
+View 17,128,Gp142z
+Wait 6 :Copy 46,5 17,168 17,48 15 0 :Wait 6 :Copy 46,5 17,163 17,43 15 0
+Wait 6 :Copy 46,5 17,158 17,38 15 0 :Wait 6 :Copy 46,5 17,153 17,33 15 0
+Wait 6 :Copy 46,5 17,148 17,28 15 0 :Wait 6 :Copy 46,5 17,143 17,23 15 0
+Wait 6 :Copy 46,5 17,138 17,18 15 0 :Wait 6 :Copy 46,5 17,133 17,13 15 0
+Wait 6 :Copy 46,5 17,128 17,8 15 0
+Copy 17,75 0,0 17,128 15 0 :Copy 29,75 0,128 34,128 15 0
+Mask 0,16 80,9 0 0
+Effect 4
+Line 136 :Row 2 :富沢「大丈夫だ。毒ガスは　もう、消えているみたいだ」
+Row 2 :斎藤「よし、Ｇｏ！！」
+Line +4 :Row 2 :斎藤達は、体育館へ向かって、一気に廊下を走った。_
+Flg0=0 :Flg1=0 :Effect 31
+*12
+Screen Off :GCls :View 17,8,Gp280b
+GGet :Screen On :If Flg0=1 Then 13
+Line 136 :Row 2 :斎藤「うっ！！‥体育館に　つながる通路に　シャッターが！？」_
+Flg0=1
+*13
+Cls :Line 136 :Row 2 :斎藤「どうすれば、いいんだ‥！」
+Line +4 :Row 1 :［１］叩いてみる
+Row 1 :［２］破壊する
+Row 1 :［３］開閉スイッチを探す
+Line 149 :Row 26 :［４］他の道を行く
+Select 14,15,17,16
+*14
+Effect 12 :Line 136 :Row 2 :富沢「おい、全然、駄目だぜ。これ‥」
+Row 2 :黒爽「ただのシャッターじゃねえよ。破壊は、不可能だ」_
+Jump 13
+*15
+Screen Off :GCls :View 28,8,Gp263
+GGet :Line 137 :Row 1 :斎藤「でやああっ！！」
+Call Tw
+Screen On :Effect 21
+Pause :Line 136 :Row 2 :黒爽「‥どうだ！？」
+Row 2 :斎藤「だ‥だめだ。ただのシャッターじゃないぞ！！」_
+Jump 12
+*16
+Line 136 :Row 2 :斎藤「仕方ない‥表から、まわっていくか‥」
+Row 2 :野笛「いや、それは　無駄だろう。内部でさえ、これなのだから、外部からの
+Row 2 :　侵入に対しては、もっと　厳重に　シャットアウトしてあるはずだ。
+Row 2 :　うかつに　廻り道をすれば、時間のロスになる！」
+Pause :Line 136 :Row 2 :黒爽「じゃ‥じゃあ、どうする」
+Row 2 :野笛「とにかく、このシャッターを開くことだ」
+Row 2 :斎藤「何てこった‥まるで、要塞だな」_
+Jump 13
+*17
+If Flg1=1 Then 18
+Line 136 :Row 2 :富沢「だめだ‥スイッチみてえのは、見当たらねえよ」_
+Flg1=1 :Jump 13
+
+- ｴｽﾊﾟｰ軍団､登場! -
+*18
+GCls :View 28,8,Gp260a
+GGet :Line 136 :Row 2 :富沢「おい‥スイッチらしきものは　ねえけど、何か‥
+Row 2 :　カギの　差し込み口みてえのが　あるぞ」
+Row 2 :斎藤「本当だ。じゃあ、カギは‥」
+Pause :Line 137 :Row 1 :キリィ「ホホホホホ！！」
+Call Tw
+Line 145 :Row 2 :斎藤「！！むっ！！貴様は‥！」_
+Screen Off :GCls :GGet :View 17,8,Gp310
+Line 137 :Row 1 :斎藤「キリィッ！！」
+Call Tw
+Screen On :Line 145 :Row 2 :キリィ「みなさんとは、初に　お目に　かかりますわね‥」
+Pause :View 17,8,Gp109
+GGet :Line 136 :Row 2 :斎藤「！！それは！」
+Row 2 :キリィ「そのシャッターは、超合ヘガス金属…破壊は、不可能。
+Row 2 :　このカギを使わなくては、開かない‥」
+Pause :Line 136 :Row 2 :斎藤「わ‥わたせ！！そのカギを！！」
+Row 2 :キリィ「駄目よ‥わたさないわ‥」
+Pause :Line 136 :Row 2 :斎藤「わっ…わたせっ！！」
+Row 2 :キリィ「駄・目・よ」
+Pause :Line 136 :Row 2 :斎藤「殺すぞ‥」
+Row 2 :キリィ「ふふ‥」
+Pause :Line 136 :Row 2 :斎藤「貴様‥」
+Row 2 :富沢「斎藤、落ち着け」
+Pause :Line 136 :Row 2 :キリィ「そうね。あなたの言う通り、カギが　欲しいのなら、私達を倒すことだわ」
+Row 2 :黒爽「私達？」_
+Screen Off :GCls :View 17,8,Gp152
+GGet :Line 146 :Row 1 :斎藤「貴様等…！」
+Call Tw
+Screen On :Effect 47 :Line 136 :Row 2 :キリィ「そう…私達…」
+Col 8 :Line 16 :Row 20 :愚礼賢
+Line 12 :Row 34 :奇李
+Line 12 :Row 52 :ファッカァ
+Pause :Mask 0,0 12,1 255 0
+エスパー軍団
+Copy 12,8 0,0 28,108 8 1
+Col 7 :Line 155 :Row 1 :　名付けて、エスパー軍団！！」
+Call Tw
+Line 136 :Row 2 :キリィ「私達は、あなた方、遊撃隊を抹殺する為に改良された、人造の超人集団…
+Row 2 :　一人、欠けてしまったけど…ふふ。
+Effect 41 :Pause :Col 7 :Line 136 :Row 2 :キリィ「ゲーム・スタートよ…カギは、私達　３人の誰かが、持つ…
+Row 2 :　探しあてて、奪ってごらんなさい…ちなみに　もう、５分経ってるけど、ふふ」
+Pause :Line 137 :Row 1 :斎藤「まて！！」
+Row 1 :キリィ「ホホホホホホ！！」
+Call Tw
+_:Screen Off :GCls :View 17,8,Gp140r
+GGet :Mask 0,0 80,25 0 0
+Screen On :Effect 31
+Line 136 :Row 2 :エスパー軍団は、疾風のように消え去った。
+Pause :Line 137 :Row 1 :斎藤「追うぞ！！みんな！！」
+Row 1 :３人「おう！！」
+Call Tw
+_:Grp 0 :GCls :View 17,8,Gp245
+GGet :Grp 1 :Line 136 :Row 2 :富沢「斎藤、ここは…」
+Row 2 :黒爽「なる程、確かに　怪しいぜ」
+Pause :Line 136 :Row 2 :斎藤「ヘガスは、この生物室で、悪魔の人間改造を行ったらしい」
+Row 2 :野笛「そのようだね」
+Pause :Line 136 :Row 2 :黒爽「おい、斎藤。何か、廊下に　髪の毛の束みてえのが、落ちてるぞ」
+Row 2 :斎藤「それは‥僕が、倒した　霧魔使いのものだ…
+Row 2 :　自分の飼ってる　霧魔に　喰われた‥その残骸さ‥」
+Pause :Line 136 :Row 2 :富沢「霧魔は、どうなった？」
+Row 2 :斎藤「…通気口の中に‥‥逃げた‥」
+Pause :Line 136 :Row 2 :富沢「何それ‥まじかよ」
+Row 2 :野笛「その話は、後にしよう。今は、時間が無い」
+Row 2 :黒爽「ああ、ムマ退治は、後回しだな」_
+Flg0=0 :Flg1=0 :Flg2=0
+*19
+Cls :Line 136 :Row 2 :斉藤「さて、ここは‥」
+Line +4 :Row 1 :［１］見る
+Row 1 :［２］調べる
+Row 1 :［３］なぐる
+Select 20,21,23
+*20
+Line 136 :Row 2 :斎藤「真っ暗だ‥さっきと、様子が　違う！」
+Row 2 :富沢「ワナかも‥気を付けろ」_
+Flg1=1 :Jump 19
+*21
+Line 136 :Row 2 :黒爽「おい‥何か、妙な気配がするぞ‥」_
+Flg0=1 :Jump 19
+*23
+Line 136 :If Flg0=0 Then 24
+If Flg1=1 Then 27
+*24
+If Flg2=1 Then 25
+If Flg2=2 Then 26
+Row 2 :斉藤は、野笛に殴りかかった。
+Line +4 :Row 2 :野笛「斎藤君、ふざけてる場合じゃない」_
+Flg2=1 :Jump 19
+*25
+Row 2 :斉藤は、黒爽に殴りかかった。
+Line +4 :Row 2 :黒爽「ざけんなバカ、油断してんじゃねえ」_
+Flg2=2 :Jump 19
+*26
+Row 2 :斉藤は、富沢に殴りかかった。
+Line +4 :Row 2 :富沢「やめろよ、まじかよ」_
+Flg2=0 :Jump 19
+*27
+GCls :Line 136 :Row 2 :斎藤は、机を叩いた。
+Effect 20 :Line +4 :Row 2 :斎藤「てやあーっ！！」_
+Screen Off :GCls :View 17,8,Gp242
+GGet :Line 146 :Row 1 :斎藤「貴様‥」
+Call Tw
+Line 136 :Row 2 :愚礼賢「ＨＡＡＡＡ…この俺様が、机の下に隠れていると、よくぞ　見破った！！」
+Screen On :Line 154 :Row 2 :野笛「いっ、意外！！意外！！こんな所に‥！！」
+Pause :Line 136 :Row 2 :愚礼賢「ふん‥見つかったからには、仕方ねえ。相手になるぜ、ヘナチョコ共」
+Row 2 :斎藤「望むところだ！！」
+Pause :Line 136 :Row 2 :富沢「斎藤、まて」
+Row 2 :斎藤「！？」
+Pause :View 17,8,Gp046
+GGet :Line 137 :Row 1 :黒爽「富沢！！」
+Call Tw
+Line 145 :Row 2 :野笛「富沢君！！」
+Pause :Line 136 :Row 2 :斎藤「富さん‥君は、さっき、奴の強烈ガスを浴びたダメージを
+Row 2 :　回復しきっていないはず‥！！　無茶は、よせ！！」
+Pause :Line 136 :Row 2 :富沢「ガスを浴びた‥だからこそ　今、奴と戦わねばならん。
+Row 2 :　敵の術中に陥るなどは、忍者にとって、最大の屈辱。ぬぐわねばならぬ‥」
+Row 2 :斎藤「富さん‥」
+Pause :Line 136 :Row 2 :黒爽「富沢！！」
+Row 2 :野笛「富沢君！！」
+Pause :Line 136 :Row 2 :愚礼賢「フン。一番、ヘナチョコそうな奴が、相手か‥まあいい。
+Row 2 :　仲間の前で、目も背けるような惨殺体に調理してやるぜ。Ｆｕｃｋ！」
+Row 2 :富沢「Ｆｕｃｋか。いいだろう‥」
+Pause :View 17,8,Gp131
+GGet :Line 136 :Row 2 :愚礼賢「行くぜ、ヘナチョコ！」
+Row 2 :富沢「！！いかん！！離れろ、みんな！！」
+Pause :Line 137 :Row 1 :愚礼賢「喰らえ、凶裂屁黄臭吹射！！」
+Call Tw
+Pause :As 3 View 17,8,Gp131a
+GGet :Effect 29 :Line 137 :Row 1 :斎藤「ああっ！！」
+Row 1 :黒爽「富沢の顔に直撃したっ！！」
+Call Tw
+Line 154 :Row 2 :愚礼賢「へっ‥口ほどにもねえ野郎だぜ‥」_
+Screen Off :GCls :View 17,8,Gp046
+GGet :Line 137 :Row 1 :愚礼賢「馬鹿な！！」
+Call Tw
+Screen On :Line 145 :Row 2 :富沢「馬鹿は、お前だ。二度も　同じ種類の毒が、忍者に通用すると思ったのか？」
+Pause :Line 136 :Row 2 :愚礼賢「‥何だと！？今のは‥さっきと、違う種類の毒だぞ‥」
+Pause :Line 136 :Row 2 :富沢「…‥え？」
+Row 2 :愚礼賢「…‥‥‥…」_
+Screen Off :GCls :View 17,8,Gp258
+Line 137 :Row 1 :富沢「ぐっ！！ぐああああっ！！」
+Row 1 :斎藤「富さん！！」
+Call Tw
+Screen On :Line 154 :Row 2 :愚礼賢「馬鹿が…俺も　頭のいい方じゃねえが、お前よりは　ましだろうな…」_
+Screen Off :GCls :View 17,8,Gp115
+GGet :Line 146 :Row 1 :斎藤「富さん！！」
+Call Tw
+Line 136 :Row 2 :愚礼賢「とどめだ‥忘却の彼方へと沈め…」
+Screen On :Line 154 :Row 2 :黒爽「だめだ、斎藤！！今、行ったら、お前も　巻き添えを食うぞ！！」
+Pause :Line 155 :Row 1 :　今は‥今は　それだけしかない！」
+Call Tw
+Line 136 :Row 2 :斎藤「だが、このままでは！！」
+Row 2 :野笛「信じるんだ‥富沢君を。彼に任せるしか‥
+Pause :Line 136 :Row 2 :愚礼賢「へへ‥お前の仲間は、お前を見捨てたようだぜ」
+Row 2 :富沢「…に‥‥るな…」
+Pause :Line 136 :Row 2 :愚礼賢「ん？　何だ？　何か、言ったか？」
+Row 2 :富沢「忍‥者を‥あまく‥‥見るな‥」
+Pause :Line 146 :Row 1 :　凶裂屁黄臭吹射！！」
+Call Tw
+Line 136 :Row 2 :愚礼賢「野郎‥まだ、言うか。だったら、とっとと　喰らって、死ね！！_
+As 3 View 17,8,Gp115a
+Effect 29 :_
+Screen Off :GCls :View 17,8,Gp308a
+Line 137 :Row 1 :富沢「忍法・火炎竜！！」
+Call Tw
+Screen On :Effect 32 :Line 145 :Row 2 :愚礼賢「あっ！！」
+*L0
+Wait 1 :Palette 5,000
+Wait 2 :Palette 5,FFF
+Ksnc L0
+Screen Off :GCls :View 17,8,Gp265
+Line 137 :Row 1 :斎藤「富さん！！」
+Row 1 :野笛「富沢君！！」
+Call Tw
+Effect 25 :Screen On :_
+Grp 0 :GCls :View 17,8,Gp273a
+GGet :Grp 1:Line 136 :Row 2 :斎藤「富さん‥何てこった‥跡形も‥」
+Pause :Line 136 :Row 2 :黒爽「いや、あいつは　この位で、死ぬような男じゃない。必ず　帰ってくる、必ず
+Row 2 :　俺は、あいつを信じている。そうだろう、野笛！！」
+Row 2 :野笛「共感するよ、黒爽」
+Pause :Line 136 :Row 2 :斎藤「どたん場で、マッチを…さっき、調理室から、くすねたんだな」
+Pause :Line 136 :Row 2 :黒爽「行こう‥時間が、ねえ‥」
+Row 2 :野笛「ん‥？いや、まて！！何だ、それは！？焼け跡に　光る物が‥！？」
+Pause :View 17,8,Gp281b
+GGet :Line 136 :Row 2 :斎藤「‥カギのようだ」
+Row 2 :野笛「さっきのとは、形が違うな‥」
+Pause :Line 136 :Row 2 :黒爽「ワナじゃねえか？」
+Row 2 :野笛「考えられるね。しかし…」
+Pause :Line 136 :Row 2 :斎藤「時間がない。とにかく、試してみようよ」_
+Grp 0 :GCls :Grp 1 :Flg0=0 :Flg1=0 :Flg2=0 :Flg3=0 :Flg63=0
+Scn FS2D5
+
+*E.
+

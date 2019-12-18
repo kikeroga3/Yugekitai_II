@@ -1,0 +1,477 @@
+
+- ｻﾌﾞﾙｰﾁﾝ -
+*Tw
+Copy 40,60 0,137 0,136 15 1
+Ret
+
+- ｷﾘｨ(指先で､ﾁﾛﾁﾛ放電) -
+*Fg
+Rnd 3
+If Flg0=1 Then F0
+If Flg0=2 Then F1
+If Flg0=3 Then F2
+Copy 2,22 8,8 46,88 15 0
+Jump F3
+*F0
+Copy 2,22 10,8 46,88 15 0
+Jump F3
+*F1
+Copy 2,22 12,8 46,88 15 0
+Jump F3
+*F2
+Copy 2,22 14,8 46,88 15 0
+*F3
+Wait 2 :Ksnc Fg
+Cls :Ret
+
+- ﾒｲﾝ･ﾙｰﾁﾝ -
+*S.
+Screen Off :GCls :Mask 8,0 9,16 255 0
+View 17,8,Gp272
+Screen On :Wait 30 :Cnt 17
+*L0
+Wait 4 :Copy 45,120 18,8 17,8 3 0
+If Flg0=0 Then 00
+Flg0=0 :Copy 45,120 17,8 18,8 12 0
+Jump 01
+*00
+Flg0=1
+*01
+Loop L0
+Wait 4 :View 8,8,Gp272D4
+GGet :Col 12 :Line 136 :Row 2 :斎藤「…‥‥‥…！！」
+Row 2 :金髪男「Ｎｉｃｅ　ｔｏ　ｍｅｅｔ　ｙｏｕ．いそがしいとこ、悪いようだけど…
+Row 2 :　宣戦布告は、さっきした…わね？」
+Pause :Line 136 :Row 2 :斎藤「き…貴様は…」
+Row 2 :金髪男「まだ、名乗っていなかったかしら？私の名は、奇李（キリー）。あなたたち
+Row 2 :　遊撃隊を　この世から、抹殺する為に　生まれた　人造超人（エスパー）」
+Effect 35 :Call Fg
+Line 136 :Row 2 :斎藤「ま‥抹殺だと‥！？」
+Row 2 :キリー「さあ、早速だけど、命を　もらう事にしようかしら‥」
+Call Fg
+Line 136 :Row 2 :斎藤（ううっ！！ま‥まずい！！
+Row 2 :　この態勢では、奴の攻撃に　対処する術が、無い！！）
+Call Fg
+*02
+Line 136 :Row 2 :斉藤（ぜ‥絶体絶命ッ！！、どうすればッ‥！？）
+Line +4 :Row 1 :［１］話す
+Row 1 :［２］攻撃する
+Row 1 :［３］何とかする
+Select 03,04,05
+*03
+Line 136 :Row 2 :斎藤「あ‥あの」
+Row 2 :キリー「話す余裕など、与えないわ‥」
+Call Fg
+Jump 02
+*04
+Line 136 :Row 2 :斎藤（だっ‥駄目だッ！！攻撃するにも　その為の武器（マサムネ）を　便所の脇に
+Row 2 :　置いてしまった！！しかも　僕は、排尿中だ！！）
+Call Fg
+Jump 02
+
+- 反撃放尿 -
+*05
+Screen Off :GCls :View 17,8,Gp128
+Col 7 :Line 137 :Row 1 :キリー「死ィねェエェェッ！！」
+Call Tw
+Screen On :Effect 41
+*L1
+Wait 1 :Palette 1,877 4,FFF
+Wait 1 :Palette 2,AB9 4,CCD
+Wait 1 :Palette 1,564 4,000
+Wait 1 :Palette 2,DEC 4,CCD
+Ksnc L1
+Screen Off :GCls :View 17,8,Gp011
+Line 137 :Row 1 :キリー「は‥！？」
+Call Tw
+Screen On :_
+Screen Off :GCls :View 17,8,Gp039
+Line 137 :Row 1 :キリー「はあああっあああっ‥！！
+Row 1 :　あァアァァッ！！」
+Call Tw
+Screen On
+*L2
+Wait 1 :Palette 4,FFF
+Wait 2 :Palette 4,000
+Ksnc L2
+Screen Off :GCls :View 17,8,Gp238
+Line 137 :Row 1 :斎藤「うおおおおおおおおうッ！！」
+Call Tw
+Screen On
+*L3
+Wait 1 :Palette 5,897 6,675
+Wait 2 :Palette 5,564 6,CDA
+Ksnc L3
+Screen Off :GCls :View 0,8,Gp143D4
+Mask 0,0 80,25 255 0
+Mask 17,1 47,15 0 0
+Screen On :Wait 25 :Effect 29 :Copy 16,67 12,128 32,51 15 0
+Wait 5 :Copy 18,59 28,128 28,55 15 0
+Wait 5 :Copy 16,76 0,8 26,41 15 0
+Wait 5 :Copy 8,76 64,8 26,41 15 0
+Wait 5 :Copy 8,79 64,84 26,38 15 0
+Wait 5 :Copy 16,73 46,128 20,16 15 0
+Effect 1 :View 0,8,Clr143
+GGet :Mask 0,0 80,25 0 0
+Line 136 :Row 2 :キリー「オゥオッ！！」
+Row 2 :斎藤「うむッ！？空中に　逃れたかッ！！」
+Pause :View 17,8,Gp149b
+GGet :Line 136 :Row 2 :キリー「ハァ‥ハァ‥ハァ‥何て、男！！
+Row 2 :　‥普通、思い付いても　やらないような事を　平気で…！！」
+Pause :Line 137 :Row 1 :キリー「だがそのヒラメキ！！実行力！！
+Row 1 :　爆発的発想の持ち主と見た！！」
+Call Tw
+Pause :Line 137 :Row 1 :キリー「不利な形勢を逆利用するなどは
+Row 1 :　敵ながら、見事！！
+Row 1 :　勝負は　一時、おあずけよ！！」
+Call Tw
+_:Screen Off :GCls :View 28,8,Gp259
+GGet :Line 137 :Row 1 :斎藤「まて！！逃がさん！！」
+Call Tw
+Screen On :Line 149 :Row 2 :斎藤は、キリーを追って、廊下に出た。
+Pause :Line 136 :Row 2 :しかし、その時‥！！
+Line +4 :Row 2 :斎藤「え‥？」
+Effect 27 :Palette 1,564 2,786 3,AB9 4,CDB 5,342
+Wait 6 :Palette 1,675 2,897 3,CDB 4,DEC 5,453
+Wait 6 :Palette 3,DEC 4,EFC 5,564
+Wait 6 :Palette 3,EFC 4,FFF
+Wait 6 :Palette 3,FFF
+_:Screen Off :GCls :View 17,8,Gp157a
+View 28,8,Gp157b
+Copy 14,120 0,0 64,8 15 0
+Effect 25
+Screen On :Line 136 :Row 2 :斎藤「しょ‥職員室が、爆発した！？
+Row 2 :　ほ‥炎と、衝撃波が　こっちに向かってくるゥ！！」_
+Screen Off :GCls :View 17,8,Gp174
+GGet :Mask 15,0 30,1 255 0
+Mask 15,0 2,16 255 0
+Screen On :Col 3 :Line 136 :Row 2 :斎藤「だっ、駄目だァッ！！衝撃波が、速いかッ！！追いつかれるゥッ！！」
+Pause :View 20,8,Gp165
+Line 137 :Row 1 :斎藤「とォーーーーっ！！」
+Call Tw
+Wait 6 :Copy 30,124 17,8 16,4 3 0
+Wait 6 :Copy 30,124 17,4 16,2 3 0
+Wait 6 :Copy 30,124 17,2 16,2 3 0
+Wait 6 :Copy 30,124 17,0 16,2 3 0
+Wait 6 :Copy 30,124 17,0 16,4 3 0
+Wait 6 :Copy 30,120 17,2 16,8 3 0
+Wait 6 :Copy 30,114 17,6 16,14 3 0
+Wait 6 :Copy 30,106 17,12 16,22 3 0
+Wait 6 :Copy 30,96 17,20 16,32 3 0
+Wait 6 :Copy 30,84 17,30 16,44 3 0
+Wait 6 :Copy 30,70 17,42 16,58 3 0
+Palette 4,785 8,FFB C,CE8
+Wait 6 :Palette 4,9A7 8,FFD C,EFA
+Wait 6 :Palette 4,BC9 8,FFF C,FFC
+Wait 6 :Palette 4,DEB C,FFF
+Wait 6 :Palette 4,FFD
+Wait 6 :Palette 4,FFF
+Screen Off :GCls :Mask 0,0 17,16 255 0
+Mask 64,0 17,16 255 0
+View 0,8,Gp180a
+GGet :Screen On :Effect 11
+Cnt 13
+*L4
+Wait 4 :Copy 16,120 0,8 38,8 15 0
+Copy 10,120 64,8 54,8 15 0
+Wait 4 :Cls :Loop L4
+Grp 0 :Screen Off :GCls :View 6,8,Gp180b
+GGet :Mask 63,0 2,16 255 0
+Screen On :Grp 1 :Wait 30 :Cnt 15
+*L5
+Wait 3 :Copy 64,120 18,8 17,8 15 0
+Loop L5
+Copy 10,120 6,8 64,8 15 0
+Cnt 10
+*L6
+Wait 3 :Copy 64,120 18,8 17,8 15 0
+Loop L6
+Copy 10,120 64,8 6,8 15 0
+GGet :Mask 0,0 80,25 0 0
+Col 7 :Line 136 :Row 2 :斎藤「！」
+Pause :Line 136 :Row 2 :加川「…‥‥‥…」
+Row 2 :斎藤「…‥加川…」
+Pause :Line 136 :Row 2 :加川「ちがう」
+Row 2 :斎藤「！！」
+Pause :Line 146 :Row 1 :斎藤「加川ァ！！」
+Call Tw
+Line 136 :Row 2 :加川「それは、さっきまでの名だァ」
+Pause :Line 155 :Row 1 :　ただ、それだけだァ！！」
+Call Tw
+Line 136 :Row 2 :加川「間違えるなァ、俺の名は　ファッカァ！爆炎（バーニング）のファッカァ！！
+Row 2 :　貴様と、戦う為に　生まれた　改良人間（リメイク）！！
+Pause :Line 146 :Row 1 :ファッカァ「その通りィィ！！」
+Call Tw
+Line 136 :Row 2 :斎藤「改造されたのか！！加川君！！改造されて…正気をも、失ったのかァ！！」
+Pause :Line 136 :Row 2 :斎藤「加‥！？」
+Effect 45 :Line +4 :Row 2 :その時、鈍い爆音が、校舎を震わせた。
+Pause :Line 136 :Row 2 :斎藤「何だ、今の音は！？‥旧校舎から‥！！」
+Row 2 :ファッカァ「よろしいィィ‥計画通りだァ‥」
+Pause :Line 136 :Row 2 :斎藤「何の計画だ！！」
+Row 2 :ファッカァ「あとで、わかるゥ…」
+Pause :Line 137 :Row 1 :斎藤「加川アァ！！」
+Call Tw
+Pause :Line 136 :Row 2 :ファッカァ「おっと、間違えるなよ、斎藤。オレは、お前を　助けてやったんだ。
+Row 2 :　ヤツラは、お前を　警察に　突き出そうとしていたんだぜ」
+Row 2 :斎藤「！！」
+Pause :Line 155 :Row 1 :　そうだろォ、斎藤ォォ！！」
+Call Tw
+Line 136 :Row 2 :ファッカァ「そうならずに　すんだのは、なぜだ？‥そうさ！！　お前を　警察に
+Row 2 :　売ろうとしている　連中共を　俺様が、木端微塵にしてやったからだ！！
+Pause :Line 137 :Row 1 :斎藤「気安く‥！気安く、僕の名を呼ぶな
+Row 1 :　貴様ァ！！」
+Call Tw
+Pause :Line 136 :Row 2 :ファッカァ「…‥‥‥…」
+Row 2 :斎藤「ぐぐ…！！くっ！！」_
+Screen Off :GCls :View 17,8,Gp173
+Screen On :Line 136 :Row 2 :ファッカァ「…‥またな‥‥斎藤‥…」
+Row 2 :斎藤「！」_
+Screen Off :GCls :View 0,3,Gp142a
+GGet :Copy 16,65 0,8 48,63 15 0
+Mask 0,0 80,16 255 0
+Mask 16,1 48,16 0 0
+Copy 80,32 0,160 0,128 15 0
+Screen On :Effect 33
+Line 136 :Row 2 :そう言い残すと、加川‥いや、ファッカァは、旧校舎に走り去った。
+Line +4 :Row 2 :斎藤「加川！！」_
+Mask 0,16 80,4 255 0
+Cls :Effect 26
+Cnt 26
+*L7
+Wait 5 :Copy 42,54 22,102 22,101 12 0
+Loop L7
+GGet :Mask 0,16 80,4 0 0
+Line 136 :Row 2 :斎藤「う！！あ‥あれはッ‥！？」_
+Flg0=0 :Flg63=0
+*06
+Cls :Line 136 :Row 2 :斉藤「‥…！？」
+Line +4 :Row 1 :［１］見る
+Row 1 :［２］調べる
+Row 1 :［３］逃げる
+Select 07,09,10
+*07
+Line 136 :If Flg0=1 Then 08
+Row 2 :斎藤「‥ムマ？いや、違う‥！？」_
+Jump 06
+*08
+Flg63=1 :Row 2 :斎藤「ケムリ‥！？い‥いや、これは、ガス！！毒ガスだッ！！やばいッ！！」_
+Jump 06
+*09
+Flg0=1 :Line 136 :Row 2 :斎藤「何だ‥？くっ‥臭い‥！！」_
+Jump 06
+*10
+Line 136 :If Flg63=1 Then 11
+Row 2 :斉藤「いや‥慌てるな、冷静に　対処するンだ」_
+Jump 06
+*11
+Row 2 :斎藤「に‥逃げよう。ん、い‥いや、誰かいるぞ！？」
+Pause :Copy 12,83 64,8 48,45 15 0
+GGet :Line 136 :Row 2 :斎藤「‥人影！！誰だ！！」
+Pause :View 17,8,Gp251a
+GGet :Line 137 :Row 1 :斎藤「と‥富沢！！」
+Call Tw
+Pause :View 17,8,Gp253a
+GGet :Line 136 :Row 2 :斎藤「しっかりしろ！！もう、大丈夫だ！！」
+Row 2 :富沢「い‥息を吸う‥な…‥毒‥ガ‥スだ…」
+Pause :Line 136 :Row 2 :富沢「そ‥この‥スイッチを‥防火シャッターを下ろせ…‥旧校舎と‥新校舎を‥
+Row 2 :　遮断‥で‥き‥る…」
+Row 2 :斎藤「わかった」_
+Screen Off :GCls :View 0,3,Gp142a
+Copy 42,27 22,128 22,102 12 0
+Copy 14,25 64,91 34,69 15 0
+Copy 42,27 22,155 22,128 15 0
+GGet :Screen On :Line 136 :Row 2 :斉藤「これか‥」
+Line +4 :Row 1 :［１］スイッチを押す
+Select 12
+
+- ｱｰﾑ･ﾘﾝｸﾞ点滅 -
+*Am
+Wait 1 :Palette 5,8A8
+Wait 2 :Palette 5,FFF
+Ksnc Am
+Cls :Ret
+
+*12
+Effect 46
+Copy 46,5 17,3 17,8 3 0 :Wait 6 :Copy 46,5 17,3 17,13 3 0
+Wait 6 :Copy 46,5 17,3 17,18 3 0 :Wait 6 :Copy 46,5 17,3 17,23 3 0
+Wait 6 :Copy 46,5 17,3 17,28 3 0 :Wait 6 :Copy 46,5 17,3 17,33 3 0
+Wait 6 :Copy 46,5 17,3 17,38 3 0 :Wait 6 :Copy 46,5 17,3 17,43 3 0
+Wait 6 :Copy 46,5 17,3 17,48 3 0 :Wait 6 :Copy 46,5 17,3 17,53 3 0
+Wait 6 :Copy 46,5 17,3 17,58 3 0 :Wait 6 :Copy 46,5 17,3 17,63 3 0
+Wait 6 :Copy 46,5 17,3 17,68 3 0 :Wait 6 :Copy 46,5 17,3 17,73 3 0
+Wait 6 :Copy 46,5 17,3 17,78 3 0 :Wait 6 :Copy 46,5 17,3 17,83 3 0
+Wait 6 :Copy 46,5 17,3 17,88 3 0 :Wait 6 :Copy 46,5 17,3 17,93 3 0
+Wait 6 :Copy 46,5 17,3 17,98 3 0 :Wait 6 :Copy 46,5 17,3 17,103 3 0
+Wait 6 :Copy 46,5 17,3 17,108 3 0 :Wait 6 :Copy 46,5 17,3 17,113 3 0
+Wait 6 :Copy 46,5 17,3 17,118 3 0 :Wait 6 :Copy 46,5 17,3 17,123 3 0
+Grp 0 :Screen Off :Effect 4
+GCls :View 17,8,Gp261a
+GGet :Screen On :Grp 1 :Line 136 :Row 2 :斎藤「もう、大丈夫だ‥一体、何が　あった！？」
+Pause :Line 136 :Row 2 :富沢「…く‥黒爽や…の‥野笛たちと…め‥めし、食いに　行ったっけ‥…ファ‥
+Row 2 :　ファミリン・ラーメンへ…」
+Row 2 :斎藤「あ、ああ」
+Pause :Line 136 :Row 2 :富沢「ま‥満席で、食えなかったから…学校に‥もどっ…て…ヒマつぶしてたら…
+Row 2 :　い‥いきなり、変な‥でぶが‥変な　でぶが、現れて‥べろんと、ケツ出したと
+Row 2 :　思ったら…い‥いきなり、こんな…すげえ　ガスを…も‥猛烈な勢いで…旧校舎に
+Row 2 :　充満して…い‥生き残ったのは、たぶん…オ‥オレ一人だ…」
+Pause :Line 136 :Row 2 :斎藤「では、黒爽と、野笛君は！？」
+Row 2 :富沢「あ‥あいつらは、わからない…門の前で、別れたから…か‥帰ったかも…」
+Pause :Line 136 :Row 2 :斎藤「何てこった‥旧校舎には、一年生が‥まだ、
+Row 2 :　大勢の生徒が、残っていたというのに‥！！」
+Row 2 :富沢「ああ‥」
+Pause :Line 136 :Row 2 :斎藤「君は‥よく、助かったものだね。さすが、忍者だ」_
+Row 2 :富沢「いや…そういうわけだからでは‥ない。見ろ」
+Pause :Copy 8,40 64,60 40,60 15 0
+GGet :Line 137 :Row 1 :斎藤「あっ！！」
+Call Tw
+Line 145 :Row 2 :富沢「そういうわけさ‥…だから、ここまで、どうにか、歩いてこれた‥」
+Call Am
+Line 136 :Row 2 :斎藤「アームリングが、自動で、生命維持を…！？」
+Row 2 :富沢「行っていた‥これは…つけている当人の能力を…引き出すことだけではなく‥
+Row 2 :　他の機能も　ついているようだ‥」
+Call Am
+Line 136 :Row 2 :斎藤（そう言えば…僕は、思い出していた。
+Row 2 :　富沢は、太陽仮面から、もらった　このアームリングを装着する事により、
+Row 2 :　伊賀忍者であった　祖先の血を‥魂を　呼び覚ましたのだ‥）
+Call Am
+Line 136 :Row 2 :斎藤（すると…昔から、カンの強かったという　黒爽の予知も‥アームリングの
+Row 2 :　機能によって、増大し、彼の視界《ヴィジョン》として、夢に出てきた‥という
+Row 2 :　可能生は、充分に　ありうるわけだ‥）
+Call Am
+Line 136 :Row 2 :斎藤（では‥彼の予知、あのヴィジョンが、本物だとすると‥！！
+Row 2 :　い、いや、今は、そんな事を　考えている時ではない‥！！
+Row 2 :　この場を　何とかしなければ‥！！）
+Call Am
+Line 136 :Row 2 :斎藤「富さん、職員室が、爆破された。僕は、様子を見に行かなくては‥」
+Row 2 :富沢「わかった…オレは‥大丈夫だ‥行ってくれ」
+Call Am
+Line 136 :Row 2 :斎藤「ここに　いるんだ。いいね」
+Call Am
+Grp 0 :Screen Off :GCls :Mask 0,0 80,25 0 0
+View 17,8,Gp186D4
+GGet :Palette 4,000 5,000 6,000
+Screen On :Grp 1 :Line 136 :Row 2 :斎藤「ひ‥ひどい‥さっきの爆発で、これ程まで‥これでは‥おそらく
+Row 2 :　誰も、生きてはいまい‥」
+Pause :Palette 4,120 5,231 6,342
+Wait 6 :Palette 4,231 5,342 6,675
+Wait 6 :Palette 4,342 5,453 6,786
+Wait 6 :Palette 4,453 5,675 6,AB9
+Wait 6 :Palette 4,564 5,897 6,DEC
+Line 137 :Row 1 :斎藤「スミダ先生！！」
+Call Tw
+Line 145 :Row 2 :130 A$="スミダ「う‥うう‥」
+Pause :View 17,8,Gp213
+GGet :Line 137 :Row 1 :斎藤「スミダ先生！！
+Row 1 :　しっかりして下さい！！」
+Call Tw
+Pause :Line 136 :Row 2 :角田「そ‥その声は…斎藤か‥？」
+Row 2 :斎藤「！？‥先生…目が‥？」
+Pause :Line 136 :Row 2 :角田「も、もう、お前の…進路を‥相談して‥やれないなぁ…」
+Row 2 :斎藤「先生‥！！そんな事は　ありません‥！！
+Row 2 :　い‥今、救急車を呼んできます！！」
+Pause :Line 136 :Row 2 :角田「ま、待ってくれ‥行くな‥行かないでほしい‥私は…もうダメだ…
+Row 2 :　わかるんだ‥だから…」
+Pause :Line 136 :Row 2 :斎藤「先生‥そんな事、言わないで‥」
+Row 2 :角田「いや‥いいんだ…さ‥斎藤‥最後の頼みだ…私の‥胸のポケットを探れ‥」
+Pause :Line 136 :Row 2 :斎藤「は‥はい、先生。手帳が、入っていました」
+Row 2 :角田「て‥手帳に差し込んである‥鉛筆を‥とれっ‥」
+Pause :View 17,8,Gp226
+GGet :Line 137 :Row 1 :斎藤「こっ、これはっ！！」
+Call Tw
+Row 2 :角田「私が…帝国陸軍に在た頃…から‥日記を書くのに‥使っていた…もの‥だ‥」
+Pause :Line 136 :Row 2 :角田「え‥えらいんだぞ‥私は、少佐だったからな‥」
+Row 2 :斎藤「に‥二等兵って、かいてありますけど‥」
+Pause :Line 136 :Row 2 :角田「…‥‥‥…」
+Row 2 :斎藤「…‥‥‥…」
+Pause :Line 136 :Row 2 :角田「…‥‥‥…」
+Row 2 :斎藤「あ‥い、いや、よく見たら、少佐でした」
+Pause :Line 136 :Row 2 :角田「そ‥そうだろ？そうだ‥それでいい‥」
+Row 2 :斎藤「先生‥」
+Pause :Line 136 :Row 2 :角田「それを‥お前に…や、やるっ‥」
+Row 2 :斎藤「でも、そんな大切な物‥！！」
+Pause :Line 136 :Row 2 :角田「私には、子供が　いない‥もらって欲しい…たのむ」
+Row 2 :斎藤「…‥頂戴致します」
+Pause :View 17,8,Gp213
+GGet :Line 136 :Row 2 :角田「む、昔は　良かった…シャープ・ペンシルなど、無かった時代だ…お前が、生
+Row 2 :　まれる　ずっと昔…あの頃は、毎日が、充実していた…あの頃、民衆の目は、みんな
+Row 2 :　‥きらきら、輝いていた‥もう‥見えないが、おそらく‥今の　お前のように…」
+Row 2 :斎藤「先生‥」
+Pause :Line 136 :Row 2 :角田「…さっきは‥立派‥だったぞ…お前は…正しかった‥
+Row 2 :　私達が‥馬鹿だったよ…若い者の言うことは‥聞くもんだなぁ‥若者の‥……」_
+Palette 5,453
+Wait 10 :Palette 5,674
+Wait 10 :Palette 5,895
+Wait 10 :Palette 5,AB7
+Wait 10 :Palette 5,CD8
+Wait 10 :Palette 5,DE9
+Row 2 :斎藤「…‥‥先生？」
+Pause :Line 137 :Row 1 :斎藤「先生！！スミダ先生！！」
+Call Tw
+_:Screen Off :GCls :View 17,8,Gp272a
+GGet :Line 155 :Row 1 :　奴等を必ず、殺してやる！！」
+Call Tw
+Line 136 :Row 2 :斎藤「くうっ‥…ス‥ミ‥ダ‥先‥生…。
+Row 2 :　僕は、この鉛筆に誓うぞ…先生達を‥こんな目に　あわせた奴を…！！
+Screen On :Pause :Line 146 :Row 1 :　爆炎のファッカァ！！」
+Call Tw
+Line 136 :Row 2 :斎藤「まっていろよ…加川‥いや！！_
+Grp 0 :GCls :Line 136 :Row 2 :電話の声「はあ…そうですか、付近の主婦が、通報を‥いや、爆発って程の事では
+Row 2 :　ありませんでした。ボヤで済みました。まあ　幸い、ケガ人も　でなかった事ですし
+Row 2 :　‥ええ、はい。その必要は　ありません。こちらの方で、何とかしますので、はい。
+Row 2 :　いやあ、お互い、公の職は　大変ですね…それじゃ、ええ‥どうも…」
+Grp 1 :_
+Screen Off :GCls :View 0,8,Gp239
+Grp 0 :GGet :Mask 0,0 17,16 255 0
+Screen On :Grp 1 :Line 136 :Row 2 :ヘガス「これでいい…電話線を切ってこい‥愚礼賢…うまくやれ‥」
+Pause :Line 136 :Row 2 :愚礼賢「…Ｏｋ．Ｍｙ　ｍａｓｔｅｒ」
+Row 2 :ヘガス「Ｇｏｏｄ‥」
+Pause :Palette 3,342
+Wait 6 :Palette 3,231
+Wait 6 :Palette 3,120
+Wait 6 :Palette 3,010 4,120 5,231
+Wait 6 :Palette 3,000 4,231 5,453
+Wait 6 :Palette 4,342 5,786
+Wait 6 :Palette 4,564 5,9A8
+Line 136 :Row 2 :ファッカァ「こっちも　終わったァ‥マスタァ」
+Pause :Line 136 :Row 2 :ヘガス「…確認は　してきたな‥？」
+Row 2 :ファッカァ「ああ…奴は　まだ、この学校に残ってる。その仲間達も、共に」
+Pause :Line 136 :Row 2 :ヘガス「…‥‥そうか」
+Row 2 :ファッカァ「‥しかし、マスタァ‥…なぜ、それ程まで、あの男に　こだわるゥ…
+Row 2 :　あの　お方の命令では‥」
+Pause :Line 136 :Row 2 :ヘガス「私は、彼の命令で、動いているのではない。私自身の意思で‥だ」
+Row 2 :キリー「気になるわね」
+Pause :Copy 18,120 0,8 46,8 15 0
+GGet :Line 136 :Row 2 :ヘガス「キリィ‥」
+Row 2 :キリー「なぜ、あの男に　こだわるのか…理由を聞いていなかったわ…」
+Pause :Line 136 :Row 2 :ヘガス「…‥‥‥…」
+Row 2 :キリー「わけを知りたいわね」
+Row 2 :ファッカァ「同感だァ‥わけを知りたい…」
+Pause :Line 136 :Row 2 :ヘガス「‥フ‥フフ‥聞いて、どうする‥フフ‥」
+Pause :Line 136 :Row 2 :キリー「別に。どうもしないわ。ただ、知りたいだけ…。戦闘の前で、何かを
+Row 2 :　気にかけておくのは、よくない事よ‥…能力を　発揮できない事も　あるわ」
+Pause :Line 136 :Row 2 :ヘガス「キリィ、お前は　美しい。私の生んだ　最高傑作だ。
+Row 2 :　その　お前が、そう言うのなら、仕方‥ないか‥」
+Row 2 :キリー「‥理由は‥？」
+Pause :Line 136 :Row 2 :ヘガス「…‥‥‥…」
+Row 2 :キリー「理由は‥！？」
+Pause :Line 136 :Row 2 :ヘガス「復讐だ…」
+Row 2 :キリー「…‥‥‥…！！」
+Row 2 :ファッカァ「…‥‥‥…！！」
+Pause :Line 136 :Row 2 :ヘガス「…‥わかった‥な？」
+Pause :Line 136 :Row 2 :キリー「Ｏｋ．Ｍｙ　ｍａｓｔｅｒ‥」
+Row 2 :ヘガス「Ｇｏｏｄ…」_
+Grp 0 :Screen Off :GCls :Mask 0,0 80,25 0 0
+View 17,8,Gp261a
+Copy 6,56 70,8 46,8 15 0
+Copy 12,120 0,0 64,8 15 0
+GGet :Screen On :Grp 1 :Line 136 :Row 2 :斎藤「大丈夫だったか？富さん」
+Row 2 :富沢「…ああ、だいぶ　良くなった‥もう、歩けるよ」
+Pause :Line 136 :Row 2 :斎藤「そうか、じゃあ、行動を共にしよう。この事態を　何とかする為に」
+Row 2 :富沢「ああ‥もちろんだ‥」_
+Grp 0 :GCls :Grp 1
+Flg0=0 :Flg1=0 :Flg63=0
+Scn FN2D4
+
+*E.
+

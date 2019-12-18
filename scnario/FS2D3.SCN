@@ -1,0 +1,343 @@
+
+- ｻﾌﾞﾙｰﾁﾝ -
+*Tw
+Copy 40,60 0,137 0,136 15 1
+Ret
+
+- ﾒｲﾝ･ﾙｰﾁﾝ -
+*S.
+
+*00
+Screen Off :GCls :View 17,8,Gp140
+GGet :Screen On
+*01
+Line 136 :Row 2 :ここは、旧校舎２階の廊下。
+Line +4 :Row 1 :［１］２年の各教室へ
+Row 1 :［２］生物室
+Row 1 :［３］トイレ
+Line 149 :Row 26 :［４］渡り廊下
+Row 26 :［５］３階へ上がる
+Row 26 :［６］１階に降りる
+Select 02,03,To,Cr,3F,1F
+*02
+Line 136 :Row 2 :斎藤「２年生は　もう、誰も　いないだろうな‥」
+Pause :Jump 01
+
+- ﾄｲﾚ -
+*To
+Screen Off :GCls :View 17,8,Gp143
+GGet :Screen On
+*T0
+Line 136 :Row 2 :旧校舎２階のトイレ。
+Line +4
+Row 1 :［１］辺りを見る
+Row 1 :［２］用を足す
+Row 1 :［３］トイレから出る
+Select T1,T2,00
+*T1
+Line 136 :Row 2 :斎藤「誰も　いない‥」
+Pause :Jump T0
+*T2
+Line 136 :Row 2 :斎藤「そんな事してる場合じゃない…！」
+Jump T4
+Pause :Jump T0
+
+- ﾜﾀﾘ･ﾛｳｶ -
+*Cr
+Screen Off :GCls :View 17,8,Gp142
+GGet :Screen On :Line 136 :Row 2 :２階の渡り廊下です。
+Line +4
+Row 1 :［１］新校舎へ移動
+Row 1 :［２］旧校舎に戻る
+Select C0,00
+*C0
+Scn FN2D3
+
+*3F
+Scn FS3D3
+
+*1F
+Scn FS1D3
+
+- ﾑﾏ･ﾃﾝﾒﾂ -
+*Mu
+Wait 2 :Palette 2,BCA 4,DFC
+Wait 3 :Palette 4,FFF
+Wait 2 :Palette 2,9A8 4,DFC
+Wait 3 :Palette 4,BCA
+Loop Mu
+Ret
+
+- 生物室(ﾍｶﾞｽ登場) -
+*03
+Screen Off :GCls :View 17,8,Gp158D3
+GGet :Screen On :Line 136 :Row 2 :斎藤「カギが、掛かってる‥まだ、使用中らしい。一体、中に　誰が　いるのか‥？
+Row 2 :　何を　しているのだろうか‥」
+Pause :If Flg3=0 Then 00
+If Flg5=0 Then 00
+If Flg6=0 Then 00
+If Flg7=0 Then 00
+If Flg9=0 Then 00
+If Flg10=0 Then 00
+If Flg11=0 Then 00
+Line 136 :Row 2 :ガチャ
+Line +4 :Row 2 :斎藤「！！」
+Pause :Line 136 :Row 2 :斎藤「！！‥開くぞ、さっきは　カギが、掛かっていたが‥！！」_
+Screen Off :GCls :Mask 0,16 80,8 255 0
+View 17,8,Gp172
+Screen On :Wait 30 :Cnt 50
+*L0
+Wait 1 :Copy 46,170 17,9 17,8 15 0
+Loop L0
+Line 137 :Row 1 :斎藤「うああああああああッ！！」
+Call Tw
+Mask 0,0 80,25 0 0
+_:Screen Off :GCls :View 17,8,Gp158
+View 25,8,Gp158a
+GGet :Screen On :Line 136 :Row 2 :男「…何だね‥？　君は‥」
+Row 2 :斎藤「ち…近づくな。き‥君の方こそ、見ない顔だ…あっ、あやしい奴めっ‥！！」_
+Screen Off :GCls :Mask 0,0 64,24 255 0
+Mask 17,1 47,15 0 0
+View 2,8,Gp161
+Screen On :Flg0=1 :Cnt 30
+*L1
+Wait 2 :Copy 34,180 30,10 30,8 12 0
+F+0 :If Flg0=2 Then 04 ! Jump 05
+*04
+Flg0=0 :Copy 60,120 1,8 2,8 3 0
+*05
+Loop L1
+Mask 0,0 80,25 0 0
+GGet :Line 136 :Row 2 :ヘガス「失敬な！！私の名は、ヘガス・我狼陰。　今日、転校してきた者だ。
+Row 2 :　生物室は、勝手に使わせてもらったが、君が、使うなら、使うがいい。
+Row 2 :　私の用事は　もう、済んだのでね…」
+Row 2 :斎藤「！！」_
+*06
+Cls :Line 136 :Row 2 :斉藤（異様な連中だ‥）
+Line +4 :Row 1 :［１］見る
+Row 1 :［２］話す
+Row 1 :［３］調べる
+Line 149 :Row 26 :［４］なぐる
+Select 07,10,08,09
+*07
+Line 136 :Row 2 :斎藤「なんだ、後ろの奴は‥！？」_
+Jump 06
+*08
+Line 136 :Row 2 :斎藤「異質の気を感じる。アームリングが‥反応する‥！！」_
+Jump 06
+*09
+Line 136 :Row 2 :斎藤「この気圧…！！駄目だ‥殴るどころか、うかつに近づく事も出来ない‥！！」_
+Jump 06
+*10
+Line 136 :Row 2 :斎藤「うっ‥後ろの　２人は、誰だ！？」
+Pause :Line 136 :Row 2 :ヘガス「彼らは…私の付き添いだ…君には、関係のない事のはず…」
+Row 2 :斎藤「…‥‥‥…！？」
+Pause :Line 136 :Row 2 :ヘガス「いや‥まてよ‥その日本刀…それは…！！…まさか、君は…いや‥まあいい
+Row 2 :　この場は、見なかった事にしておく…。行き給え、斎藤　浩壱君」
+Row 2 :斎藤「！！」
+Pause :Line 136 :Row 2 :ヘガス「君と　私とは、直接の関係は、無い‥」
+Row 2 :斎藤「僕の名を知っている　君は、何者だ‥」
+Pause :Line 136 :Row 2 :ヘガス「私は、ヘガス我狼陰。　用事が　あるのは、君の友人にだけだ‥
+Row 2 :　もっとも、この２人は、別だが」
+Row 2 :斎藤「…‥‥‥…！！」
+Pause :Line 136 :Row 2 :ヘガス「さあ、行き給え。この場は、見逃してやる」
+Row 2 :愚礼賢「めんどくせえ…この場で　やっちまおうぜ‥。どうせ　いずれは‥」
+Pause :Line 136 :Row 2 :ヘガス「愚礼賢。私が　見逃す‥と言った手前、今　ここで‥というわけにはいかん」
+Row 2 :愚礼賢「なぁ‥いいじゃねぇか！！やらせてくれよ！！
+Row 2 :　こっちは　３人だ‥こんな奴、２０秒もあれば、充分だ」
+Pause :Line 136 :Row 2 :ヘガス「愚礼賢。私の手はずした通りにするんだ。今　ここで、彼を相手にする事は
+Row 2 :　予定外の行動となり、不確定要素を生む原因ともなる。私の言う通りにしろ」
+Pause :Line 137 :Row 1 :愚礼賢「今、殺ったっていいじゃねぇか！
+Row 2 :　敵が１人、減るだけだァ！！」
+Call Tw
+Pause :Line 136 :Row 2 :ヘガス「駄目だ」
+Row 2 :斎藤「…‥‥‥…！」
+Pause :Line 136 :Row 2 :ヘガス「さあ、行き給え」
+Row 2 :斎藤「…そうは、いかないな。君は　どうやら、加川君と、もう１人の‥
+Row 2 :　あの金髪オカマと、関係が　あるようだ。
+Row 2 :　…それが　わかった以上、放っておくわけには　いかない‥」
+Pause :Line 136 :Row 2 :ヘガス「…‥おろかな‥」
+Row 2 :斎藤「…‥‥‥…」
+Pause :View 17,8,Gp079a
+GGet :Line 137 :Row 1 :ヘガス「だが止むを得まい。アンドレ！」
+Call Tw
+Pause :Line 136 :Row 2 :斎藤「こいつは‥異人か！！」
+Row 2 :ヘガス「アンドレは　フランス人だ。改良人間（リメイク）の試作（プロトタイプ）
+Row 2 :　君の　その、マサムネの刃（ブレード）が、通用するかな？　フフフフフ‥！！」
+Pause :Line 150 :Row 1 :斎藤「まて！！」
+Call Tw
+Line 136 :Row 2 :そう言うと、ヘガスと　愚礼賢は、走り去った。
+Effect 31 :Pause :Line 137 :Row 1 :アンドレ「間違えるな！！お前の相手は
+Row 1 :　この、わしだ！！」
+Call Tw
+Pause :Line 136 :Row 2 :斎藤「しゃ、しゃべった」
+Row 2 :アンドレ「わしは、他のリメイクとは、違う。テレパシストとして、改良された
+Row 2 :　わしは、副作用により、肉体に　天然の“霧魔”を宿す事となった」
+Pause :Line 136 :Row 2 :斎藤「ムマ？」
+Pause :Line 164 :Row 1 :　行くぞ、サムライ！！」
+Call Tw
+Line 136 :Row 2 :アンドレ「霧魔は、低いが　知能を持った霊能生命体！！
+Row 2 :　わしは、そいつを　この髪の毛に飼っている。…霧魔は、人を襲う時、肉や骨は
+Row 2 :　食うが、髪の毛は残すからだ。わしは、その霧魔を　テレパシィで操るのだ！！
+Pause :View 17,8,Gp041
+Line 146 :Row 1 :アンドレ「出でよ、霧魔！！我が命に従い
+Row 1 :　眼前の敵を食い尽くせ！！」
+Call Tw
+Line 136 :Row 2 :斎藤「くっ、来るかッ！！」
+*L2
+Wait 2 :Palette 4,897 5,BCA 6,676
+Wait 1 :Palette 4,CDB 5,EFD 6,9A9
+Wait 1 :Palette 4,EFD 5,EFD 6,CDC
+Wait 1 :Palette 4,EFD 5,EFD 6,EFD
+Wait 1 :Palette 4,453 5,786 6,343
+Ksnc L2
+Screen Off :GCls :View 2,8,Back2
+GGet :As 2 View 2,8,And0
+Col 4 :Line 145 :Row 1 :斎藤「生か死か‥正宗で、勝負だッ！！」
+Copy 40,16 0,145 0,144 15 1
+Screen On :Pause :As 2 View 2,8,And1
+Effect 29 :Pause :As 2 View 2,8,And3
+Effect 5 :Pause :As 2 View 2,8,And2
+Effect 22 :_
+Screen Off :GCls :View 17,8,Gp167b
+GGet :Effect 37 :Screen On :Col 7 :Line 136 :Row 2 :斎藤「…‥勝った‥」
+Pause :View 29,8,Gp167d
+GGet :Line 146 :Row 1 :　喰らわれている！！」
+Call Tw
+Line 136 :Row 2 :斎藤「！！霧魔が‥！！アンドレの肉体を包む‥！！くっ‥こっ、これは！！
+Effect 27
+*L3
+Wait 2 :Palette 6,DFC
+Wait 3 :Palette 6,FFF
+Wait 2 :Palette 6,DFC
+Wait 3 :Palette 6,BCA
+Ksnc L3
+Screen Off :GCls :View 17,8,Gp168a
+Screen On :Effect 26
+Cnt 6 :Call Mu
+Wait 2 :Palette 2,BCA 4,DFC
+Wait 3 :Palette 1,342 4,FFF
+Wait 2 :Palette 2,9A8 4,DFC
+Wait 3 :Palette 1,564 4,BCA
+Wait 2 :Palette 2,BCA 4,DFC
+Wait 3 :Palette 1,786 4,FFF
+Wait 2 :Palette 2,9A8 4,DFC
+Wait 3 :Palette 1,9A8 4,BCA
+*L4
+Wait 2 :Palette 2,BCA 4,DFC
+Wait 3 :Palette 4,FFF
+Wait 2 :Palette 2,9A8 4,DFC
+Wait 3 :Palette 4,BCA
+Ksnc L4
+Screen Off :GCls :View 17,8,Gp158
+View 22,8,Gp168b
+GGet :Screen On :Line 136 :Row 2 :斎藤「あっ！！っ‥通気口の中に‥！！」
+Pause :Palette 3,CDB
+Wait 6 :Palette 3,AB9
+Wait 6 :Palette 3,786
+Wait 6 :Palette 3,564 5,CDB
+Effect 15 :Wait 6 :Palette 5,AB9
+Wait 6 :Palette 5,897
+Wait 6 :Palette 5,675
+Wait 6 :Palette 5,453
+Wait 6 :Palette 5,231
+Wait 6 :Palette 5,000
+*11
+Cls :Line 136 :Row 2 :斉藤「‥…！？」
+Line +4 :Row 1 :［１］見る
+Row 1 :［２］調べる
+Select 12,13
+*12
+Line 136 :Row 2 :斎藤「通気口の中に　入ってしまった…」_
+Jump 11
+*13
+Line 136 :Row 2 :〔調べる〕
+Line +4 :Row 1 :［１］廊下
+Row 1 :［２］通気口
+Row 1 :［３］生物室
+Select 14,15,16
+*14
+Line 136 :Row 2 :斎藤「ア‥アンドレの髪の毛‥！！」_
+Jump 11
+*15
+Line 136 :Row 2 :斎藤「も‥もう　ここには、いない‥事態が、悪化したような気がする‥」_
+Jump 11
+*16
+Screen Off :GCls :View 17,8,Gp245a
+GGet :Line 155 :Row 1 :　人体改良が行われたというのかッ！！」
+Call Tw
+Line 136 :Row 2 :斎藤「これは‥！さっき、リメイクやら、改良などと言っていたが…加川君も…！？
+Row 2 :　悪夢の…！！かつてのナチスドイツ・アウシュビッツのような‥
+Screen On
+Pause :Line 136 :Row 2 :斎藤「もはや、躊躇してはいられない‥急がねば‥みんなが‥葛校が、危ない！！」_
+Screen Off :GCls :View 17,8,Gp157
+GGet :Effect 31 :Grp 0
+Screen On :Grp 1 :Line 136 :Row 2 :斎藤は、職員室に走った。
+Pause :Line 136 :Row 2 :斎藤「カギが、掛かっている‥！」
+Line +4 :Row 1 :［１］ノックする
+Row 1 :［２］カギを壊す
+Select 17,18
+*17
+Effect 44 :Line 136 :Row 2 :斎藤「斎藤です！！開けて下さい」
+Row 2 :角田「まだ、下らん事しとるのか！！帰れ！！」_
+*18
+Screen Off :GCls :View 17,8,Gp186b
+GGet :Line 137 :Row 1 :斎藤「だあ～ッ！！」
+Call Tw
+Line 145 :Row 2 :教師Ａ「うわあっ！！」
+Row 2 :角田「げえっ！斎藤オォォ！！」
+Effect 38 :Screen On
+Pause :View 17,8,Gp218
+GGet :Line 155 :Row 1 :斎藤「下校放送を流せッ！今すぐ流せッ！
+Row 1 :　さもないと、スミダの命は…！！」
+Call Tw
+Line 136 :Row 2 :教師Ｂ「なっ、何事かね、これはッ！？」
+Row 2 :角田「うっ、うわああっ！！」
+Pause :Line 136 :Row 2 :女教師「やめなさい、斎藤君！！」
+Row 2 :教師Ａ「やめろ、斎藤君！！」
+Pause :Line 136 :Row 2 :教師Ｂ「何の冗談かね！？これはアァ！！」
+Row 2 :角田「助けて！！助けてくれ！！こいつは、本気だ！！殺されるう！！」
+Pause :Line 136 :Row 2 :斎藤「そうさ‥これは、本気だ。冗談じゃない」
+Pause :View 17,8,Gp220
+GGet :Line 136 :Row 2 :教師Ｂ「落ち着き給え！！何が、目的だ！！」
+Row 2 :斎藤「下校放送だ。ある程度は、僕が　強制的に下校させたが、まだ　沢山の生徒が
+Row 2 :　校舎に残っている！！彼らを　校舎から、避難させるんだ！！」
+Pause :Line 136 :Row 2 :教師Ｂ「バカな！！下校放送で、帰る連中だと思うかね！？
+Row 2 :　おかどちがいも　いいところだ！！」
+Row 2 :斎藤「連中！？‥今、連中と言ったか！？生徒の事を‥！？」
+Pause :Line 155 :Row 1 :斎藤「公共の備品と、生徒達の命を
+Row 1 :　ハカリに　かけるのか！！」
+Call Tw
+Line 136 :Row 2 :教師Ｂ「そんなことを言うために　職員室の扉を‥！！公共の備品を破損させたと
+Row 2 :　いうのかね！？」
+Pause :Line 136 :Row 2 :教師Ｂ「停学を　くらいたいか…？」
+Row 2 :斎藤「殺してやる…！！スミダを殺してやる‥！！」
+Pause :Line 136 :Row 2 :教師Ｂ「退学だ。お前は」
+Row 2 :斎藤「うっ…くっ‥！！」
+Pause :Line 136 :Row 2 :教師Ｂ「退学を喰らいたいか？…ん、どうした？…‥今なら　まだ、間に合うぞ…？」
+Pause :Line 136 :Row 2 :斎藤「せ‥先生…」
+Row 2 :教師Ｂ「‥何だ？」
+Pause :Line 136 :Row 2 :斎藤「ぼ‥僕は‥！！…‥…僕…！！僕が、悪うごさいました…」
+Row 2 :教師Ｂ「よろしい」
+Line +4 :Row 2 :斎藤は、屈辱のあまり、めまいを感じた。_
+Screen Off :GCls :View 17,8,Gp155
+GGet :Effect 31 :Screen On :Line 136 :Row 2 :斎藤「僕は‥僕は‥なんて‥‥いったい、どうすれば‥！！」
+Line +4 :Row 2 :斎藤は、逃げるように　その場から、走り去った。
+Pause :Line 136 :Row 2 :女教師「先生！少しは、あの子の言う事も聞いてあげては‥」
+Pause :Line 136 :Row 2 :教師Ｂ「何を、寝呆けた事を言っているんだね…早く、警察に　連絡し給え」
+Row 2 :女教師「け‥警察！？」
+Pause :Line 136 :Row 2 :教師Ｂ「そうだ！真剣を　もった生徒が、情緒不安定のまま、校内を　うろついて
+Row 2 :　いるんだぞ！！放っておけるか！！」
+Row 2 :女教師「…‥‥‥…！！」_
+Grp 0 :Screen Off :GCls :View 17,8,Gp143
+View 47,8,Gp143aD3
+GGet :Grp 1 :Screen On :Line 136 :Row 2 :斎藤「そうだ‥小便をしよう。とりあえず、小便をして、落ち着こう‥！」
+Pause :Line 136 :Row 2 :斎藤「ああ‥小便してたら、だんだん、頭の中が　まとまってきた…まずは、早く
+Row 2 :　校舎内の生徒を‥めんどうだが、一つ一つ、教室を廻って、校外に押し出すんだ‥
+Row 2 :　それさえ、終われば、あとは、自由に戦える‥…」
+Pause :Line 136 :Row 2 :斎藤「…‥ん‥‥おかしい…何だ、この感覚は‥？」_
+
+Scn Act1D4
+
+*E.
+

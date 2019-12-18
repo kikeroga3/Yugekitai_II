@@ -1,0 +1,460 @@
+
+- ｻﾌﾞﾙｰﾁﾝ -
+*Tw
+Copy 40,60 0,137 0,136 15 1
+Ret
+
+- ﾒｲﾝ･ﾙｰﾁﾝ -
+*S.
+Screen Off :GCls :If Flg3=1 Then 00
+Flg3=1 :View 17,8,Gp140
+GGet :Grp 0 :Screen On :Grp 1 :Line 136 :Row 2 :斎藤「さてと…今日は、３年生になってのクラスがえだったが、既に　陽子ちゃんが
+Row 2 :　どのクラスになったかは、調べてある。３年２組の３番だ。
+Row 2 :　残念ながら、僕は　９組だった。まだ、残っていてくれればいいが…！」
+Pause
+*00
+View 17,8,Gp140
+GGet :Screen On :Line 136 :Row 2 :ここは、旧校舎３階の廊下。
+Line +4
+Row 1 :［１］３年の各教室へ
+Row 1 :［２］トイレ
+Row 1 :［３］渡り廊下
+Line 149 :Row 26 :［４］屋上へ上がる
+Row 26 :［５］２階へ降りる
+Select 01,02,03,04,05
+*01
+Line 136 :Row 2 :〔３年の各教室へ〕
+Line +4
+Row 1 :［１］３年１組
+Row 1 :［２］３年２組
+Row 1 :［３］３年３組
+Line 149 :Row 26 :［４］３年４組
+Row 26 :［５］３年５組
+Row 26 :［６］３年６組
+Line 149 :Row 52 :［７］３年７組
+Row 52 :［８］３年８組
+Row 52 :［９］３年９組
+Select 06,15,20,24,29,37,40,40,41
+
+- ﾄｲﾚ -
+*02
+Screen Off :GCls :View 17,8,Gp143
+GGet :Screen On
+*T0
+Line 136 :Row 2 :旧校舎３階のトイレ。
+Line +4
+Row 1 :［１］辺りを見る
+Row 1 :［２］用を足す
+Row 1 :［３］トイレから出る
+Select T1,T2,14
+*T1
+Line 136 :Row 2 :斎藤「相変わらず　汚いな、床なんか水浸しだ。ろくに掃除してないんだな」
+Pause :Jump T0
+*T2
+Line 136 :If Flg9=9 Then T3
+Row 2 :斎藤「ちょっと、もよおしてきたな‥やっていくか」
+Jump T4
+*T3
+Row 2 :斎藤「また、もよおしてきた‥今日は　えらく出るな。‥病気だろうか？」
+*T4
+Rnd 9 :If Frg0=7 Then T5
+View 47,8,Gp143a
+Jump T6
+*T5
+Flg9=0 :View 41,8,Gp143k
+*T6
+F+9 :F+9 :Pause :Jump T0
+
+- ﾜﾀﾘ･ﾛｳｶ -
+*03
+Screen Off :GCls :View 17,8,Gp142
+GGet :Screen On :Line 136 :Row 2 :３階の渡り廊下です。
+Line +4
+Row 1 :［１］新校舎へ移動
+Row 1 :［２］旧校舎に戻る
+Select C0,14
+*C0
+Scn Act3FN
+
+- 屋上 -
+*04
+Screen Off :GCls :View 17,8,Gp159
+GGet :Screen On
+*R0
+Line 136 :Row 2 :斎藤「ああ‥すがすがしい春の空気だ」
+Line +4
+Row 1 :［１］見る
+Row 1 :［２］調べる
+Row 1 :［３］３階へ降りる
+Select R1,R8,14
+*R1
+Line 136 :Row 2 :〔見る〕
+Line +4
+Row 1 :［１］新校舎
+Row 1 :［２］森
+Row 1 :［３］空
+Line 149 :Row 26 :［４］生徒ホール
+Select R2,R3,R6,R7
+*R2
+Line 136 :Row 2 :斎藤「屋上からだと、新校舎の中は、丸見えなんだな。　家庭科室に　美術室に
+Row 2 :　音楽室に　図書室‥　ん‥あの音楽室に　今、富沢が見えたような‥」
+Pause :Jump R0
+*R3
+Line 136 :If Flg0=2 Then R5
+If Flg0=1 Then R4
+Row 2 :斎藤「あの森か…終わった事だ‥」
+Flg0=1 :Pause :Jump R0
+*R4
+Row 2 :斎藤「終わった事だ。過ぎ去った　過去なんだ」
+Flg0=2 :Pause :Jump R0
+*R5
+Row 2 :斎藤「１０ケ月も前の事だ…奴は　もう、骨になっているだろう。終わったんだ‥」
+Flg0=0 :Pause :Jump R0
+*R6
+Line 136 :Row 2 :斎藤「ああ、輝く空は　ブルー…」
+Pause :Jump R0
+*R7
+Line 136 :Row 2 :斎藤「あそこで　売ってる　パン食って、腹こわしたことあるんだよな…
+Row 2 :　それに　僕は、キムヤラより、マヤザキの方が好きなんだ」
+Pause :Jump R0
+*R8
+Line 136 :Row 2 :〔調べる〕
+Line +4
+Row 1 :［１］手すり
+Row 1 :［２］屋上の床
+Row 1 :［３］音楽室
+Select R9,Ra,Rb
+*R9
+Line 136 :Row 2 :斎藤「ちょっと、サビついていて、危ないな‥」
+Pause :Jump R0
+*Ra
+Line 136 :Row 2 :斎藤「コンクリのブロックで、タイル状に並べられている。その隙間には、
+Row 2 :　藻や、苔が‥雑草まで生えている」
+Pause :Jump R0
+*Rb
+Line 136 :Row 2 :斎藤「人が、何人かいるな‥大半は、女生徒のようだが‥」
+Pause :Jump R0
+
+- 2ｶｲ ﾍ ｵﾘﾙ -
+*05
+Scn Act2FS
+
+- 3年1組(野笛) -
+*06
+Screen Off :GCls :View 17,8,Gp169
+If Flg12=0 Then 07
+Screen On :Line 136 :Row 2 :野笛君は　もう、いません。
+Pause :Jump 00
+*07
+View 17,8,Gp169a
+GGet :Screen On 
+*08
+Line 136 :Row 2 :３年１組の教室です。
+Line +4
+Row 1 :［１］見る
+Row 1 :［２］話す
+Row 1 :［３］なぐる
+Line 149 :Row 26 :［４］教室を出る
+Select 09,11,13,14
+*09
+Line 136 :If Flg1=1 Then 10
+Row 2 :斎藤「本を読んでいる人がいる。あのシルエットは、どこかで見たような‥」
+Pause :Jump 08
+*10
+Row 2 :斎藤「彼以外には、誰も　いない。みんな、帰ってしまったんだな」
+Pause :Jump 08
+*11
+Line 136 :If Flg1=0 Then 12
+Row 2 :野笛「野蛮なことをする人は、キライだね」
+Line +4
+Row 2 :野笛君は、相手にしてくれません。
+Pause :Jump 08
+*12
+Line 136 :Row 2 :斎藤「ねえ君、ちょっと聞きたいことがあるんだけど」
+Row 2 :男子生徒「…‥‥‥…」
+Pause :Line 136 :Row 2 :斎藤「ねえ君、」
+Row 2 :男子生徒「うるさいな。今、本を読んでいるんだよ」
+Pause :Jump 08
+*13
+Screen Off :GCls :View 17,8,Gp144a
+Line 137 :Row 1 :斎藤「てやああ～！！」
+Row 1 :野笛「ぶっキャアアアァアァッ！！」
+Call Tw
+Effect 11
+Screen On :_:If Flg1=1 Then 06
+Flg1=1 :Screen Off :GCls :View 17,8,Gp015
+GGet :Screen On :Line 136 :Row 2 :斎藤「ああ‥君は、野笛君！！」
+Row 2 :野笛「斎藤君か‥ひどいなあ、何事かと思ったよ！」
+Pause :Line 136 :Row 2 :斎藤「な、なぜ１組に君が？」
+Row 2 :野笛「なぜって‥今日から、ボクらは　３年生だろ。
+Row 2 :　クラスがえで、そうなったからだよ。何を言ってるんだ、全く‥」
+Pause :Line 136 :Row 2 :斎藤「あ、ああ、そうか、うっかりしてたよ、君達も　かわっていたんだね‥」
+Row 2 :野笛「‥低能め」
+Pause :Line 136 :Row 2 :斎藤「と、ところで、陽子ちゃんを見なかったかな？　彼女を　さがしているんだ」
+Pause :Line 136 :Row 2 :野笛「さあね、僕は見てないよ」
+Row 2 :斎藤「そ、そう」_
+Jump 06
+
+- 00復帰用 -
+*14
+Screen Off :GCls :Screen On :Jump 00
+
+- 3年2組(ﾊﾙｶ) -
+*15
+Screen Off :GCls :View 17,8,Gp169
+If Flg2=1 Then 16
+Flg2=1 :View 17,8,Gp169f
+GGet :Screen On :Line 136 :Row 2 :斎藤「陽子ちゃんのクラスだ」
+Pause :Line 136 :Row 2 :斎藤「陽子ちゃんの姿は、見えないな…」
+Pause :View 17,8,Gp169g
+GGet :Line 136 :Row 2 :斎藤「女生徒が、１人か…あれ？　制服が、違うみたいだぞ？」
+Pause :View 17,8,Gp169h
+GGet :Line 136 :Row 2 :女生徒は、斎藤の前で、立ち止まった。
+Line +4 :Row 2 :斎藤「！？」
+Pause :Line 136 :Row 2 :女生徒は、何か言いたげな目で、斎藤を見ている。
+Line +4 :Row 2 :斎藤（なんだ、この女生徒は！？　僕の前にきて、急に　立ち止まるなんて‥！）
+Pause :Line 136 :Row 2 :よく見れば、井ノ頭　陽子に勝るとも劣らぬ、端正な顔だちの美少女だ。
+Row 2 :その大きな瞳が、斎藤を　まっすぐに見つめている。
+Pause :Line 136 :Row 2 :斎藤（い‥一体、ボクに　何の用があるというんだ！？）
+Pause :Line 136 :Row 2 :女生徒「あの‥悪いんだけど‥」
+Row 2 :斎藤「な、何か！？」_
+Screen Off :GCls :View 17,8,Gp176
+View 30,8,Gp176h
+GGet :Screen On :Line 136 :Row 2 :女生徒「どいてくれない？」
+Row 2 :斎藤「ああ、ごめん！これは、うっかりだ！　全く　気が　つかなかったよ！！」
+Pause :Line 136 :Row 2 :斎藤（何だ、別に　用事があったわけじゃないのか）
+Line +4 :Row 2 :女生徒は、斎藤の脇を　通り過ぎていった。
+Pause :View 17,8,Gp169
+GGet :Line 136 :Row 2 :斎藤「ちょっと、がっかりしたような、ホッとしたような‥転校生かな？
+Row 2 :　それにしても、息が止まるような　美人だったな…」
+Pause
+*16
+GGet :Screen On
+*17
+Line 136 :Row 2 :斎藤「３年２組の教室‥陽子ちゃんのクラスだ」
+Line +4
+Row 1 :［１］見る
+Row 1 :［２］調べる
+Row 1 :［３］教室を出る
+Select 18,19,14
+*18
+Line 136 :Row 2 :もう、ここには　誰もいません。
+Pause :Jump 17
+*19
+Line 136 :Row 2 :斎藤「そうだ、陽子ちゃんの机に　カバンが、残っていれば…！」
+Pause :Line 136 :Row 2 :斎藤は、教室内の机を見て廻ったが、井ノ頭　陽子のカバンらしきものはなかった。
+Pause :Line 136 :Row 2 :斎藤「駄目か‥しかし、今日は　まだ、授業のない日だから、カバンを持って
+Row 2 :　こなかった　生徒が、大半だろう。だから、カバンが　なくとも、まだ、学校に
+Row 2 :　残ってるという可能性が、消えたわけじゃない…いや、彼女は　必ず、残ってるに
+Row 2 :　違いない！　よし、他を当たってみよう！！」
+Flg7=1 :Pause :Jump 17
+
+- 3年3組(ｶﾗｵｹ) -
+*20
+Screen Off :GCls :View 17,8,Gp170
+GGet :Screen On
+Line 136 :Row 2 :斎藤「ん？　女生徒達が集まって、カラオケなどしているな。
+Row 2 :　何だか、僕も　歌いたくなってきたぞ」
+Pause
+*21
+Line 136 :Row 2 :３年３組の教室です。
+Line +4
+Row 1 :［１］ヤジる
+Row 1 :［２］乱入する
+Row 1 :［３］教室を出る
+Select 22,23,14
+*22
+Line 136 :Row 2 :斎藤「ヘイ、ね～ちゃん。腰と、左手の振りが　あってねーぜ」
+Row 2 :周りの女生徒「うるさいわね、どっか行きなさいよ」
+Pause :Jump 21
+*23
+Line 137 :Row 1 :斎藤「よおし行くかッ、僕の十八番！！」
+Call Tw
+Pause :View 32,8,Gp170a
+GGet :Line 137 :Row 1 :斎藤「あっれっはっッだれーだッ！！
+Row 1 :　だれーだッ！！だれーだッ！！…」
+Call Tw
+Pause :Line 137 :Row 1 :斎藤「あっれっはっッ、デビィルッ！！
+Row 1 :　デビルマーン、デッビィルマーン！！」
+Call Tw
+_:Screen Off :GCls :View 31,33,Gp193
+Screen On :Effect 37
+Line 136 :Row 2 :斎藤は、追い出された。_
+Jump 14
+
+- 3年4組(漫画部) -
+*24
+Screen Off :GCls :View 17,8,Gp023
+GGet :Screen On
+Line 136 :If Flg4=1 Then 25
+Row 2 :斎藤「おやっ、何だ、このクラスは…」
+Pause
+*25
+Line 136 :Row 2 :３年４組の教室です。
+Line +4
+Row 1 :［１］見る
+Row 1 :［２］話す
+Row 1 :［３］なぐる
+Line 149 :Row 26 :［４］教室を出る
+Select 26,27,28,14
+*26
+Line 136 :Row 2 :机の上には、漫画の原稿が散らばり、みんな　こちらを見ています。
+Pause :Jump 25
+*27
+Line 136 :Row 2 :左手前の女生徒「ここは、漫研の部室よ」
+Row 2 :リボンの女生徒「…‥‥‥…」
+Pause :If Flg4=1 Then 25
+Flg4=1 :Line 136 :Row 2 :右奥の男子生徒「放課後の　この教室を使わせてもらってるんだ」
+Pause :Line 136 :Row 2 :眼鏡の男子生徒「…‥同人誌…読むかい‥？」
+Row 2 :斎藤「え、ああ‥」_
+Screen Off :GCls :View 17,8,Gp187
+GGet :Screen On :Line 136 :Row 2 :斎藤「うっ！何だ　これ！！」
+Row 2 :眼鏡の男子生徒「夏コミで売るんだ」
+Pause :Line 136 :Row 2 :斎藤「いいのかよ、学校で　こんなの描いちゃって」
+Row 2 :眼鏡の男子生徒「学校側も　ある程度、黙認してるのさ。
+Row 2 :　言っても　ムダということは、わかってるだろうから」
+Pause :Line 136 :Row 2 :斎藤「すげ～な～、これ売っちゃうのォ‥？こんなの買う奴いるのかい？」
+Row 2 :眼鏡の男子生徒「けっこう、ヒョーバンはいい」
+Pause :Line 136 :Row 2 :斎藤「これが…」
+Row 2 :眼鏡の男子生徒「どうだい、感想は？」
+Pause :Line 136 :Row 2 :斎藤「もっと、この主人公の女の子の◎◎◎を☆☆☆☆しちゃっても
+Row 2 :　♂♀♂♀よりは、×××の方が、○○と思うよ」
+Row 2 :眼鏡の男子生徒「なる程、いい意見だ」_
+Jump 24
+*28
+Screen Off :View 17,8,Gp144b
+Line 137 :Row 1 :斎藤「ルォおお！！」
+Row 1 :眼鏡の男子生徒「ぶへええぇェエェッ！！
+Row 1 :　暴力反対ィイィィッ！！」
+Call Tw
+Effect 11 :Screen On :_
+Jump 24
+
+- 3年5組(ﾔｽｷ) -
+*29
+Screen Off :GCls :If Flg5=0 Then 30
+View 17,8,Gp163
+Screen On :Line 136 :Row 2 :３年５組の教室です。　もう、誰もいません。_
+Jump 14
+*30
+View 17,8,Gp014
+GGet :Screen On :Line 136 :Row 2 :安木「よォ、斎藤」
+Row 2 :斎藤「ああ、安木か」
+Pause
+*31
+Line 136 :Row 2 :３年５組の教室です。
+Line +4
+Row 1 :［１］話す
+Row 1 :［２］なぐる
+Row 1 :［３］教室を出る
+Select 32,34,35
+*32
+Line 136 :If Flg5=1 Then 33
+Row 2 :斎藤「実は、陽子ちゃんを　さがしているんだけど、見なかった？」
+Row 2 :安木「見たよ。新校舎の３階で、ウロウロしてた…
+Row 2 :　けど、あれから　結構、時間たったし、もう　帰っちまったかも」
+Pause :Line 136 :Row 2 :斎藤「新校舎か」
+Row 2 :安木「黒爽や、富沢なら　まだ、残ってると思うよ。オレは、帰るけど」
+Flg5=1 :Pause :Jump 31
+*33
+Row 2 :斎藤「あ、そう。じゃあ、また明日…」
+Row 2 :安木「バイバイ‥」_
+Jump 29
+*34
+Screen Off :View 17,8,Gp144c
+Line 137 :Row 1 :斎藤「うごオォッ！！」
+Row 1 :安木「フン！！貧弱な拳が、この肉体に
+Row 1 :　通用すると思うのかねッ！！」
+Call Tw
+Effect 20 :Screen On :_
+Screen Off :GCls :View 17,8,Gp014
+GGet :Screen On :Jump 31
+*35
+Line 136 :If Flg5=1 Then 36
+Row 2 :斎藤「いやまて、安木にも　尋ねてみよう‥！」
+Pause :Jump 31
+*36
+Row 2 :斎藤「あ、そう。じゃあ、また明日…」
+Row 2 :安木「バイバイ‥」_
+Jump 14
+
+- 3年6組(ﾋｶﾘ) -
+*37
+Screen Off :GCls :View 17,8,Gp163
+If Flg8=0 Then 38
+Screen On :Line 136 :Row 2 :斎藤「キレイに掃除されているな…」
+Line +4 :Row 2 :もう　ここには、誰もいません。_
+Jump 14
+*38
+View 17,8,Gp163a
+GGet :Screen On :Line 136 :If Flg6=0 Then 39
+Row 2 :斎藤「やあ、まだ掃除してるのかい」
+Row 2 :光「ううん、もう終わるトコ」_
+Flg8=1 :Jump 14
+*39
+Row 2 :斎藤「ん…？　女の子が１人、掃除をしてるのか」
+Pause :Line 136 :Row 2 :女の子「あっ！？」
+Row 2 :斎藤「ん？」
+Pause :View 27,8,Gp016
+GGet :Line 137 :Row 1 :女の子「あ～っ、ヴァックスだあっ」
+Call Tw
+Row 2 :斎藤「え？あ‥あれ、君は？」
+Pause :Line 136 :Row 2 :女の子「あっ、ごめんなさい。本当は、サイトー君っていうんだよね。
+Row 2 :　ヨーコから、聞いてたんだよ。私、おぼえてる？」
+Row 2 :斎藤「え…と、ああ、そうそう、髪の毛、切ったんだね？　前に会った時は、２つに
+Row 2 :　結んでいたから、ちょっと、思い浮かばなかったんだ」
+Pause :Line 136 :Row 2 :光「朝野　光です。よろしくね」
+Row 2 :斎藤「よろしく、朝野さん」
+Pause :Line 136 :Row 2 :光「ね、こうやって、２人だけで　話すのって、はじめてでしょ」
+Row 2 :斎藤「ん？　ん、うん、そうだね」
+Pause :Line 136 :Row 2 :光「１年生の時の文化祭で、私、初めて、あなたのこと見たの！　ホラ、憶えてる？」
+Row 2 :斎藤「ああ～、あれは　僕たちにとっても　初舞台だった。『クレクレタコラ』の
+Row 2 :　ヘヴィメタバージョンと、『恋は、ズキズキ』のロックアレンジバージョンを
+Row 2 :　発表した時の事だね」
+Pause :Line 136 :Row 2 :光「あの時、私、すっごく感動したんだ。ちょうど、失恋して、落ち込んでた時
+Row 2 :　だったし‥ヴァックス率いる　遊撃隊のチームの人達が、頑張ってる姿を見て、
+Row 2 :　勇気づけられちゃった。私１人、落ち込んでなんかいられないなって‥ホントよ。
+Row 2 :　いつか、お礼が言いたかったんだ。どうも　ありがとう、ヴァックス！」
+Pause :Line 136 :Row 2 :斎藤「いいのサ、照れるなァ‥（でも、嬉しいな…僕達の歌で、心の救われた人も
+Row 2 :　いたなんて‥）」
+Pause :Line 136 :Row 2 :光「ね、ところで、何してるの？」
+Row 2 :斎藤「ん、ああ、人を　さがしているんだ。井ノ頭さんなんだけど‥
+Row 2 :　君、どこにいるか、知ってる？」
+Pause :Line 136 :Row 2 :光「ううん。今日は、ヨーコとは　会ってないけど‥ヨーコに　何か、用事？」
+Row 2 :斎藤「い、いや別に　用ってほどのことじゃないんだけど」
+Row 2 :光「ふうん‥」
+Pause :Line 136 :Row 2 :光「そういえば、ずっと前にも　斎藤君、こうやって、人さがしてたみたいだったね。
+Row 2 :　あの時は、誰を　さがしてたの？」
+Row 2 :斎藤「！！」
+Pause :Line 136 :Row 2 :光「…どうしたの？　こわい顔して‥」
+Row 2 :斎藤「いや…何でも‥あの時は、人を　さがしていたわけではないよ、光ちゃん‥」
+Pause :Line 136 :Row 2 :斎藤は、遠い目をした。
+Line +4 :Row 2 :斎藤（終わった事だ‥）
+Row 2 :A$="光「？」
+Pause :Line 136 :Row 2 :斎藤「君は　１人で、何をしているのだい？」
+Row 2 :光「ん‥おそうじ」
+Pause :Line 136 :Row 2 :斎藤「でも…クラスがかりで、大掃除したんでしょ？」
+Row 2 :光「でも、まだ　ゴミが、散らばってるし‥結構、汚れてるのよ。もうちょっと
+Row 2 :　キレイになれば、朝　来た時、みんな、気持ちがいいと思うんだ」
+Pause :Line 136 :Row 2 :斎藤「そうか、手伝いたいのは、山々だけど、人探しの最中なのでね。
+Row 2:　頑張ってくれ」
+Pause :Line 136 :Row 2 :光「ねえ、ヴァックスっ！！　今年の文化祭も　演るんでしょ？」
+Row 2 :斎藤「もちろんさ」
+Pause :Line 136 :Row 2 :光「がんばってね！！」
+Row 2 :斎藤「ありがとう（君の為に歌おう‥）」_
+Flg6=1 :Jump 14
+
+- 3年7､8組 -
+*40
+Screen Off :GCls :View 17,8,Gp176
+Screen On :Line 136 :Row 2 :斎藤「誰も　いない‥やっぱり、みんな帰っちゃってるんだな」_
+Jump 14
+
+- 3年9組 -
+*41
+Screen Off :GCls :View 17,8,Gp169
+Screen On :Line 136 :Row 2 :斎藤「誰も　いない‥ちなみに　ここは、僕のクラスだ」_
+Jump 14
+
+*E.
+

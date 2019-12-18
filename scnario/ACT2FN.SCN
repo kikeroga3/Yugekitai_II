@@ -1,0 +1,94 @@
+
+*S.
+
+*00
+Screen Off :GCls :View 17,8,Gp157
+GGet :Screen On :Line 136 :Row 2 :ここは、新校舎２階の廊下。
+Line +4 :Row 1 :［１］職員室
+Row 1 :［２］トイレ
+Row 1 :［３］渡り廊下
+Line 149 :Row 26 :［４］３階へ上がる
+Row 26 :［５］１階に降りる
+Select 01,To,Cr,3F,1F
+*01
+Screen Off :GCls :View 17,8,Gp186
+GGet :Screen On :Line 136 :Row 2 :斎藤「職員室だ。来ると　どうも、ささやかながら、緊張してしまうな」
+Pause :View 37,8,Gp186a
+GGet :Line 136 :Row 2 :角田「おお、斎藤。何だ、職員室に　何か用か？」
+Pause :If Flg16=1 Then 02
+Line 136 :Row 2 :斎藤「これは、スミダ先生」
+Pause :Line 136 :Row 2 :角田「なんだ、お前、来年は　進学か？」
+Row 2 :斎藤「え？いや、その、まだ、はっきりとは」
+Pause :Line 136 :Row 2 :角田「そうか、進路の事で、何か考えてるのなら、私の所へ来い。
+Row 2 :　相談に　のらんでもないぞ‥のらんでも‥」
+Row 2 :斎藤「そ、そうですか」_
+*02
+Cls :Line 136 :Row 2 :ここは、職員室です。
+Line +4 :Row 1 :［１］見る
+Row 1 :［２］話す
+Row 1 :［３］なぐる
+Line 149 :Row 26 :［４］職員室を出る
+Select 03,04,06,00
+*03
+Line 136 :Row 2 :角田「何だ‥？先生の顔に　何か、ついてるのか？」
+Row 2 :斎藤「いえ、別に‥そういったわけでは」_
+Jump 02
+*04
+Line 136 :If Flg16=1 Then 05
+Row 2 :角田「何、井ノ頭？先生は、知らんな」_
+Flg16=1 :Jump 02
+*05
+Row 2 :角田「職員室に　用がないなら、出なさい、早く」_
+Jump 02
+*06
+Line 136 :Row 2 :角田「や、やめんか！！暴力は　よせ、暴力は…！！」_
+Jump 02
+
+- ﾄｲﾚ -
+*To
+Screen Off :GCls :View 17,8,Gp143
+GGet :Screen On
+*T0
+Line 136 :Row 2 :新校舎２階のトイレ。
+Line +4
+Row 1 :［１］辺りを見る
+Row 1 :［２］用を足す
+Row 1 :［３］トイレから出る
+Select T1,T2,00
+*T1
+Line 136 :Row 2 :斎藤「このトイレは　あまり、使われていないようだな…」
+Pause :Jump T0
+*T2
+Line 136 :If Flg9=9 Then T3
+Row 2 :斎藤「消防車だ、ジャ～～～ッ」
+Jump T4
+*T3
+Row 2 :斎藤「今日は、また‥異常に‥…でるな」
+*T4
+Rnd 9 :If Frg0=7 Then T5
+View 47,8,Gp143a
+Jump T6
+*T5
+Flg9=0 :View 41,8,Gp143k
+*T6
+F+9 :F+9 :Pause :Jump T0
+
+- ﾜﾀﾘ･ﾛｳｶ -
+*Cr
+Screen Off :GCls :View 17,8,Gp142
+GGet :Screen On :Line 136 :Row 2 :２階の渡り廊下です。
+Line +4
+Row 1 :［１］旧校舎へ移動
+Row 1 :［２］新校舎に戻る
+Select C0,00
+*C0
+Scn Act2FS
+
+*3F
+Scn Act3FN
+
+*1F
+Scn Act1FN
+
+*E.
+

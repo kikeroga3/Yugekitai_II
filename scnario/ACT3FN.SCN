@@ -1,0 +1,134 @@
+
+*S.
+
+*00
+Screen Off :GCls :View 17,8,Gp157
+GGet :Screen On :Line 136 :Row 2 :ここは、新校舎３階の廊下。
+Line +4 :Row 1 :［１］美術室
+Row 1 :［２］トイレ
+Row 1 :［３］渡り廊下
+Line 149 :Row 26 :［４］４階へ上がる
+Row 26 :［５］２階に降りる
+Select 01,To,Cr,4F,2F
+*01
+Screen Off :GCls :View 17,8,Gp009
+GGet :Screen On :Line 136 :Row 2 :黒爽「おお斎藤」_
+If Flg14=1 Then 02
+Row 2 :斎藤「黒爽じゃないか。君、絵なんか描けたのかい？」
+Pause
+*02
+Cls :Line 136 :Row 2 :ここは、美術室です。
+Line +4 :Row 1 :［１］見る
+Row 1 :［２］話す
+Row 1 :［３］なぐる
+Line 149 :Row 26 :［４］美術室を出る
+Select 03,07,09,00
+*03
+Line 136 :Row 2 :〔見る〕
+Line +4 :Row 1 :［１］美術室内
+Row 1 :［２］絵
+Select 04,05
+*04
+Line 136 :Row 2 :斎藤「相変わらず、ごちゃごちゃした所だな」
+Pause :Jump 02
+*05
+Line 136 :If Flg14=0 Then 06
+Row 2 :斎藤「アライか…」
+Pause :Jump 02
+*06
+Row 2 :斎藤「…その絵は…！？」
+Pause :Line 136 :Row 2 :黒爽「そうだ」
+Row 2 :斎藤「なぜ、君が、奴の絵を…！！」
+Pause :Line 136 :Row 2 :黒爽「……夢で見るんだよ‥お前は‥見ないのか？」
+Row 2 :斎藤「いや…」
+Pause :Line 136 :Row 2 :黒爽「最近になってからよ‥夢に　ちょくちょく…いや、夢というよりは、まるで
+Row 2 :　現実の事というか…とにかく、本当に起こっている事のように視界（ヴィジョン）
+Row 2 :　として、ハッキリと映るんだ。この頭の中に‥！！
+Row 2 :　今、描いている　このヴィジョンが」
+Pause :Line 136 :Row 2 :斎藤「そういえば、やつれているよ…」
+Row 2 :黒爽「ああ‥ろくに寝ていないんだ‥」
+Pause :Line 136 :Row 2 :斎藤「ノイローゼか」
+Row 2 :黒爽「かもね」
+Pause :Line 136 :Row 2 :斎藤「絵を　よく見せてくれないかい？」
+Row 2 :黒爽「いいよ、ホラ」_
+Screen Off :GCls :View 29,8,Gp224
+GGet :Screen On :Line 136 :Row 2 :斎藤「笑っている‥黒いマントを‥‥手の甲には、あのスサノオの紋章か‥…！？
+Row 2 :　この下の方にある　白いものは、何だ？」
+Pause :Line 136 :Row 2 :黒爽「俺にも、ハッキリとは…ただ、そんなようなものがあったのは、確かだ」
+Row 2 :斎藤「正夢？予知夢なのかな」
+Pause :Line 136 :Row 2 :黒爽「俺には…しかし、夢にしては、あまりに…あいつは死んだんだ。生き埋めに…
+Row 2 :　俺には…わからない‥」
+Pause :Line 136 :Row 2 :斎藤「‥‥この絵…アライのまわりが、真っ暗だけど‥‥」
+Row 2 :黒爽「地中かもな」_
+Screen Off :GCls :View 17,8,Gp009
+GGet :Screen On :Line 136 :Row 2 :斎藤「奴の霊が、呼びかけているのかな…？」
+Row 2 :黒爽「だとしたら、なぜ今頃…あれから、１年近いというのに…」
+Pause :Line 136 :Row 2 :斎藤「‥‥…‥‥」
+Row 2 :黒爽「それに　呼びかけるとしたら、まず、お前か、落し穴を掘った　富沢の方
+Row 2 :　だろう…これは、すると、予知夢と見た方がいいかもな…俺、昔から、けっこう、
+Row 2 :　正夢なんか見たりしてたし、今回ほど、ハッキリと見えたのは、初めてだが」
+Pause :Line 136 :Row 2 :斎藤「じゃあ、きっと　ただのノイローゼだな。普段、いくら考えまいとしても
+Row 2 :　君の心の中には、アライを殺したという罪悪感があるんだ」
+Pause :Line 136 :Row 2 :黒爽「勝手にしろバカ、罪悪感なんか持ったことはねえよ」
+Row 2 :斎藤「そ、そうか」_
+Flg14=1 :Jump 02
+*07
+Line 136 :If Flg14=0 Then 08
+Row 2 :黒爽「井ノ頭　陽子？帰ったんじゃねーの？」_
+Jump 02
+*08
+Row 2 :斎藤「絵を描いているのか」
+Row 2 :黒爽「絵を描いているんだ」_
+Jump 02
+*09
+Line 136 :Row 2 :黒爽「やめろよ、バカ」_
+Jump 02
+
+- ﾄｲﾚ -
+*To
+Screen Off :GCls :View 17,8,Gp143
+GGet :Screen On
+*T0
+Line 136 :Row 2 :新校舎３階のトイレ。
+Line +4
+Row 1 :［１］辺りを見る
+Row 1 :［２］用を足す
+Row 1 :［３］トイレから出る
+Select T1,T2,00
+*T1
+Line 136 :Row 2 :斎藤「相変わらず臭いな‥全く、学校のトイレって奴は‥」
+Pause :Jump T0
+*T2
+Line 136 :If Flg9=9 Then T3
+Row 2 :斎藤「ここに来ると、つい　したくなるな‥」
+Jump T4
+*T3
+Row 2 :斎藤「ああ～、どうしたんだろうか、今日は‥異常に‥…」
+*T4
+Rnd 9 :If Frg0=7 Then T5
+View 47,8,Gp143a
+Jump T6
+*T5
+Flg9=0 :View 41,8,Gp143k
+*T6
+F+9 :F+9 :Pause :Jump T0
+
+- ﾜﾀﾘ･ﾛｳｶ -
+*Cr
+Screen Off :GCls :View 17,8,Gp142
+GGet :Screen On :Line 136 :Row 2 :３階の渡り廊下です。
+Line +4
+Row 1 :［１］旧校舎へ移動
+Row 1 :［２］新校舎に戻る
+Select C0,00
+*C0
+Scn Act3FS
+
+*4F
+Scn Act4FN
+
+*2F
+Scn Act2FN
+
+*E.
+

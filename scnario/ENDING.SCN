@@ -1,0 +1,148 @@
+
+- ½¸Û°Ù¥»ÌÞ -
+*Sc
+Copy 40,9 0,101 0,100 8 1 :Cnt 10 :If Flg0=0 Then Lp
+Copy 79,9 1,100 0,100 8 0
+*Lp
+Wait 3 :Copy 60,110 10,1 10,0 8 0
+Loop Lp
+Ret
+
+- Ò²Ý¥Ù°ÁÝ -
+*S.
+Screen Off :Mode 2 :GCls
+Mode 1 :Screen On :Palette 4,FFF 8,FFF
+Col 8 :Line 101 :Row 16 :‚b‚`‚r‚s
+Flg0=0 :Call Sc
+Cnt 5 :Call Lp
+Line 101 :Row 16 :Ö“¡@_ˆë
+F+0 :Call Sc
+Line 101 :Row 16 :•‘u@‹P
+Call Sc
+Line 101 :Row 14 :ˆÀ–Ø‚½‚©‚æ‚µ
+F-0 :Call Sc
+Line 101 :Row 16 :•x‘ò@LŽj
+F+0 :Call Sc
+Line 101 :Row 16 :“{‰®@Œ’Žu˜Y
+Call Sc
+Line 101 :Row 16 :–ì“J@—Tˆê
+Call Sc
+Cnt 5 :Call Lp
+Line 101 :Row 14 :ˆäƒm“ª@—zŽq
+Call Sc
+Line 101 :Row 16 :ŒºŠC@s‰¤
+Call Sc
+Line 101 :Row 16 :ŒºŠC@–íŒŽ
+Call Sc
+Line 101 :Row 16 :Vˆä@—d•
+Call Sc
+Cnt 5 :Call Lp
+Line 101 :Row 16 :’©–ì@Œõ
+Call Sc
+Line 101 :Row 16 :“c’†@Œ¹Ž¡
+Call Sc
+Line 101 :Row 14 :‚Ö‚Ì‚µ@‚½‚©‚Ý‚Ë
+Call Sc
+Line 101 :Row 15 :H–ì‚Ý‚Ì‚è
+F-0 :Call Sc
+Line 101 :Row 16 :ŽR–{@’¼”ü
+F+0 :Call Sc
+Line 101 :Row 16 :ˆ¢•”@ƒŽq
+Call Sc
+Line 101 :Row 16 :Îì@“N
+Call Sc
+Line 101 :Row 16 :‰F“cì@•
+Call Sc
+Line 101 :Row 16 :‰ÍÎ@^Žq
+Call Sc
+Line 101 :Row 16 :¬–ì@Œb
+Call Sc
+Line 101 :Row 16 :‰iˆä@—m”ü
+Call Sc
+Line 101 :Row 16 :¼“c@“¿Žq
+Call Sc
+Line 101 :Row 16 :•Pì@—TŽq
+Call Sc
+Line 101 :Row 16 :‘åò@–¾”ü
+Call Sc
+Line 101 :Row 16 :’†—¢@‹ž‰Ø
+Call Sc
+Line 101 :Row 16 :Â–Ø@‹IŽq
+Call Sc
+Line 101 :Row 16 :“÷@—FŒb
+Call Sc
+Line 101 :Row 16 :‘òŽR@“¹Žq
+Call Sc
+Line 101 :Row 16 :‚“ú@“oŽuŽq
+Call Sc
+Line 101 :Row 16 :ŠÛŽR@ˆê•½
+Call Sc
+Line 101 :Row 16 :Šp“c@‹g_
+Call Sc
+Cnt 5 :Call Lp
+Line 101 :Row 16 :‹ã—´_@—I
+Call Sc
+Line 101 :Row 16 :—ë@í@ŠÛ
+F-0 :Call Sc
+Cnt 5 :Call Lp
+Line 101 :Row 9 :ƒAƒ“ƒhƒŒ@ƒUƒrƒ‹@ƒ_ƒrƒ‹
+Call Sc
+Line 101 :Row 13 :Šï—›ƒwƒNƒ_ƒUƒX
+Call Sc
+Line 101 :Row 14 :ƒJ[ƒ‹‹ð—çŒ«
+Call Sc
+Line 101 :Row 10 :‰Áì@–ž@ë¡@ƒtƒ@ƒbƒJ[
+F+0 :Call Sc
+Line 101 :Row 13 :ƒiƒ“ƒV[@ƒlƒCƒ‹
+Call Sc
+Line 101 :Row 13 :ƒwƒKƒX‰ä˜T‰A
+F-0 :Call Sc
+Cnt 5 :Call Lp
+Line 101 :Row 11 :‚»‚Ì‘¼‚ÌŠ‹‚¶‚½‚¿
+Call Sc
+Cnt 5 :Call Lp
+Line 101 :Row 15 :‘¾@—z@‰¼@–Ê
+F+0 :Call Sc
+Cnt 100 :Call Lp
+- ½À¯Ì -
+Screen Off :Grp 0 :GCls
+Line 18 :Row 15 :‚r‚s‚`‚e‚e
+Line +9 :Row 11 :ŠGë¡‚a‚f‚lë¡ƒRƒ“ƒe
+Col 4 :Row 16 :•‘ò@‹P•v
+Col 8 :Line +9 :Row 7 :ƒvƒƒOƒ‰ƒ€ë¡ƒQ[ƒ€ƒfƒUƒCƒ“
+Col 4 :Row 16 :•‘ò@KŽj
+Copy 40,100 0,1 0,0 12 1 :Copy 79,100 1,0 0,0 4 0
+Screen On :Grp 1 :Wait 150 :Grp 0
+- »Ý¸½ -
+GCls :Line 16 :Row 7 :‚r‚o‚d‚b‚h‚`‚k@‚s‚g‚`‚m‚j‚r
+Line +9 :Row 9 :Ö“¡@_ˆê
+Row 9 :•‘ò@‹P•v
+Row 9 :•x‘ò@_Žj
+Row 9 :¬–ìŽ›@—Tˆê
+Row 9 :•Û–Ø@’’õ
+Row 9 :’†‘º@’B–ç
+Line 34 :Row 23 :‚‹´@—T”V
+Row 23 :–]ŒŽ@—S‹g
+Row 23 :•Ð‰ª@ˆê˜N
+Row 23 :]‰º@—²”V
+Row 23 :‚‹´@Žs˜Y
+Copy 40,100 0,1 0,0 4 1 :Copy 79,100 1,0 0,0 4 0
+Grp 1 :Wait 240 :Grp 0
+- ¿ÉÀ -
+GCls :Line 46 :Row 9 :yƒ^ƒCƒgƒ‹ƒƒSz‚’Ã—l
+Copy 40,100 0,1 0,0 4 1 :Grp 1 :Wait 90 :Grp 0
+GCls :Line 41 :Row 13 :yŽg—pƒc[ƒ‹z
+Row 5 :‚c‚…‚‚‰‚ƒ‚”‚‰‚‚Ž@‚c‚’‚‚†‚”D
+Copy 40,100 0,1 0,0 4 1 :Grp 1 :Wait 90 :Grp 0
+GCls :Line 46 :Row 3 :yŽ‘—¿‹¦—Íz“Œ‹ž“s—§Š‹ü–ì‚“™ŠwZ
+Copy 40,100 0,1 0,0 4 1 :Grp 1 :Wait 90 :Grp 0
+GCls :Line 46 :Row 8 :y»ìz‚e‚Œ‚‚”@‚v‚‚–‚…
+Copy 40,100 0,1 0,0 4 1 :Copy 79,100 1,0 0,0 4 0
+Grp 1 :Wait 90 :Grp 0
+GCls :Line 46 :Row 8 :y’ñ‹Ÿz‚s‚j‚n@‚r‚‚†‚”D
+Copy 40,100 0,1 0,0 4 1 :Grp 1 :Wait 90 :Grp 0
+GCls :Line 85 :Row 8 :s‘O‰qtƒwƒKƒX‰ä˜T‰A‚Ì•œQ@|I
+Copy 40,100 0,1 0,0 4 1 :Grp 1 :_
+
+*C.(255)
+

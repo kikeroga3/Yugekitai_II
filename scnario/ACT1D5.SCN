@@ -1,0 +1,366 @@
+
+- ｻﾌﾞﾙｰﾁﾝ -
+*Tw
+Copy 40,60 0,137 0,136 15 1
+Ret
+
+- ﾒｲﾝ･ﾙｰﾁﾝ -
+*S.
+Line 136 :Row 2 :斎藤「この教室‥カギが、掛かっている」
+Row 2 :黒爽「！‥斎藤。さっきのカギで、開かないか？」
+Pause :Line 136 :Row 2 :斎藤「よし、やってみよう」
+Pause :Effect 28 :Line 136 :Row 2 :ガチャ
+Line +4 :Row 2 :斎藤「開いた！！」_
+Screen Off :GCls :View 17,8,Gp176k
+GGet :Screen On :Line 136 :Row 2 :黒爽「充分、気をつけろ‥」
+Row 2 :斎藤「わかってる」
+Pause :Line 136 :Row 2 :黒爽「斎藤‥まさかとは、思うが…ちょっと、そこらへんの机の上、叩いてみな…」
+Row 2 :斎藤「え？‥ぼ、僕が？」
+Pause :Line 136 :Row 2 :黒爽「さっきも　やっただろ。同じように　やればいい」
+Row 2 :斎藤「‥わかった」_
+GCls :Line 136 :Row 2 :斎藤「やあっ！！」
+Effect 20 :Line +4 :Row 2 :斎藤は、机を叩いた。_
+Screen Off :GCls :View 17,8,Gp242c
+GGet :Line 146 :Row 1 :斎藤「貴様‥」
+Call Tw
+Line 136 :Row 2 :キリィ「ＨＡＡＡＡ…この私が、机の下に隠れている事に　よくぞ、気付いたわね」
+Screen On :Line 154 :Row 2 :黒爽「…‥‥‥…」
+Pause :Line 136 :Row 2 :キリィ「あなた方が、この教室のカギを開けて、入ってきたということは、愚礼賢を
+240 Row 2 :　倒したという事ね。あら‥？でも　そちらも一人、減ってるみたい。ふふ」
+Pause :Line 136 :Row 2 :野笛「今度は、そうはいかんぞ。３対１だ」
+Pause :View 17,8,Gp243
+GGet :Line 136 :Row 2 :キリィ「ふふ‥４Ｐで、楽しむってわけね？　いいわよ」
+Pause :Line 137 :Row 1 :斎藤「そういう言い方はやめろオォ！！」
+Call Tw
+Pause :View 17,8,Gp045
+GGet :Line 136 :Row 2 :キリィ「いいわ‥かかってらっしゃい」_
+Flg1=0 :Flg2=0 :Flg3=0
+*00
+Cls :Line 136 :If Flg3=1 Then Xa
+Row 2 :キリィ「いいわよ‥いつでも　どうぞ‥？」
+Jump Xs
+*Xa
+Row 2 :斉藤「ならばッ‥！」
+*Xs
+Line +4 :Row 1 :［１］斎藤が闘う
+Row 1 :［２］黒爽が闘う
+Row 1 :［３］野笛が闘う
+Select 01,02,04
+
+- ｻｲﾄｳ･ﾏｻﾑﾈ -
+*01
+If Flg3=1 Then 08
+Line 137 :Row 1 :斎藤「相手になろう！！このマサムネ
+Row 1 :　ソードの錆にしてやるッ！！
+Row 1 :　いや、マサムネは錆びないが‥！！」
+Call Tw
+Pause :Line 146 :Row 1 :斎藤「ぬううっ！！行くぞオォッ！！」
+Call Tw
+Line 136 :Row 2 :キリィ「どっちでも　いいわ。早く、かかってらっしゃい」_
+Screen Off :GCls :View 17,8,Gp282
+As 2 View 17,8,Gp282a
+Mask 16,1 1,15 255 0
+Screen On :Effect 11
+Col 3 :Line 136 :Row 2 :キリィ「ヒュッ！！」
+Row 2 :斎藤「アウッ！！」
+Cnt 17
+*L0
+Wait 9 :Copy 46,120 16,8 17,8 12 0
+Copy 45,120 18,8 17,8 3 0
+Loop L0
+_:Screen Off :GCls :View 17,8,Gp045
+GGet :Mask 0,0 80,25 0 0
+Col 7 :Line 155 :Row 1 :　超人的だッ！！」
+Call Tw
+Line 136 :Row 2 :キリィ「大した事ないのね‥」
+Row 2 :斎藤「こッ‥こいつ、強い‥！攻撃をする　瞬間を突く　そのスピードとキレ‥！！
+Screen On :Pause :Line 136 :Row 2 :野笛「忘れるな、斎藤君！！こいつは、改良（リメイク）された人間なんだ！！
+Row 2 :　精神・肉体エネルギー値は、共に　人間の　それを　はるかに上まっている！！」
+Row 2 :斎藤「…‥！！」_
+Flg1=1 :Jump 00
+
+- ｸﾛｻﾜ･ﾇﾝﾁｬｸ -
+*02
+If Flg2=0 Then 03
+Line 136 :Row 2 :斎藤「駄目だ、失神している‥！」_
+Jump 00
+*03
+Screen Off :GCls :View 30,32,Gp319
+GGet :Line 137 :Row 1 :斎藤「黒爽！！」
+Call Tw
+Screen On :Pause :Line 136 :Row 2 :黒爽「ふン、斎藤‥一年前の俺と思うなよ。実は　俺は、ここ一年、通信教育で
+Row 2 :　ヌンチャクさばきの達人となるべく、鍛練していたッ！！
+Row 2 :　その成果を見せてやろう‥！！」
+Pause :Mask 18,15 62,10 255 0
+Mask 0,0 21,10 255 0
+Copy 20,80 30,32 0,0 15 0
+GGet :View 18,120,Gp319a
+Line 136 :Row 2 :黒爽「ほおっ！」
+Cnt 10
+*L1
+Wait 6 :Copy 20,80 18,120 30,32 15 0
+Wait 6 :Copy 20,80 38,120 30,32 15 0
+Effect 29 :Wait 6 :Copy 20,80 58,120 30,32 15 0
+Loop L1
+Wait 6 :Cls :Effect 1
+Mask 18,15 6,10 0 0
+View 24,120,Gp319b
+Line 136 :Row 2 :黒爽「ほぉあっ！！」
+Row 2 :斎藤「おお！！」
+Cnt 10
+*L2
+Wait 6 :Copy 18,80 24,120 30,32 15 0
+Wait 6 :Copy 18,80 42,120 30,32 15 0
+Effect 29 :Wait 6 :Copy 18,80 60,120 30,32 15 0
+Loop L2
+Wait 6 :Cls :Effect 1
+Copy 20,80 0,80 0,0 15 0
+Mask 0,0 80,25 0 0
+Line 136 :Row 2 :斎藤「すごい！！すごいよ、黒爽っ！！」
+Row 2 :野笛「ブルース・リーみたいだ！！」_
+Screen Off :GCls :View 17,8,Gp246
+Screen On :Line 136 :Row 2 :キリィ「…‥‥‥！」_
+GCls :View 17,8,Gp299
+Line 136 :Row 2 :黒爽「行くぜ。貴様は　今夜、地獄で　眠る‥！」_
+Screen Off :GCls :View 17,8,Gp282
+As 2 View 17,8,Gp282b
+Mask 16,1 1,15 255 0
+Screen On :Effect 11
+Col 3 :Line 136 :Row 2 :キリィ「きえぇッ！！」
+Row 2 :黒爽「ごごぉッ！！」
+Cnt 21
+*L3
+Wait 9 :Copy 46,120 16,8 17,8 12 0
+Copy 45,120 18,8 17,8 3 0
+Loop L3
+_:Screen Off :GCls :View 17,8,Gp300
+GGet :Mask 0,0 80,25 0 0
+Screen On :Col 7 :Line 136 :Row 2 :野笛「駄目だ‥完全に　意識を失っている‥」
+Row 2 :斎藤「くうっ！！おそるべき相手だ！！
+Row 2 :　それとも　単に　黒爽が、弱かったのか‥！？」
+Pause :Line 136 :Row 2 :キリィ「試してみれば？」
+Row 2 :斎藤「ヌ‥！！」_
+Flg2=1 :GCls :View 17,8,Gp045
+GGet :Jump 00
+
+- ｻｲｺ点滅 -
+*Py
+Wait 2 :Palette 2,AB9 4,FFF
+Wait 3 :Palette 2,EFD 4,333
+Ksnc Py
+Ret
+
+- ﾉﾌｴ･ﾚｲｶﾉﾝ -
+*04
+If Flg3=0 Then 05
+Line 136 :Row 2 :野笛「だめだ！レイカノンの攻撃では、逆に　エネルギーを与える事に　なりかねん」_
+Jump 00
+*05
+If Flg1=0 Then 06
+If Flg2=1 Then 07
+*06
+Line 136 :Row 2 :野笛「ちょっと、待ってくれ！　レイカノンは、久々に使うので、セッティングに
+Row 2 :　少し、時間が　かかる！！　できれば、時間を　かせいでほしい‥！！」_
+Jump 00
+*07
+Screen Off :GCls :View 17,8,Gp256
+GGet :Line 137 :Row 1 :斎藤「野笛君！！」
+Row 1 :野笛「セッティング完了！！」
+Call Tw
+Screen On :Pause :Line 136 :Row 2 :野笛「貴様のような輩は、このレイカノンの一撃で、キレイに　始末するに限る！！
+Row 2 :　これだけの至近距離だ‥外す事は、あるまい！
+Row 2 :　それとも　光よりも　速く　動けるか！？」_
+GCls :View 17,8,Gp243
+Line 136 :Row 2 :キリィ「それは、不可能ね‥」_
+Screen Off :GCls :View 17,8,Gp311
+GGet :Mask 64,1 16,15 255 0
+Line 137 :Row 1 :野笛「では、死ねエェい！！」
+Call Tw
+Screen On :Pause :Copy 8,120 64,8 36,8 15 0
+Effect 39 :Line 136 :Row 2 :斎藤「やったァ！！」_
+Screen Off :GCls :View 17,8,Gp246
+View 39,8,Gp246a
+GGet :Screen On :Line 136 :野笛「片付いたか…！」
+Pause :Wait 6 :Palette 3,120 5,675
+Wait 6 :Palette 3,342 5,456
+Wait 6 :Palette 3,564 5,342 6,675
+Wait 6 :Palette 3,786 5,120
+Wait 6 :Palette 3,AB9 5,000 6,564
+Line 137 :Row 1 :野笛「！？」
+Call Tw
+_:Screen Off :GCls :View 17,8,Gp045
+GGet :Line 146 :Row 1 :斎藤「な‥何イィ！？奴の胸には、風穴
+Row 1 :　どころか、焦げ目ひとつすらない！！」
+Call Tw
+Line 136 :Row 2 :キリィ「美しい…芸術的な彩光だったわ…一瞬、目が　眩んでしまった程に…」
+Screen On :Pause :Line 137 :Row 1 :斎藤「完全なるノー・ダメージ‥！！
+Row 1 :　奴には　殺人光線が、通用しないッ！？」
+Call Tw
+Pause :Line 136 :Row 2 :野笛「！！これは‥！」
+Row 2 :キリィ「その通りよ、ドクター・ノブエ！このアメリカン・スリーブは、どこにでも
+Row 2 :　売ってる　１２＄の安物‥だが、その強度は、警察や　軍隊で、使われている　どの
+Row 2 :　防弾服よりも　はるかに　強い！！」
+Pause :View 17,8,Gp243
+GGet :Line 136 :Row 2 :野笛「まさか‥！！まさか、貴様等‥！！」
+Row 2 :キリィ「ドクター・ノブエの発見した　重分子構造処理による　シールド効果の
+Row 2 :　実践よ…どうやら、有効な結果が出たようだわ！！」
+Pause :Line 137 :Row 1 :野笛「貴様等ァ！！何て事を‥！
+Row 1 :　僕の発見や、発明していたものを‥
+Row 1 :　戦争に　利用する気かァ！！」
+Call Tw
+Pause :Line 136 :Row 2 :キリィ「わかっていた筈よ！！それは、歴史が、物語っている通り‥！
+Row 2 :　あなた方、科学者の役割は、いつも　同じだった！！」_
+Screen Off :GCls :View 17,8,Gp312a
+Col 7 :Line 137 :Row 1 :野笛「うぅぅううおおおおおッ！！
+Row 1 :　ウッキイイィィッ！！」
+Call Tw
+Screen On :Copy 12,40 16,8 64,48 15 0
+Wait 36 :Cnt 10
+*L4
+Wait 4 :Copy 12,40 64,8 16,8 15 0
+Wait 6 :Effect 39 :Copy 12,40 64,48 16,8 15 0
+Loop L4
+_:Screen Off :GCls :View 17,8,Gp311D5
+GGet :Copy 8,120 36,8 72,8 15 0
+Screen On :Wait 36 :Cnt 10
+*L5
+Wait 4 :Copy 8,120 64,8 36,8 15 0
+Wait 6 :Effect 38 :Copy 8,120 72,8 36,8 15 0
+Loop L5
+Line 137 :Row 1 :キリィ「ホホホホッ！面白い！面白いわ！
+Row 1 :　ヘガスの言った通り、あなたは　逆上し
+Row 1 :　レーザーを乱射する‥！！」
+Call Tw
+Pause :Line 136 :Row 2 :キリィ「露出部分の頭や、腕を　狙ってくるのが　わかっているから、ガードするのは
+Row 2 :　容易いわっ！！でも　これが、どういう事だか、わかって！？」_
+View 17,8,Gp312a
+Line 155 :Row 1 :野笛「！！」
+Copy 40,9 0,155 0,154 15 1
+_:Screen Off :GCls :View 17,8,Gp243
+GGet :Screen On :Line 136 :Row 2 :キリィ「この腕と額のバンドは、ヘガス・我狼陰が、私の為に作った
+Row 2 :　熱エネルギー吸収帯‥！！　そのシステムは、吸収した　熱エネルギーを
+Row 2 :　私のサイコ・エネルギーに変換する！！」
+Pause :Line 136 :Row 2 :野笛「な‥！！」
+Row 2 :斎藤「何を　わけの　わからない事を‥！！」
+Pause :Line 136 :Row 2 :野笛「斎藤君、待て！！何か、やばいッ‥伏せるんだ！！」
+Row 2 :斎藤「！！」_
+Screen Off :GCls :View 17,8,Gp323
+GGet :Line 137 :Row 1 :キリィ「サイコ・サンダー！！」
+Call Tw
+Screen On :Wait 11 :Palette 5,AB9
+Effect 35 :Wait 7 :Palette 5,CDB 6,120
+Wait 7 :Palette 5,EFD 6,342
+Wait 7 :Palette 6,564
+Wait 7 :Palette 6,786
+Wait 7 :Palette 3,564 6,9A8
+Wait 7 :Palette 3,675 6,BCA
+Wait 7 :Palette 3,786
+Effect 27
+*L6
+Wait 3 :Palette 1,777 5,897 6,000
+Wait 2 :Palette 1,000 5,EFD 6,BCA
+Ksnc L6
+Screen Off :GCls :View 17,8,Gp317
+GGet :Mask 0,0 80,25 0 0
+Screen On :Line 136 :Row 2 :斎藤「ぬうぅっ！！」
+Call Py
+Row 2 :キリィ「なッ‥！！私のサイコ・サンダーに　耐えるとはっ‥！！」
+Call Kw
+Call Py
+Cls :Line 136 :Row 2 :斎藤「一年前に　シビレ光線を　体験している事が、功を成したのか‥！！
+Row 2 :　僕の体には、電気に対する　免疫が、出来ている！！
+Row 2 :　これくらいの電撃ならば、何発かは、耐えられそうだ‥！！」
+Call Kw
+Call Py
+Flg3=1 :Jump 00
+
+- ｷｰｳｪｲﾄ -
+*Kw
+Wait 2 :Palette 2,AB9 4,FFF
+Wait 3 :Palette 2,EFD 4,333
+Ret
+
+- 対決(ｷﾘｨ.vs.ｻｲﾄｳ) -
+*08
+Screen Off :GCls :View 17,8,Gp160
+Line 137 :Row 1 :斎藤「もう一度、マサムネで勝負だ！！
+Row 1 :　今度は　本気で行くぞ、オカマ野郎！！
+Row 1 :　ブッ殺してやる！！」
+Call Tw
+Screen On :_
+Screen Off :GCls :View 2,8,Back1
+GGet :As 2 View 2,8,Kry0
+Col 4 :Line 144 :Row 2 :キリィ「ホホホ、いせいの　いい事！！」
+Screen On :Effect 35
+Pause :As 2 View 2,8,Kry1
+Effect 15 :Pause :As 2 View 2,8,Kry2
+Effect 21 :Pause :As 2 View 2,8,Kry3
+Effect 20 :Pause :As 2 View 2,8,Kry4
+Effect 22 :_
+Screen Off :GCls :View 17,8,Gp246b
+GGet :Screen On :Col 7 :Line 136 :Row 2 :キリィ「！！そんな馬鹿な！！シールド・コーティングを施した　シャツが
+Row 2 :　斬られるなんてッ‥！！」
+Pause :Line 137 :Row 1 :野笛「見事だ、斎藤君！！伏せろォ！！」
+Call Tw
+Line 145 :Row 2 :斎藤「！！」_
+Screen Off :GCls :View 17,8,Gp312a
+Mask 64,1 13,11 255 0
+Col 7 :Line 137 :Row 1 :野笛「光粒子一点集中発射装置作動ォ！」
+Call Tw
+Screen On :Copy 12,40 16,8 64,48 15 0
+Wait 36 :Cnt 3
+*L7
+Wait 4 :Copy 12,40 64,8 16,8 15 0
+Effect 39 :Wait 6 :Copy 12,40 64,48 16,8 15 0
+Loop L7
+_:Screen Off :GCls :View 17,8,Gp246c
+Screen On :Line 136 :Row 2 :キリィ「！！」_
+GCls :View 17,8,Gp301
+Wait 30 :Cnt 60
+*L8
+Wait 2 :Copy 46,118 17,8 17,10 12 0
+Loop L8
+Col 3 :Line 136 :Row 2 :斎藤「ひいいいっ！！」_
+Screen Off :GCls :View 17,8,Gp302
+GGet :Effect 37 :Screen On
+Col 7 :Line 136 :Row 2 :斎藤「やった‥！！」
+Row 2 :野笛「手強い奴だったが、何とか、片付いたね‥」
+Pause :View 36,8,Gp302a
+GGet :Line 136 :Row 2 :黒爽「全く、恐ろしい奴だったぜ」
+Row 2 :野笛「起きてたのか、黒爽君！」
+Pause :Line 164 :Row 1 :　スゲェぜ、斎藤！！」
+Call Tw
+Line 136 :Row 2 :黒爽「ああ。実を言うと、こいつが　サイコ・サンダーとかいう術を使った
+Row 2 :　あたりから、目は　覚めていたんだ。‥‥気絶したフリを続けて、こいつを　油断
+Row 2 :　させようと、思ったんだが‥どうやら、その必要も　なかったようだな。
+Pause :Line 136 :Row 2 :斎藤「よし。こいつが、カギを持っているかどうか、見てみよう‥！」
+Pause :Line 136 :Row 2 :黒爽「油断するなよ、斎藤」
+Row 2 :斎藤「ああ‥」_
+Screen Off :GCls :View 17,8,Gp281a
+Copy 6,45 64,8 38,8 15 0
+GGet :Screen On :Line 136 :Row 2 :斎藤「あったよ。カギだ」
+Pause :Line 136 :Row 2 :黒爽「…‥シャッターのとは、違うみたいだな‥」
+Pause :Line 136 :Row 2 :野笛「てっきり、奴が　持っていると、思ったのだが‥よく、調べたのかい？」
+Pause :Line 136 :Row 2 :斎藤「もちろん、よく　探したが、これだけだったよ」
+Row 2 :黒爽「すると、あと　一人。あの白Ｔシャツか」
+Pause :Line 136 :Row 2 :斎藤「…加川君だ」
+Row 2 :黒爽「加川？　聞いた事ある　名前だな」
+Pause :Line 136 :Row 2 :斎藤「‥‥君は、会った事が　なかったね」
+Row 2 :野笛「？‥知り合いなのか？　斎藤君」
+Pause :Line 136 :Row 2 :斎藤「この学校の生徒さ。だが　今は、エスパー軍団だ。
+Row 2 :　爆炎のファッカーだ。僕が、倒す」
+Pause :Line 136 :Row 2 :野笛「…そうか」
+Row 2 :黒爽「やっかいだな」
+Pause :Line 136 :Row 2 :野笛「それにしても‥スゴイのは、斎藤君だ。重分子処理を施した物なら、
+Row 2 :　例え、紙切れ一枚でも　マグナム弾を　はじき返す強度が、あるというのに…
+Row 2 :　それを　一刀のもとに　斬ってしまうとは…！」_
+Row 2 :斎藤「いやあ、気合いだよ、気合い」
+Pause :Line 136 :Row 2 :野笛「という事は、マサムネの有する　エネルギーが、僕のレイカノンの効果よりも
+Row 2 :　遥かに　高い値を持っているという事になる‥それとも　奴のシールドコーティング
+Row 2 :　は、完全ではなかったのか？‥いや、そんな筈は‥」
+Pause :Line 136 :Row 2 :斎藤「とにかく　急ごう。時間が、無いんだ！」_
+Grp 0 :GCls :Mask 0,0 80,25 0 0
+Grp 1 :Scn FS2D5
+
+*E.
+

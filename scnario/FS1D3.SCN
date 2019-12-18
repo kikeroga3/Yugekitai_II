@@ -1,0 +1,102 @@
+
+*S.
+
+*00
+Screen Off :GCls :View 17,8,Gp140
+GGet :Screen On :Line 136 :Row 2 :ここは、旧校舎１階の廊下。
+Line +4
+Row 1 :［１］１年の各教室へ
+Row 1 :［２］正面玄関
+Row 1 :［３］トイレ
+Line 149 :Row 26 :［４］２階へ上がる
+Select 01,En,To,2F
+*01
+Line 136 :Row 2 :〔１年の各教室へ〕
+Line +4
+Row 1 :［１］１年１組
+Row 1 :［２］１年２組
+Row 1 :［３］１年３組
+Line 149 :Row 26 :［４］１年４組
+Row 26 :［５］１年５組
+Row 26 :［６］１年６組
+Line 149 :Row 52 :［７］１年７組
+Row 52 :［８］１年８組
+Row 52 :［９］１年９組
+Select 02,03,04,02,03,04,02,03,04
+*02
+Flg0=0 :View 17,8,Gp163b
+GGet :Jump 05
+*03
+Flg0=1 :View 17,8,Gp169c
+GGet :Jump 05
+*04
+Flg0=2 :View 17,8,Gp176i
+GGet
+*05
+Cls :Line 136 :If Flg11=0 Then 06
+Row 2 :斎藤（この危機感の無さ…）
+Jump 07
+*06
+Row 2 :斎藤「１年生も　やっと、ＨＲ（ホームルーム）が終わったようだな‥」
+*07
+Line +4 :Row 1 :［１］見る
+Row 1 :［２］話す
+Row 1 :［３］教室を出る
+Select 08,09,00
+*08
+Line 136 :Row 2 :斉藤（１年生は、帰るのが　名残り惜しいのか‥まぁ、僕にも　そんな憶えはある。
+Row 2 :　しかし、結構、残っているなァ‥）_
+Jump 05
+*09
+Line 136 :If Flg11=0 Then 10
+Row 2 :斎藤「その‥君たち、早く帰りたまえよ」
+Row 2 :１年生達「はァい、先輩」_
+Jump 05
+*10
+Screen Off :GCls :View 28,8,Gp262
+Mask 0,0 24,17 255 0
+Mask 52,0 24,17 255 0
+GGet :Screen On :Line 136 :Row 2 :斎藤「その‥君たち、今日は、早く　帰るんだ」
+Row 2 :１年生「え‥はい」
+Pause :Copy 22,50 28,30 0,0 15 0
+Copy 2,50 52,8 28,30 15 0
+Wait 30 :Copy 14,50 54,8 28,30 15 0
+Effect 31 :Wait 30 :Copy 22,50 52,58 28,30 15 0
+Wait 30 :Copy 22,50 0,0 28,30 15 0
+GGet :Line 136 :Row 2 :１年生「あ‥！」
+Pause :Line 136 :Row 2 :斎藤「！？‥な、何？」
+Row 2 :１年生「今、後ろを　誰か、通りました」
+Pause :Line 136 :Row 2 :斎藤「あ、ああ、そう…！何だ…とにかく、理由は、今は　言えないんだが、
+Row 2 :　早めに　下校するように」
+Row 2 :１年生「はァい」_
+Flg11=1 :Screen Off :GCls :Mask 0,0 80,25 0 0
+Screen On :If Flg0=0 Then 02
+If Flg0=1 Then 03
+If Flg0=2 Then 04
+
+*En
+Scn EntRanCe
+
+- ﾄｲﾚ -
+*To
+Screen Off :GCls :View 17,8,Gp143
+GGet :Screen On
+*T0
+Line 136 :Row 2 :旧校舎１階のトイレ。
+Line +4
+Row 1 :［１］辺りを見る
+Row 1 :［２］用を足す
+Row 1 :［３］トイレから出る
+Select T1,T2,00
+*T1
+Line 136 :Row 2 :斎藤「誰も　いないな」
+Pause :Jump T0
+*T2
+Line 136 :Row 2 :斎藤「くっ…！」
+Pause :Jump T0
+
+*2F
+Scn FS2D3
+
+*E.
+

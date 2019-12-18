@@ -1,0 +1,268 @@
+
+- ｻﾌﾞﾙｰﾁﾝ -
+*Tw
+Copy 40,60 0,137 0,136 15 1
+Ret
+
+- ﾃﾝﾒﾂ(ﾙｰﾌﾟ) -
+*Pk
+Wait 3 :Palette 2,000
+Wait 1 :Palette 2,EFD
+Loop Pk
+Ret
+
+- ﾃﾝﾒﾂ(ｷｰｾﾝｽ) -
+*Kp
+Wait 2 :Palette 2,000 4,453 6,000
+Wait 2 :Palette 2,231 4,000 6,EFD
+Ksnc Kp
+Ret
+
+- ﾒｲﾝ･ﾙｰﾁﾝ -
+*S.
+Screen Off :GCls :View 17,8,Gp436
+Screen On :Col 7 :Line 136 :Row 2 :だが、その時！！　退路を　ふさぐ　影が、一つ！！
+Line +4 :Row 2 :黒爽「むん！？」
+Row 2 :斎藤「こ‥こいつは！！」_
+Screen Off :GCls :View 17,8,Gp433
+Line 137 :Row 1 :斎藤「ファッカァ！！」
+Call Tw
+Effect 47 :Screen On :_
+Screen Off :GCls :View 17,8,Gp380
+Mask 0,0 80,17 255 0
+Mask 17,1 46,15 0 0
+Screen On :Line 136 :Row 2 :ヘガス「ファッカー！！…無事だったのか！！」_
+Screen Off :GCls :View 17,8,Gp436
+GGet :Line 137 :Row 1 :黒爽「ちくしょう！！どきやがれ！！」
+Call Tw
+Screen On :Pause :Line 136 :Row 2 :斎藤「だ‥駄目だ！！　下がるんだ、みんな！！
+Row 2 :　こいつは、何も無い空間に　自由に　爆発を起こす事が出来るんだ！！」
+Row 2 :黒爽「！！」
+Pause :Line 136 :Row 2 :富沢「さ‥下がれと　言ったって、うしろは‥！！」_
+Screen Off :GCls :View 0,8,Gp386
+Copy 16,83 0,8 36,45 15 0
+Copy 11,83 64,23 52,45 15 0
+GGet :Line 137 :Row 1 :弥月「いやああ！！どんどん、せまって
+Row 1 :　くるうぅ！！」
+Call Tw
+Screen On :Effect 36 :Line 154 :Row 2 :斎藤「うわああ」
+Pause :Line 137 :Row 1 :ファッカァ「受けてみろォ！俺の最後の
+Row 1 :　全能力を　かけた爆炎攻撃‥！！」
+Call Tw
+Screen On :_
+Screen Off :GCls :View 17,8,Gp432
+Line 137 :Row 1 :ファッカァ「全てを燃やし尽くすぜ！！
+Row 1 :　ＢｕＲＮ　Ｉｔ　ＡＬＬ！！」
+Call Tw
+Screen On :_
+Screen Off :GCls :View 17,8,Gp430
+GGet :Copy 23,62 63,128 17,128 15 1
+Line 137 :Row 1 :ファッカァ「Ｆｕｃｋ　Ｆｉｒｅ！！」
+Call Tw
+Screen On :_
+Mask 0,17 80,7 255 0
+Cls :Effect 26 :Cnt 182
+*L0
+Wait 1 :Copy 46,181 17,9 17,8 12 0
+Loop L0
+Palette 4,EFD
+Wait 30 :Screen Off :GCls :View 17,8,Gp424
+Mask 0,17 80,7 0 0
+Screen On :Effect 27
+Wait 60 :Palette 2,9A8 3,231
+Wait 10 :Palette 2,BCA 3,564
+Wait 10 :Palette 2,DEC 3,897
+Wait 10 :Palette 2,EFD 3,BCA
+Wait 10 :Palette 3,EFD
+Wait 50 :Screen Off :View 2,8,Gp429
+Copy 14,46 64,54 24,40 15 0
+Line 137 :Row 1 :ヘガス「！！」
+Call Tw
+Screen On :_
+Screen Off :GCls :View 1,8,Gp450
+Copy 80,24 0,160 0,136 15 0
+Screen On :Effect 26
+*K0
+Wait 1 :Palette 1,564 3,9A8
+Wait 1 :Palette 1,EFD 2,000 3,EFD
+Wait 1 :Palette 1,564 3,9A8
+Wait 1 :Palette 1,675 2,EFD 3,AB9
+Ksnc K0
+Screen Off :View 17,8,Gp387
+Copy 14,40 64,8 28,20 15 0
+Copy 14,40 64,48 42,20 15 0
+Line 137 :Row 1 :ヘガス「な‥何‥！？」
+Call Tw
+Screen On :_
+Screen Off :GCls :View 0,8,Gp378
+Copy 80,35 0,163 0,128 15 0
+Screen On :Wait 40 :View 18,8,Gp378b
+Effect 25 :Wait 20 :View 17,50,Gp378c
+Effect 25 :Wait 30 :View 42,40,Gp378d
+Effect 25 :_
+Screen Off :View 17,8,Gp394
+Line 137 :Row 1 :斎藤「！！」
+Call Tw
+Screen On :_
+Screen Off :GCls :View 17,8,Gp432
+Line 137 :Row 1 :ファッカァ「地獄へ堕ちろおおぉ！！」
+Call Tw
+Effect 26 :Screen On :_
+GCls :View 3,8,Gp380a
+Line 136 :Row 2 :ヘガス「ファッカー！？　貴様は…」
+Cnt 15 :Call Pk
+Copy 14,65 2,8 16,8 15 0
+Effect 25 :Cnt 5 :Call Pk
+Copy 14,70 64,8 50,23 15 0
+Effect 25
+*K1
+Wait 3 :Palette 2,000
+Wait 1 :Palette 2,EFD
+Ksnc K1
+Screen Off :GCls :View 1,8,Gp398
+Line 137 :Row 1 :ヘガス「おおおおオッ！！」
+Call Tw
+Screen On :Call Kp
+Screen Off :GCls :View 17,8,Gp439
+Line 137 :Row 1 :ファッカァ「お前に　ふさわしい
+Row 1 :　クソだめの地獄へと…！！」
+Call Tw
+Effect 26 :Screen On :_
+Screen Off :GCls :View 1,8,Gp398
+GGet :Screen On :Line 136 :Row 2 :ヘガス「その…額の穴は！！　そうか‥
+Row 2 :　貴様、すでに　精神制御から、解かれているなッ！！」
+Call Kp
+Cls :Copy 16,80 0,8 16,48 15 0
+Line 137 :Row 1 :ヘガス「くおおオォッ！！」
+Call Tw
+Call Kp
+Screen Off :GCls :View 1,8,Gp450
+Mask 0,17 80,3 255 0
+Screen On :Wait 30 :Palette 4,231
+Wait 10 :Palette 4,564
+Wait 10 :Palette 4,9A8 5,231
+Wait 10 :Palette 4,CDB 5,564
+Wait 10 :Palette 4,EFD 5,9A8
+Wait 10 :Palette 5,CDB
+Wait 10 :Palette 5,EFD
+Wait 30 :Effect 38
+Copy 15,75 1,8 17,8 15 0 :Copy 14,75 64,8 32,8 15 0
+Wait 15 :Copy 15,75 1,83 17,8 15 0 :Copy 14,75 64,83 32,8 15 0
+_:GCls :View 17,8,Gp396
+Effect 11 :_
+Screen Off :View 17,8,Gp394
+Mask 0,17 80,3 0 0
+Line 137 :Row 1 :斎藤「加川！！」
+Call Tw
+Screen On :_
+GCls :View 17,8,Gp434
+Line 136 :Row 2 :加川「へ‥さ‥斎藤…ごめんな‥今まで、迷惑　かけて…、そいつも　道連れにして
+Row 2 :　往くから…カンベンしてくれよ…」_
+Screen Off :GCls :View 1,8,Gp398
+Line 137 :Row 1 :Row 1 :ヘガス「おおおおおおおお
+Row 1 :　ファッカアアァァッ！！」
+Call Tw
+Screen On :Call Kp
+GCls :View 17,8,Gp434
+GGet :Line 136 :Row 2 :加川「最期に…『加川』って、呼んでくれて…うれしかっ‥た‥ぜ…」
+Pause :Line 137 :Row 1 :斎藤「加川君ン！！」
+Call Tw
+Pause :Copy 46,119 17,8 17,9 15 0
+Cnt 60
+*L1
+Wait 3 :Copy 46,118 17,8 17,10 15 0
+Loop L1
+Line 137 :Row 1 :黒爽「みんな、ふせろォ！！」
+Row 1 :斎藤「！！」
+Call Tw
+_:Screen Off :GCls :View 1,8,Gp450
+Copy 80,24 0,160 0,136 15 0
+Mask 0,17 80,8 255 0
+Screen On :Wait 30 :Palette 0,231 1,897 3,BCA 4,231 5,231
+Wait 10 :Palette 0,564 1,AB9 3,CDB 4,564 5,564
+Wait 10 :Palette 0,897 1,CDB 3,DEC 4,897 5,897
+Wait 10 :Palette 0,BCA 1,EFD 3,EFD 4,BCA 5,BCA
+Wait 10 :Palette 0,DEC 4,DEC 5,DEC
+Wait 10 :Palette 0,EFD 4,EFD 5,EFD
+Wait 40 :Screen Off :GCls :View 17,8,Gp448
+Effect 25 :Screen On :_
+GCls :View 0,8,Gp469
+Wait 50 :Effect 47
+Copy 16,83 0,8 28,45 15 0 :Copy 8,55 64,8 44,45 15 0
+_:Grp 0 :Screen Off :GCls :Mask 0,17 80,8 0 0
+Wait 60 :View 17,8,Gp397
+Screen On :Grp 1 :Wait 60 :Copy 2,16 64,0 36,0 12 0
+Cnt 5
+*L2
+Wait 3 :Copy 2,56 36,0 36,8 12 0
+Loop L2
+Wait 3 :Copy 2,16 64,40 36,48 12 0
+Wait 42 :Copy 2,16 66,0 38,0 12 0
+Cnt 6
+*L3
+Wait 3 :Copy 2,64 38,0 38,8 12 0
+Loop L3
+Wait 3 :Copy 2,16 66,56 38,56 12 0
+_:Screen Off :View 17,8,Gp395
+GGet :Screen On :Line 136 :Row 2 :斎藤「加川君‥！！」
+Pause :Line 136 :Row 2 :黒爽「こいつは…ずっと　闘っていたんだな…一人で、改造された時から、ずっと…
+Row 2 :　たった　一人で‥！」_
+Row 2 :弥月「…‥‥‥！」
+Pause :Line 136 :Row 2 :富沢「彼も…他の　一般生徒達と　同様に…いや、
+Row 2 :　それ以上に、この闘いの犠牲者だったんだ‥！」
+Pause :Line 136 :Row 2 :斎藤「僕達のせいだ…僕達が、加川君を　こんな目に　あわせた‥！」
+Row 2 :富沢「！」
+Pause :Line 164 :Row 1 :　陽子ちゃんの尻を追い回してたのさ！」
+Call Tw
+Line 136 :Row 2 :黒爽「！斎藤‥！！」
+Row 2 :斎藤「加川君は‥僕達に　関わったせいで、こんな目に‥！！
+Row 2 :　…彼が　改造（リメイク）されている間、僕が　何をしていたか　知ってるか！？
+Pause :Line 137 :Row 1 :斎藤「ワラバン紙で　作った　封筒に
+Row 1 :　大学ノートの切れっぱしを入れた
+Row 1 :　ラブレターを渡す為にね！！」
+Call Tw
+_:Screen Off :GCls :View 17,8,Gp372
+GGet :Line 146 :Row 1 :斎藤「何が、違うんだ！！
+Row 1 :　仕方が無かったとでも言うのか！？」
+Call Tw
+Screen On :Line 136 :Row 2 :黒爽「それは、違うぞ！！斎藤！！しっかりしろ！！」
+Pause :Line 136 :Row 2 :黒爽「何を　弱気になってるんだ！　悪いのは、俺達じゃねぇ！！
+Row 2 :　この戦いが、仕組まれたものだという事に　気が付かないのか！！？」
+Pause :Line 136 :Row 2 :斎藤「！！仕組まれた…もの‥？」
+Row 2 :黒爽「そうだ。ヘガスも　黒子の一人さ！
+Row 2 :　エスパー軍団も　ラグビーや　サッカーでいう　前衛（フォワード）に過ぎん。
+Row 2 :　裏で、こいつらを　操っていた人間がいる！！」_
+Screen Off :GCls :View 17,8,Gp399
+Line 137 :Row 1 :黒爽「新井だ…」
+Call Tw
+Screen On :_
+Screen Off :GCls :View 17,8,Gp183
+Grp 0 :Screen On :Grp 1 :_
+Grp 0 :Screen Off :View 17,8,Gp400
+Line 137 :Row 1 :斎藤「！」
+Call Tw
+Grp 1 :Screen On :_
+GCls :View 17,8,Gp399
+GGet :Line 136 :Row 2 :黒爽「奴が、俺達に　復讐しているんだ、あるいは　挑戦か…！
+Row 2 :　冷静になって　考えてみろ、この学校で　新井の事を知ってるのは、俺達、
+Row 2 :　遊撃隊と、加川だけだった！！」
+Row 2 :斎藤「！！」
+Pause :Line 136 :Row 2 :黒爽「奴は、まるごと　全てを　消そうとしたんだ…
+Row 2 :　これは、始まりに過ぎない‥！！」
+Row 2 :斎藤「…‥‥！！」_
+Screen Off :GCls :View 17,8,Gp372
+Copy 6,22 64,8 30,35 15 0
+Copy 6,25 70,8 42,23 15 0
+Copy 6,20 64,30 20,68 15 0
+Copy 2,4 76,8 58,50 15 0
+GGet :Screen On :Line 136 :Row 2 :黒爽「お前は、遊撃隊のリーダーなんだ、しっかりと　前を見ろ。
+Row 2 :　そして、これから、自分が…俺達が、何をするべきなのかを　考えるんだ…！」
+Pause :Line 136 :Row 2 :斎藤「すまなかった、黒爽。
+Row 2 :　どうやら、僕は、少し、取り乱してしまっていたようだ」_
+Row 2 :黒爽「いや、いいんだ。わかってくれたようだな‥」
+Pause :Line 136 :Row 2 :富沢「しかし、新井は…奴は、一年前に　死んだのではなかったのか？」
+Pause :Line 136 :Row 2 :弥月「あの‥私、思い当たる事が　あるんです‥！」_
+Grp 0 :Screen Off :GCls :Scn ComGGun
+
+*E.
+

@@ -1,0 +1,76 @@
+
+*S.
+
+*00
+Screen Off :GCls :View 17,8,Gp140
+GGet :Screen On
+*01
+Line 136 :Row 2 :ここは、旧校舎２階の廊下。
+Line +4 :Row 1 :［１］２年の各教室へ
+Row 1 :［２］生物室
+Row 1 :［３］トイレ
+Line 149 :Row 26 :［４］渡り廊下
+Row 26 :［５］３階へ上がる
+Row 26 :［６］１階に降りる
+Select 02,03,To,Cr,3F,1F
+*02
+Line 136 :Row 2 :斎藤「２年生は　もう、誰もいないや‥ＨＲ（ホームルーム）終わるの早いからなァ
+Row 2 :　みんな、帰ってしまったのかな」
+Pause :Jump 01
+
+- 生物室 -
+*03
+Screen Off :GCls :View 17,8,Gp158
+Screen On :Line 136 :Row 2 :斎藤「？‥ん、ドアに　貼り紙がしてある…使用中、入れませんだって‥‥？
+Row 2 :　ふ～ん、何してんだろ」_
+Flg17=1 :Jump 00
+
+- ﾄｲﾚ -
+*To
+Screen Off :GCls :View 17,8,Gp143
+GGet :Screen On
+*T0
+Line 136 :Row 2 :旧校舎２階のトイレ。
+Line +4
+Row 1 :［１］辺りを見る
+Row 1 :［２］用を足す
+Row 1 :［３］トイレから出る
+Select T1,T2,00
+*T1
+Line 136 :Row 2 :斎藤「汚いな‥全く、２年の連中は　いい加減だな‥」
+Pause :Jump T0
+*T2
+Line 136 :If Flg9=9 Then T3
+Row 2 :斎藤「ぶるっ‥もよおしてきたな‥やっていくか」
+Jump T4
+*T3
+Row 2 :斎藤「ああ、もよおしてきた‥今日は　また、ずいぶん出るな。
+Row 2 :　まさか‥病気じゃないだろうな‥」
+*T4
+Rnd 9 :If Frg0=7 Then T5
+View 47,8,Gp143a
+Jump T6
+*T5
+Flg9=0 :View 41,8,Gp143k
+*T6
+F+9 :F+9 :Pause :Jump T0
+
+- ﾜﾀﾘ･ﾛｳｶ -
+*Cr
+Screen Off :GCls :View 17,8,Gp142
+GGet :Screen On :Line 136 :Row 2 :２階の渡り廊下です。
+Line +4
+Row 1 :［１］新校舎へ移動
+Row 1 :［２］旧校舎に戻る
+Select C0,00
+*C0
+Scn Act2FN
+
+*3F
+Scn Act3FS
+
+*1F
+Scn Act1FS
+
+*E.
+

@@ -1,0 +1,171 @@
+
+- ｻﾌﾞﾙｰﾁﾝ -
+*Tw
+Copy 40,60 0,137 0,136 15 1
+Ret
+
+- 点滅 -
+*Kp
+Wait 3 :Palette 4,000
+Wait 1 :Palette 4,EFD
+Ksnc Kp
+Ret
+
+- ﾒｲﾝ･ﾙｰﾁﾝ -
+*S.
+Screen Off :GCls :View 0,8,Gp457
+GGet :Mask 0,0 80,17 255 0
+Mask 17,1 46,15 0 0
+Col 7 :Line 137 :Row 1 :野笛「圧縮粒子吹出装置作動オォ！！」
+Call Tw
+Screen On :Call Kp
+Cls :View 17,8,Gp457a
+Copy 14,55 20,55 64,63 3 0 :Effect 38
+Cnt 30
+*L0
+Wait 1 :Copy 14,55 64,8 20,55 3 0
+Wait 1 :Copy 14,55 64,63 20,55 3 0 :Loop L0
+Copy 8,24 64,63 26,68 12 0 :Effect 35
+Cnt 30
+*L1
+Wait 1 :Copy 14,55 64,8 20,55 3 0 :Palette 6,000
+Wait 1 :Copy 14,55 64,63 20,55 3 0 :Palette 6,EFD
+Loop L1
+Effect 15 :Cnt 30
+*L2
+Wait 1 :Copy 14,55 64,8 20,55 3 0 :Palette 6,000
+Wait 1 :Copy 14,55 64,63 20,55 3 0 :Palette 6,EFD
+Copy 44,116 19,8 17,12 12 0 :Loop L2
+Screen Off :GCls :View 17,8,Gp463
+View 46,8,Gp463a
+Screen On :Wait 30 :Effect 41
+Copy 6,20 64,8 20,8 12 0 :Wait 3 :Copy 41,113 15,0 20,7 12 0
+- ﾀﾏ2 -
+Wait 3 :Copy 9,20 61,28 25,20 12 0 : Copy 4,5 0,0 26,15 12 0
+Wait 3 :Copy 43,116 17,8 20,12 12 0 :Wait 3 :Copy 43,116 17,8 20,12 12 0
+- ﾀﾏ3 -
+Wait 3 :Copy 7,20 63,48 35,32 12 0 :Wait 3 :Copy 6,20 64,48 38,35 12 0
+Wait 3 :Copy 6,20 64,48 40,38 12 0 :Wait 3 :Copy 6,20 64,48 42,41 12 0
+- ﾀﾏ4 -
+Wait 3 :Copy 6,20 64,68 44,44 12 0
+Wait 3 :Copy 6,20 64,68 45,46 12 0 :Wait 3 :Copy 6,20 64,68 46,48 12 0
+Wait 3 :Copy 6,20 64,68 47,50 12 0 :Wait 3 :Copy 6,20 64,68 48,52 12 0
+Wait 21 :Screen Off :GCls :View 17,8,Gp468
+Effect 11 :Screen On :_
+GCls :View 17,8,Gp454
+Wait 38 :Copy 12,35 64,8 16,8 15 0
+Effect 10 :Wait 37 :Copy 16,45 64,43 48,8 15 0
+Effect 37 :Wait 37 :View 17,54,Gp454a
+Effect 10 :Wait 38 :View 35,65,Gp454b
+Effect 25 :_
+GCls :View 17,8,Gp470
+Effect 26 :_
+Screen Off :View 17,8,Gp456
+Line 137 :Row 1 :ヘガス「うわああぁああぁ…あぁああ！」
+Call Tw
+Screen On :_
+Screen Off :GCls :View 17,8,Gp458
+Line 164 :Row 1 :　僕は、それに　勝った！！」
+Call Tw
+Line 136 :Row 2 :野笛「成功だ！！…チタン合金の装甲を　紙のように貫いた！！さしものタルカスも
+Row 2 :　この圧縮粒子砲の前では、ライフルを突き付けられた　リスのようなものか‥！！
+Row 2 :　試作の電磁シールドも合わせ、実験が　そのまま実戦になる　危険な賭けだったが‥
+Screen On :_
+Screen Off :GCls :View 17,8,Gp463b
+Line 137 :Row 1 :野笛「僕は、賭けに　勝ったぞォ！！
+Row 1 :　ヘガス！！」
+Call Tw
+Screen On :_
+Screen Off :GCls :View 17,8,Gp453
+Line 137 :Row 1 :野笛「貴様との勝負に　勝ったのだ！！」
+Call Tw
+Screen On :_
+Screen Off :GCls :View 17,8,Gp418
+Line 137 :Row 1 :ヘガス「そうは‥させん！！」
+Call Tw
+Screen On :_
+Screen Off :GCls :View 17,8,Gp463c
+Line 137 :Row 1 :ヘガス「貴様も　道連れだ！！
+Row 1 :　野笛エェエ！！」
+Call Tw
+Screen On :Effect 30
+Line 154 :Row 2 :野笛「！！」
+Wait 27 :Effect 36 :_
+Screen Off :GCls :View 17,8,Gp471
+Screen On :Col 2 :Line 136 :Row 2 :斎藤「野笛君！！」
+Cnt 17
+*L3
+Effect 36 :Wait 17 :Copy 63,120 18,8 17,8 3 0
+Loop L3
+Wait 11 :Screen Off :Effect 18
+GCls :View 17,8,Gp451
+Screen On :_
+GCls :View 17,8,Gp460
+Effect 26 :_
+GCls :View 17,8,Gp451
+Col 7 :Line 136 :Row 2 :野笛「ムダだ‥！！　君は、僕には　勝てん！！　ＩＱでも‥恋愛でも！！
+Row 2 :　僕は、常に　君の上に　いたのだから…過去‥そして、現在も！！」_
+GCls :View 17,8,Gp460
+Effect 26 :Line 136 :Row 2 :ヘガス「ナンシー‥‥！」_
+GCls :View 17,8,Gp458
+Line 136 :Row 2 :野笛「この時計台を、君の墓標としよう‥ヘガス‥！」_
+GCls :View 17,8,Gp460
+Effect 26 :Line 136 :Row 2 :ヘガス「ナンシー‥わたしは…」_
+GCls :View 17,8,Gp452
+Line 136 :Row 2 :野笛「ターゲット・スコープ・オープン、ロック・オン！！」_
+GCls :View 17,8,Gp460
+Effect 26 :Line 136 :Row 2 :ヘガス「きみのもとへ　ゆけるだろうか‥ナンシー‥」_
+Screen Off :GCls :View 17,8,Gp453
+Line 137 :Row 1 :野笛「うきいぃっ、地獄へ堕ちろおぉ！」
+Call Tw
+Screen On :_
+GCls :View 17,8,Gp470
+Effect 36 :_
+Screen Off :GCls :View 0,8,Gp457
+GGet :Line 137 :Row 1 :野笛「圧縮粒子吹出装置作…」
+Call Tw
+Screen On :Call Kp
+Cls :Copy 16,50 0,8 30,30 15 0
+Effect 35
+*K0
+Wait 1 :Palette 5,EFD
+Wait 2 :Palette 4,000 5,897
+Wait 1 :Palette 4,EFD 5,000
+Ksnc K0
+Screen Off :GCls :View 17,8,Gp473
+Line 137 :Row 1 :野笛「アッキァーッ！！」
+Call Tw
+Screen On :Effect 30 :Wait 13 :Effect 25 :_
+Screen Off :GCls :View 17,8,Gp484
+Line 137 :Row 1 :斎藤・黒爽「あ！！」
+Call Tw
+Screen On :_
+Screen Off :GCls :View 0,8,Gp462
+Copy 10,40 64,8 28,8 15 0
+View 37,8,Gp462a
+Screen On :Effect 36
+Line 136 :Row 2 :野笛「ああ…あああ‥」_
+GCls :View 17,8,Gp464
+Effect 10 :_
+Palette 1,786 2,AB9 3,231 4,564
+Wait 6 :Palette 1,9A8 2,CDB 3,564 4,786
+Wait 6 :Palette 1,BCA 2,EFD 3,897 4,9A8
+Wait 6 :Palette 1,DEC 3,BCA 4,BCA
+Wait 6 :Palette 1,EFD 3,DEC 4,DEC
+Wait 6 :Palette 3,EFD 4,EFD
+Mask 17,1 46,15 255 7
+View 17,8,Gp464a
+Palette 1,EFD 2,EFD 3,EFD 6,EFD
+Wait 6 :Mask 17,1 46,15 0 0
+Wait 6 :Palette 1,CDB 2,DEC 3,CDB
+Effect 25 :Wait 6 :Palette 1,AB9 2,CDB 3,AB9
+Wait 6 :Palette 1,9A8 2,BCA 3,9A8
+Wait 6 :Palette 3,786
+Line 137 :Row 1 :斎藤「の‥野笛君ンンン！！」
+Call Tw
+Wait 23 :Effect 47 :_
+Grp 0 :Screen Off :GCls
+Wait 90 :Scn HeaVen
+
+*E.
+

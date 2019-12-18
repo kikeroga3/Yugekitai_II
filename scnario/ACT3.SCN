@@ -1,0 +1,564 @@
+
+- ｻﾌﾞﾙｰﾁﾝ -
+*Tw
+Copy 40,60 0,137 0,136 15 1
+Ret
+
+- 点滅 -
+*Pk
+Wait 3 :Palette 4,453
+Wait 1 :Palette 4,EFD
+Ksnc Pk
+Ret
+
+- ﾏｻﾑﾈ･ｽｸﾛｰﾙ -
+*Ms
+Cls :Wait 10 :Effect 41
+Cnt 40
+*M0
+Wait 1 :Copy 3,55 0,0 70,56 15 0
+Copy 60,55 13,56 10,56 15 0
+Copy 46,55 3,0 0,0 15 0
+Loop M0
+Ret
+
+- ﾒｲﾝ･ﾙｰﾁﾝ -
+*S.
+Screen Off :GCls :Grp Gp211
+Mask 0,0 17,20 255 0
+Screen On :Effect 41
+Cnt 20
+*L0
+Wait 2 :Copy 16,80 0,0 32,32 3 0
+Copy 16,160 0,2 0,0 3 0
+Copy 16,80 0,76 32,32 12 0
+Copy 16,160 0,0 0,4 12 0
+Loop L0
+Cnt 20
+*L1
+Wait 3 :Copy 16,80 0,0 32,32 3 0
+Copy 16,160 0,2 0,0 3 0
+Copy 16,80 32,28 32,32 12 0
+Loop L1
+Screen Off :Grp Zero
+Mask 0,0 80,25 0 0
+View 0,8,Gp296
+Mask 0,1 16,15 255 0
+Mask 63,1 16,15 255 0
+Screen On :Wait 45 :Copy 16,40 0,88 32,8 12 0
+Wait 4 :Copy 16,80 0,48 32,8 12 0
+Wait 4 :Copy 16,120 0,8 32,8 12 0
+Wait 2 :Copy 16,80 0,8 32,15 12 0
+Copy 16,40 62,92 28,92 12 0
+Col 7 :Line 136 :Row 2 :富沢「ドヘ」
+Effect 32 :Line +4 :Row 2 :ボキ_
+Screen Off :GCls :View 17,8,Gp318
+GGet :Line 137 :Row 1 :富沢「ぐうう～！！」
+Call Tw
+Screen On
+*L2
+Wait 3 :Palette 4,000
+Wait 1 :Palette 4,EFD
+Ksnc L2
+Cls :Line 137 :Row 1 :黒爽「富沢ッ‥！！偉いぞ！！
+Row 1 :　よく、彼女を受け止めた…あ、後で
+Row 1 :　タコヤキでも、おごるぜ‥…！！」
+Call Tw
+Pause :Line 136 :Row 2 :アンドレ『それは、出来ん』
+Row 2 :黒爽「ハ！！」_
+Screen Off :GCls :View 17,8,Gp007b
+Mask 16,16 48 7 255 0
+Screen On :Effect 26
+Cnt 50
+*L3
+Wait 2 :Copy 46,170 17,9 17,8 3 0
+Loop L3
+Mask 16,16 48,7 0 0
+Col 2 :Line 137 :Row 1 :アンドレ『お前は　ここで、死ぬからだ
+Row 1 :　ああッ！！』
+Call Tw
+_:Screen Off :GCls :View 17,8,Gp252
+Copy 46,25 17,153 17,128 15 0
+GGet :Mask 17,1 28,15 255 0
+Mask 45,1 1,15 15 0
+Screen On :Col 7 :Line 136 :Row 2 :富沢「足が‥…足が‥…」
+Row 2 :弥月「すっ‥すいません、私の為に‥！」
+Pause :Line 136 :Row 2 :弥月「？！」
+Row 2 :富沢「！」
+Pause :Mask 45,1 1,15 0 0
+Wait 2 :Mask 44,1 1,15 15 0 :Wait 2 :Mask 44,1 1,15 0 0
+Wait 2 :Mask 43,1 1,15 15 0 :Wait 2 :Mask 43,1 1,15 0 0
+Wait 2 :Mask 42,1 1,15 15 0 :Wait 2 :Mask 42,1 1,15 0 0
+Wait 2 :Mask 41,1 1,15 15 0 :Wait 2 :Mask 41,1 1,15 0 0
+Wait 2 :Mask 40,1 1,15 15 0 :Wait 2 :Mask 40,1 1,15 0 0
+Wait 2 :Mask 39,1 1,15 15 0 :Wait 2 :Mask 39,1 1,15 0 0
+Wait 2 :Mask 38,1 1,15 15 0 :Wait 2 :Mask 38,1 1,15 0 0
+Wait 2 :Mask 37,1 1,15 15 0 :Wait 2 :Mask 37,1 1,15 0 0
+Wait 2 :Mask 36,1 1,15 15 0 :Wait 2 :Mask 36,1 1,15 0 0
+Wait 2 :Mask 35,1 1,15 15 0 :Wait 2 :Mask 35,1 1,15 0 0
+Wait 2 :Mask 34,1 1,15 15 0 :Wait 2 :Mask 34,1 1,15 0 0
+Wait 2 :Mask 33,1 1,15 15 0 :Wait 2 :Mask 33,1 1,15 0 0
+Wait 2 :Mask 32,1 1,15 15 0 :Wait 2 :Mask 32,1 1,15 0 0
+Wait 2 :Mask 31,1 1,15 15 0 :Wait 2 :Mask 31,1 1,15 0 0
+Wait 2 :Mask 30,1 1,15 15 0 :Wait 2 :Mask 30,1 1,15 0 0
+Wait 2 :Mask 29,1 1,15 15 0 :Wait 2 :Mask 29,1 1,15 0 0
+Wait 2 :Mask 28,1 1,15 15 0 :Wait 2 :Mask 28,1 1,15 0 0
+Wait 2 :Mask 27,1 1,15 15 0 :Wait 2 :Mask 27,1 1,15 0 0
+Wait 2 :Mask 26,1 1,15 15 0 :Wait 2 :Mask 26,1 1,15 0 0
+Wait 2 :Mask 25,1 1,15 15 0 :Wait 2 :Mask 25,1 1,15 0 0
+Wait 2 :Mask 24,1 1,15 15 0 :Wait 2 :Mask 24,1 1,15 0 0
+Wait 2 :Mask 23,1 1,15 15 0 :Wait 2 :Mask 23,1 1,15 0 0
+Wait 2 :Mask 22,1 1,15 15 0 :Wait 2 :Mask 22,1 1,15 0 0
+Wait 2 :Mask 21,1 1,15 15 0 :Wait 2 :Mask 21,1 1,15 0 0
+Wait 2 :Mask 20,1 1,15 15 0 :Wait 2 :Mask 20,1 1,15 0 0
+Wait 2 :Mask 19,1 1,15 15 0 :Wait 2 :Mask 19,1 1,15 0 0
+Wait 2 :Mask 18,1 1,15 15 0 :Wait 2 :Mask 18,1 1,15 0 0
+Wait 2 :Mask 17,1 1,15 15 0 :Wait 2 :Mask 17,1 1,15 0 0
+Mask 17,16 46,4 255 0
+View 17,8,Gp252
+Cnt 25
+*L4
+Wait 3 :Copy 46,145 17,8 17,9 15 0
+Copy 46,1 17,153 17,8 15 0
+Loop L4
+_:Screen Off :GCls :View 17,8,Gp119
+Mask 0,0 80,25 0 0
+Line 146 :Row 1 :弥月「キャアァアァッ！！？」
+Call Tw
+Screen On :Line 136 :Row 2 :愚礼賢「いいザマだ‥！捜したぜ、ヘナチョコ忍者！どこに隠れていやがった！！」_
+GCls :View 17,8,Gp321
+GGet :Line 136 :Row 2 :黒爽「がっ‥‥かぁっ‥ッ！！」
+Pause :Line 137 :Row 1 :斎藤「黒爽っ！！逃げろっ！！
+Row 1 :　逃げてくれえっ！！」
+Call Tw
+Pause :Line 146 :Row 1 :斎藤「黒爽ーっ！！」
+Call Tw
+Line 136 :Row 2 :黒爽「な‥んてこ‥った…これ‥が、ム‥マ‥か…マジで、ヒトを…喰いやがる…」
+Pause :Line 137 :Row 1 :アンドレ『ハハハ、喰らわれろ！
+Row 1 :　骨まで、喰らわれるがいい！！』
+Row 1 :斎藤「や‥やめろォーッ！！」
+Call Tw
+Pause :Line 137 :Row 1 :アンドレ『霧魔のエーテルに細胞の一片
+Row 1 :　たりとも、消化し尽くされろォ！！』
+Call Tw
+Pause :Line 136 :Row 2 :黒爽「斎藤‥後は、頼んだぞ…学‥校を‥みんなの‥命を‥」
+Pause :Wait 28 :Palette C,564
+Wait 8 :Palette C,786
+Wait 8 :Palette C,9A8
+Wait 8 :Palette C,BCA
+Wait 8 :Palette C,CDB
+Line 137 :Row 1 :斎藤「うっ‥！！うわああああ
+Row 1 :　黒爽ァーッ！！」
+Call Tw
+Pause :Line 136 :Row 2 :アンドレ『ふははははは、どうだ！？骨も残さず、喰ってやったわい！！奴の肉と
+Row 2 :　エーテルを吸収した分、巨大になり、お前も喰ってやる！サムライ！！』
+Row 2 :斎藤「ひいいいっ！！」
+Pause :Line 136 :Row 2 :アンドレ『…‥‥‥…』
+Row 2 :斎藤「！？‥‥！？」
+Pause :Line 136 :Row 2 :アンドレ『お、おかしい、なぜ、大きくならんのだ！？
+Row 2 :　奴の肉と‥エーテルを　吸収した筈なのにっ‥！！』
+Pause :Line 146 :Row 1 :アンドレ『！！』
+Call Tw
+Line 136 :Row 2 :黒爽「してねェよ」_
+Screen Off :GCls :View 0,8,Gp288
+GGet :Mask 0,0 80,16 255 0
+Mask 17,1 46,15 0 0
+Line 146 :Row 1 :アンドレ『バ‥馬鹿なっ！！』
+Call Tw
+Line 136 :Row 2 :斎藤「…！？黒爽！！？」
+Screen On :Pause :Line 136 :Row 2 :黒爽「喰われたフリだよ、喰われたフリ。てめーみたいな　チンケな　化け物に
+Row 2 :　喰い殺されて、成仏できるかよ』
+Pause :Line 137 :Row 1 :アンドレ『喰われたフリだあ！？』
+Call Tw
+Row 2 :黒爽「そうさ」
+Pause :View 0,8,Gp277
+GGet :Line 136 :Row 2 :黒爽「見ろ、マジックだぜ。アンドレ？」
+Pause :Effect 23
+Copy 16,40 0,8 22,20 15 0
+Wait 7 :Copy 16,40 0,48 22,20 15 0
+Wait 7 :Copy 16,40 0,88 22,20 15 0
+Wait 7 :Copy 10,40 62,8 28,20 15 0
+Wait 7 :Copy 10,40 62,48 28,20 15 0
+GGet :Line 136 :Row 2 :アンドレ『ぬうう！！』
+Row 2 :斎藤「！！」
+Pause :Effect 23
+Copy 10,40 62,8 28,20 15 0
+Wait 7 :Copy 16,40 0,88 22,20 15 0
+Wait 7 :Copy 16,40 0,48 22,20 15 0
+Wait 7 :Copy 16,40 0,8 22,20 15 0
+Wait 7 :View 0,8,Gp277
+Line 136 :Row 2 :黒爽「わかったか？」_
+Line 146 :Row 1 :アンドレ『ぬうぅ、なめおってえぇ！！』
+Copy 40,9 0,146 0,145 15 1
+_:Screen Off :GCls :View 17,8,Gp007b
+Copy 22,120 64,8 34,8 12 0
+GGet :Mask 16,16 48 7 255 0
+Screen On :Effect 26
+Cnt 50
+*L5
+Wait 2 :Copy 46,170 17,9 17,8 3 0
+Loop L5
+Mask 16,16 48,7 0 0
+Col 2 :Line 137 :Row 1 :アンドレ『だが、今度は　どおだあぁ！！』
+Call Tw
+_:Screen Off :GCls :View 0,8,Gp288
+GGet :Col 7 :Line 146 :Row 1 :アンドレ『！？』
+Call Tw
+Line 136 :Row 2 :黒爽「バ～カ、どっちに　行ってんだよ」
+Screen On :Pause :Cnt 30
+*L6
+Wait 1 :Copy 1,120 0,8 76,8 15 0
+Copy 77,120 1,8 0,8 15 0
+Loop L6
+GGet :Palette 4,BCA 6,AB9
+Wait 6 :Palette 4,9A8 6,CDB
+Wait 6 :Palette 4,897 6,DEC
+Line 146 :Row 1 :アンドレ『！！？』
+Call Tw
+Line 136 :Row 2 :黒爽「そっちじゃねえ、ここだ！」
+Pause :Cnt 30
+*L7
+Wait 1 :Copy 76,120 0,8 1,8 15 0
+Copy 1,120 76,8 0,8 15 0
+Loop L7
+Palette 4,AB9 6,BCA
+Wait 6 :Palette 4,CDB 6,9A8
+Wait 6 :Palette 4,DEC 6,897
+Line 146 :Row 1 :アンドレ『ぐうう！！？』
+Call Tw
+Line 136 :Row 2 :黒爽「どこ、見てんだよ。そこじゃねぇよ！ここだあ！！」_
+Screen Off :GCls :View 17,8,Gp315
+GGet :Line 137 :Row 1 :アンドレ『き‥貴様アァ！！』
+Call Tw
+Screen On :Line 145 :Row 2 :斎藤「すごい‥っ！！すごいよ、黒爽！！いつの間に　そんな技を‥！！」
+Pause :Line 136 :Row 2 :黒爽「こっちは　まかせな、斎藤‥お前は、オカマの方を　やれっ‥！！」
+Row 2 :斎藤「まかせろ！」
+Row 2 :アンドレ『…‥‥‥！！』
+Pause :Line 136 :Row 2 :黒爽「さ～て、こんなものが、俺の切り札だと、思うなよ‥」
+Row 2 :アンドレ『ヌウ…！！』_
+Screen Off :GCls :View 17,8,Gp134
+GGet :Screen On :Line 136 :Row 2 :キリィ「な‥何よ　これ！何て、絡まり方をしたの‥！？
+Row 2 :　全然、ほどけないわっ、ぐうぅっ！！」
+Pause :Cnt 29
+*L8
+Wait 2 :Copy 8,29 54,100 54,99 15 0
+Copy 8,1 64,8 54,127 15 0
+Copy 8,30 64,9 64,8 15 0
+Loop L8
+GGet :Line 136 :Row 2 :斎藤「キリィ」
+Row 2 :キリィ「はっ！！」
+Pause :Line 146 :Row 1 :　何をしようというのオォ！」
+Call Tw
+Line 136 :Row 2 :キリィ「いっ‥いやあああ、来ないでッ！！こんな‥こんな鎖に縛られたままの私に
+Line 154 :Row 2 :斎藤「くっ‥！！」_
+Flg1=0 :Flg2=0 :Flg3=0
+*00
+Cls :Line 136 :Row 2 :斉藤「はぁッ‥！」
+Line +4 :Row 1 :［１］殴る
+Row 1 :［２］蹴る
+Row 1 :［３］犯す
+Select 02,03,01
+
+- ﾚｲﾌﾟ -
+*01
+Line 136 :Row 2 :斎藤「うへぇあぁへぇあぁ」
+Line +4 :Row 2 :斎藤の全身に　悪寒が走り、腕から　肩にかけて、トリハダがたった。
+Row 2 :斎藤には、出来なかった。_
+Jump 00
+
+- ﾊﾟﾝﾁ -
+*02
+If Flg3=1 Then 05
+Line 146 :Row 1 :斎藤「せいやああっ！！」
+Call Tw
+Line 136 :Row 2 :キリィ「いっ‥いやああっ！！」_
+GCls :View 17,8,Gp322
+GGet :Line 137 :Row 1 :キリィ「ヒ～～～～～ッ！！」
+Call Tw
+Effect 10 :Call Pk
+Flg1=1 :Jump 00
+
+- ｷｯｸ -
+*03
+If Flg2=1 Then 04
+Line 146 :Row 1 :斎藤「とおーーーッ！！」
+Call Tw
+Line 136 :Row 2 :キリィ「や‥やめてえ！！」_
+GCls :View 17,8,Gp283
+GGet :Line 146 :Row 1 :キリィ「ああ～～～～っ」
+Call Tw
+Line 136 :Row 2 :斎藤「どうだっ！！どうだっ！！こいつめっ！！」
+Effect 20 :Call Pk
+Flg2=1 :Jump 00
+*04
+Line 136 :Row 2 :斎藤「も‥もう一撃かッ！！」_
+GCls :View 17,8,Gp286
+GGet :Line 137 :Row 1 :斎藤「たあーーーッ！！」
+Row 1 :キリィ「ああっ！！ああっ！！
+Row 1 :　あああ～～っ！！」
+Call Tw
+Effect 25 :Call Pk
+Cls :Line 136 :Row 2 :斎藤「ぬぐう！！ま‥まだ、音を　あげないかッ！！」_
+If Flg1=0 Then 00
+If Flg2=0 Then 00
+Flg3=1 :Jump 00
+
+- ｻｲﾄｳ･ﾋﾟﾝﾁ -
+*05
+Line 136 :Row 2 :斎藤「キリィッ！！貴様だけは、この僕の拳で、カタを　つけてやるッ！！」_
+Screen Off :GCls :View 17,8,Gp331
+Col 2 :Line 137 :Row 1 :斎藤「うおぉおぉおぉお～ッ！！」
+Call Tw
+Screen On
+*L9
+Wait 2 :Copy 1,120 62,8 16,8 3 0 :Copy 46,120 16,8 17,8 3 0
+Copy 47,120 16,8 17,8 12 0
+Wait 2 :Copy 1,120 62,8 16,8 3 0 :Copy 46,120 16,8 17,8 3 0
+Copy 47,120 17,8 16,8 12 0
+Ksnc L9
+Screen Off :GCls :View 17,8,Gp332
+Col 7 :Line 137 :Row 1 :斎藤「あ！！」
+Call Tw
+Effect 29 :Screen On :_
+GCls :View 17,8,Gp333
+Line 137 :Row 1 :キリィ「きえェエェッ！！」
+Call Tw
+Line 145 :Row 2 :斎藤「ほびゅっ！！」
+Effect 11 :Call Pk
+Screen Off :GCls :View 29,8,Gp334
+Screen On :Wait 14 :Copy 22,120 29,8 28,8 12 0
+Wait 6 :Cnt 20
+*R0
+Wait 2 :Copy 22,120 29,8 29,10 12 0
+Loop R0
+Wait 4 :Copy 22,120 29,9 29,8 12 0
+Col 3 :Line 137 :Row 1 :斎藤「わあっ！！」
+Call Tw
+_:GCls :View 17,8,Gp113
+GGet :Col 7 :Line 136 :Row 2 :斎藤「ああ…あああああ‥！！」
+Pause :View 37,8,Gp113a
+Line 137 :Row 1 :斎藤「！！」
+Call Tw
+_:Screen Off :GCls :View 0,8,Gp026
+GGet :Line 137 :Row 1 :斎藤「あひいいぃっ！！」
+Call Tw
+Screen On :Line 145 :Row 2 :キリィ「…‥‥‥…」
+Pause :Line 136 :Row 2 :斎藤「や‥やめろォ‥！」
+Row 2 :キリィ「やめろ？」
+Pause :Line 136 :Row 2 :斎藤「よ、‥‥よ、‥‥よせ‥」
+Row 2 :キリィ「よせ？」
+Pause :Line 136 :Row 2 :斎藤「…‥お、お足を　おどけ下さい、キリィ様‥…」
+Row 2 :キリィ「…‥‥‥…」_
+Screen Off :GCls :View 17,8,Gp343
+GGet :Line 159 :Row 1 :グリッ
+Call Tw
+Line 136 :Row 2 :斎藤「指が…指が、痛うごさいますっ‥はああっ‥！！」
+Row 2 :キリィ「……痛い、の？」
+Screen On :Pause :Line 136 :Row 2 :斎藤「はっ！はわっ！！はわわ～！！あひ～っ！！落ちるっ！！あひ～っ
+Row 2 :　落ちてしまいますっ！！やめてえ～っ！！」
+Row 2 :キリィ「フフ」
+Pause :Line 136 :Row 2 :斎藤「くっ‥どうすれば‥！」
+Line +4 :Row 1 :［１］考える
+Row 1 :［２］命乞いをする
+Select 06,06
+*06
+Line 136 :Row 2 :キリィ「ムダよ‥お前は　今、死ね」
+Row 2 :斎藤「うっ…うああっ」
+Pause :Line 136 :Row 2 :キリィ「この高さなら、運が　良くて、即死…」
+Row 2 :斎藤「よ‥よくて？」
+Pause :Line 136 :Row 2 :キリィ「‥悪ければ、少しの時間、内蔵破裂と、全身骨折の激痛に　苦しみもがいて
+Row 2 :　死ぬ事になるわね…どちらにしろ、お前の運命は　ここで、終わりよ。
+Row 2 :　斎藤浩壱‥！」
+Pause :View 17,8,Gp342
+Line 136 :Row 2 :斎藤「くっ‥くそう！！し‥死んでたまるか！！こんな！‥こんなところで！！」_
+Screen Off :GCls :View 17,8,Gp292z
+Line 137 :Row 1 :アンドレ『ヌオォ～ッ！！どこだ！！
+Row 1 :　どこだ、本体はあぁ！！』
+Call Tw
+Screen On :_
+GCls :View 17,8,Gp348
+GGet :Line 136 :Row 2 :黒爽「馬鹿め‥」
+Pause :Cnt 20
+*R1
+Wait 1 :Palette D,FFF E,FFF
+Wait 2 :Palette D,564 E,897
+Loop R1
+Copy 14,5 64,8 26,50 15 0
+GGet :Line 136 :Row 2 :黒爽「！？」
+Pause :Cnt 13
+*R2
+Wait 4 :Copy 6,32 54,64 54,63 12 0
+Loop R2
+Line 137 :Row 1 :アンドレ『貴様が、本体かぁ！！』
+Call Tw
+_:Copy 14,5 64,13 26,50 15 0
+Line 145 :Row 2 :黒爽「ヌ！！」_
+Screen Off :GCls :View 17,8,Gp007b
+Copy 22,120 64,8 34,8 12 0
+GGet :Mask 16,16 48 7 255 0
+Screen On :Effect 26
+Cnt 50
+*R3
+Wait 2 :Copy 46,170 17,9 17,8 3 0
+Loop R3
+GGet :Mask 16,16 48,7 0 0
+Effect 30 :Cnt 3
+*R4
+Wait 6 :Palette 2,000
+Wait 6 :Palette 2,EFD
+Loop R4
+Col 2 :Line 137 :Row 1 :アンドレ『ＧＡＡＡＵＡＡＡ！！』
+Call Tw
+Pause :Line 136 :Row 2 :アンドレ『なッ‥しょ‥障壁！？』
+Pause :Line 136 :Row 2 :黒爽「結界だ。天地八方から、お前を囲った。もう、逃げ道は　無い」
+Row 2 :アンドレ『…‥‥‥！！』_
+GCls :View 17,8,Gp348b
+GGet :Col 7 :Line 136 :Row 2 :黒爽「アンドレ‥もし、お前が　生身の人間であったなら、幻と、そうでない
+Row 2 :　生身の俺とを　区別する事が、できただろう‥！」
+Pause :Line 136 :Row 2 :黒爽「だが、エーテル生物となった　お前は、エーテル次元に投影する　俺の“影”と
+Row 2 :　本体の姿とを　区別する事が、できなかった‥！　エーテル生物と、合体する事に
+Row 2 :　よって、その弱点も　いっしょに　しょいこんじまったのさ！」
+Pause :Line 137 :Row 1 :黒爽「そして今、お前はこの世から消える
+Row 1 :　魂のカケラすら、残さずに！！
+Row 1 :　エーテルの怪物“霧魔”として！！」
+Call Tw
+Pause :Line 137 :Row 1 :アンドレ『貴様‥！貴様は、一体ッ！！』
+Call Tw
+Pause :Line 136 :Row 2 :黒爽「知っていた筈だ…太陽の、戦士！！」
+Row 2 :アンドレ『…！！…！！』_
+Screen Off :GCls :View 0,8,Gp309
+GGet :Mask 0,0 80,17 255 0
+Mask 17,1 46,15 0 0
+Col 6 :Line 137 :Row 1 :黒爽「還れよ、塵は　塵に」
+Call Tw
+Screen On :Pause :Effect 27
+Wait 7 :Copy 8,68 62,8 52,60 3 0
+Wait 8 :Copy 8,68 0,0 52,60 3 0
+Wait 9 :Copy 8,68 8,0 52,60 3 0
+Wait 21 :Copy 14,68 0,68 48,60 3 0
+GGet :Line 137 :Row 1 :アンドレ『ＧＩＩＨｉｉｉｉｅｅ！！』
+Call Tw
+Effect 40 :Pause :Line 136 :Row 2 :黒爽「オム・ケイ・イーホア・トコイラリイソワカ‥オム・ケイ・カイ・ボ・
+Row 2 :　トコイスルソハン‥」
+Pause :Line 137 :Row 1 :アンドレ『Ｈｉｉｉｉｉｉｉｉｉ！！』
+Call Tw
+Wait 30 :Palette 4,FFE 8,EFD C,DEC
+Wait 10 :Palette 4,FFF 8,FFE C,EFD
+Wait 10 :Palette 8,FFF C,FFE
+Wait 10 :Palette C,FFF
+_:Grp 0 :Screen Off :GCls :View 17,8,Gp336
+Grp 1 :Col 7 :Line 146 :Row 1 :　ちっぽけな“死”をヲヲッ！！」
+Row 1 :斎藤「うっ‥うおおぉおおっ！！」
+Call Tw
+Line 136 :Row 2 :キリィ「与えてやるわっ！！学校の屋上から、落ちて、死ぬという
+Screen On :_
+Screen Off :GCls :Grp Gp102
+Mask 0,0 80,14 255 0
+Mask 10,7 60,7 0 0
+Line 136 :Row 2 :斎藤「あ！！」
+Row 2 :キリィ「え！？」
+GGet :Screen On :Call Ms
+Call Ms
+Call Ms
+Wait 20 :Screen Off :Grp Zero
+View 17,8,Gp324
+Mask 0,0 80,25 0 0
+Effect 22 :Screen On :_
+Screen Off :GCls :View 17,8,Gp338
+GGet :Mask 0,0 80,17 255 0
+Mask 17,1 46,15 0 0
+Col 3 :Line 137 :Row 1 :キリィ「ぎいぃいぃやああぁあぁっ！！」
+Call Tw
+Screen On :_
+Copy 18,60 32,16 31,12 12 0
+Line 145 :Row 2 :斎藤「マッ‥マサムネ！！僕の‥‥マサムネが、キリィの胸にッ！！」_
+GCls :View 0,8,Gp026
+GGet :Col 7 :Line 136 :Row 2 :キリィ「なぜ‥なぜに、こんな事がッ‥！！
+Row 2 :　剣が…日本刀が、勝手に　飛んでくるなんて！！？」
+Pause :Copy 16,45 0,8 18,75 15 0
+_:Screen Off :GCls :View 17,8,Gp338
+Copy 18,64 64,8 30,8 12 0
+GGet :Screen On :Col 3 :Line 136 :Row 2 :斎藤「あっ‥！」
+Pause :Copy 18,64 28,8 27,12 12 0
+Wait 20 :View 27,8,Gp338a
+Wait 20 :View 24,8,Gp338b
+Wait 20 :Cnt 30
+*R5
+Wait 3 :Copy 18,116 24,8 24,12 12 0
+Loop R5
+_:Screen Off :GCls :View 17,8,Gp113
+View 33,8,Gp113b
+Effect 37 :Screen On :_
+GCls :View 17,8,Gp347
+Col 7 :Line 136 :Row 2 :斎藤「…‥死んだか！？」_
+Screen Off :GCls :View 17,8,Gp113
+View 33,8,Gp113b
+Screen On :Wait 29 :Palette 5,786
+Wait 13 :Palette 5,564
+Wait 13 :Palette 5,342
+Wait 13 :Palette 4,786 5,120
+Wait 13 :Palette 4,564 5,000
+Wait 13 :Palette 4,342
+Wait 13 :Palette 4,120
+Wait 13 :Palette 4,000
+_:GCls :View 17,8,Gp136
+GGet :Line 136 :Row 2 :キリィ「…左腕に　両足…背骨と、肩甲骨‥それに　後頭部…ズタズタね‥
+Row 2 :　だけど　何とか、心臓は　動いている‥！！」
+Pause :Line 136 :Row 2 :キリィ「…再生しなければ‥まずは、血流を変えて、血液が　外に　流れ出ない
+Row 2 :　ように　調節する‥そして　後は、筋肉の動きで、骨を　元の位置に戻しながら、
+Row 2 :　破れた　皮膚の復元を‥‥」
+Pause :Line 136 :Row 2 :キリィ「…‥‥‥！！」
+Pause :Line 136 :Row 2 :キリィ「…‥‥‥！…‥‥！！？
+Row 2 :　…‥‥‥！！？？‥‥‥？！！？？」_
+Screen Off :GCls :View 17,8,Gp129
+GGet :Line 137 :Row 1 :キリィ「で‥出来ない！こ‥この心臓近く
+Row 1 :　の動脈を貫いた“マサムネ”の　この傷
+Row 1 :　だけが　どうしても塞がらないイィッ！」
+Call Tw
+Screen On :Pause :Line 137 :Row 1 :キリィ「ぐうぅあぁああうっ！！
+Row 1 :　し‥心臓が、弱まってゆく！！
+Row 1 :　と‥止まるッ！！死ぬううぅうっ！！」
+Call Tw
+_:GCls :View 17,8,Gp347
+Line 136 :Row 2 :斎藤「…‥悪魔の最後だ」_
+GCls :View 17,8,Gp136
+GGet :Line 136 :Row 2 :キリィ「そ、ん、なァ‥」
+Pause :Palette 9,342
+Wait 20 :Palette 9,675
+Wait 20 :Palette 9,9A8 A,DEC
+Wait 20 :Palette A,9A8
+_:Grp 0 :GCls :View 17,8,Gp309s
+GGet :Col 3 :Line 136 :Row 2 :アンドレ『ｅｅｅｅｉｉ‥…』
+Grp 1 :Wait 40 :Palette 4,EFD
+Wait 25 :Palette 4,DEC C,EFD
+Wait 25 :Palette 4,CDB
+Cls :_
+GCls :View 0,8,Gp277
+Col 7 :Line 136 :Row 2 :黒爽「勝ったぜ…」_
+GCls :View 17,8,Gp351
+Line 136 :Row 2 :富沢「終わったようだな…」
+Row 2 :弥月「富沢さん‥！」_
+GCls :View 17,8,Gp350
+Line 136 :Row 2 :富沢「行こう、我々も！！」
+Row 2 :弥月「ハイ！」_
+GCls :View 17,8,Gp105
+Effect 47 :_
+Grp 0 :View 17,8,Gp357
+GGet :Grp 1 :Line 136 :Row 2 :黒爽「斎藤っ！そっちは！？」
+Row 2 :斎藤「か‥片付いたよ、何とかね！　そんな事より、黒爽！
+Row 2 :　あと　１分位しかない！　野笛君は‥！！？」
+Pause :Line 136 :Row 2 :黒爽「…‥野笛…！！」_
+Grp 0 :Screen Off :GCls :Mask 0,0 80,25 0 0
+Grp 1 :Line 93 :Row 32 :１３分前
+Copy 8,9 32,93 32,92 15 1
+Palette 7,FFF
+Mask 36,11 12,2 255 0
+Screen On :Wait 15 :Mask 36,11 4,2 0 0
+Wait 15 :Mask 40,11 4,2 0 0
+Wait 15 :Mask 44,11 4,2 0 0
+_:Screen Off :GCls
+
+Scn NoBuE
+
+*E.
+

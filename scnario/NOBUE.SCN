@@ -1,0 +1,240 @@
+
+- ｻﾌﾞﾙｰﾁﾝ -
+*Tw
+Copy 40,60 0,137 0,136 15 1
+Ret
+
+- ﾎﾜｲﾄ･ﾌｪｰﾄﾞｲﾝ -
+*Fi
+GGet :Mask 0,0 80,25 0 0
+Wait 32 :Palette 0,CDB 4,EFD 5,EFD
+Wait 7 :Palette 0,9A8
+Wait 7 :Palette 0,675
+Wait 7 :Palette 0,342
+Wait 7 :Palette 0,000
+Ret
+
+- ﾒｲﾝ･ﾙｰﾁﾝ -
+*S.
+Screen Off :GCls :View 17,8,Gp352
+Grp 0 :Screen On :Grp 1 :Col 7 :Line 136 :Row 2 :野笛「ヘガスッ！！‥一体、どうしたというのだ‥！
+Row 2 :　君ともあろう‥この僕と、ＮＡＳＡで　１、２位を争う　天才科学者が‥！
+Row 2 :　なぜ、このような　狂気の行動に走る！？」_
+Grp 0 :GCls :Grp 1 :Line 136 :Row 2 :野笛「ヘガス…例の企画が、通ったそうだ‥うちのグループで、発動する事に
+Row 2 :　なりそうだよ‥」_
+Screen Off :GCls :View 17,8,Gp214
+GGet :Palette 4,120
+Line 136 :Row 2 :ヘガス「馬鹿な！！あの計画は“悪魔の計画”だ！！発動されてはならないものだ！
+Row 2 :　だから、２０年も　地下の　データバンクに　封印（シール）されていたんじゃないか！
+Row 2 :　‥それを　今更‥！！」
+Screen On :Wait 6 :Palette 4,564
+Wait 6 :Palette 4,9A8
+Wait 6 :Palette 4,CDB
+Wait 6 :Palette 4,EFD
+Pause :Line 136 :Row 2 :野笛「逆らえんよ‥上層部の決めた事だ‥！」
+Pause :Line 136 :Row 2 :ヘガス「上の連中は、我々に“悪魔（ディーマン）”を作らせようというのか‥！！
+Row 2 :　戦争に使う“兵器（クラフト）”を‥！」
+Pause :Line 136 :Row 2 :野笛「タテマエ上は、未開地域や、宇宙開発で、使われる事となっている‥しかし、
+Row 2 :　大分、昔に作られた“試作（プロトタイプ）”は、ベトナムで　使用されたし、
+Row 2 :　数ケ月前に　他のグループで、新たに　試作開発された、数体の“試作”は、今度の
+Row 2 :　“湾岸”で　使われる事となるだろうな…」
+Pause :Line 136 :Row 2 :ヘガス「では、やはり‥！」
+Row 2 :野笛「結局のところ、そういう事だろう‥」
+Pause :Line 136 :Row 2 :ヘガス「フゥ‥何という事だ‥ＤＮＡ変異に　脳手術…投薬‥我々に　ナチスのような
+Row 2 :　人体実験を行えというのか‥！！　ついに、アメリカも　来るところまで、来たな‥
+Row 2 :　自国を象徴するような　スーパーマンを造れ‥とは」
+Pause :Line 155 :Row 1 :ヘガス「神への冒涜だ！！」
+Call Tw
+Line 136 :Row 2 :野笛「確かに　我々、２人の頭脳ならば、それは　可能だろう‥“ベトナム”や
+Row 2 :　“湾岸”等とは、比べものにならぬ程の　真の“超人”を創造する事が出来る！」
+Pause :Line 136 :Row 2 :野笛「その通り。だから、僕は　決心したんだ…‥もう、この国の為に
+Row 2 :　僕の頭脳は、使わない」
+Row 2 :ヘガス「！」
+Pause :Line 136 :Row 2 :野笛「僕は、ＮＡＳＡを出るよ。ヘガス」
+Row 2 :ヘガス「野笛‥！」_
+Grp 0 :Screen Off :GCls :View 17,8,Gp352
+Grp 1 :Screen On :Line 136 :Row 2 :野笛「！！」_
+Screen Off :GCls :View 12,8,Back4
+GGet :Mask 0,0 80,17 255 0
+Mask 17,1 46,15 0 0
+Screen On :Col 2 :Line 136 :Row 2 :野笛「見えてきたぞ‥体育館の出入口が‥しかし、何で、この通路だけ
+Row 2 :　真っ暗なんだ‥！？」
+Pause :View 31,38,Back4a
+Effect 29 :Line 136 :Row 2 :野笛「！！」_
+Screen Off :GCls :View 0,8,Gp518
+Col 7 :Line 146 :Row 1 :　うわああっ！！」
+Call Tw
+Line 136 :Row 2 :野笛「うっ‥！うっ！！
+GGet :Screen On :Wait 30 :Effect 39
+Copy 16,120 0,8 26,8 15 0 :Copy 10,120 64,8 42,8 15 0
+Wait 10 :Cls :Wait 10 :Effect 39
+Copy 16,120 0,8 26,8 15 0 :Copy 10,120 64,8 42,8 15 0
+Wait 10 :Cls :Wait 10 :Effect 39
+Copy 16,120 0,8 26,8 15 0 :Copy 10,120 64,8 42,8 15 0
+Wait 10 :Cls :_
+Screen Off :GCls :View 17,8,Gp511
+Col 3 :Line 137 :Row 1 :怪物『ゴオＲＲＲＲＲ！！』
+Call Tw
+Screen On :Effect 26 :Wait 28
+Cnt 16
+*L0
+Wait 7 :Copy 62,120 18,8 17,8 3 0
+If Flg0=1 Then 00
+Flg0=1 :Copy 62,120 16,8 17,8 12 0
+Jump 01
+*00 :Flg0=0
+*01 :Loop L0
+Row 1 :野笛「なんだ　こいつは！？」
+Copy 40,9 0,146 0,145 15 1
+_:Screen Off :GCls :View 17,8,Inc3D
+GGet :Screen On :Col 7 :Line 136 :Row 2 :野笛「うっ！！」
+Pause :Line 136 :Row 2 :野笛「…こ‥こいつではない、こいつらと　いうべきか…蛇‥！？　トカゲ‥！？
+Row 2 :　いや！　こいつらの姿形は、現在、地球上で　記録されている　どの生物の　それとも
+Row 2 :　一致しない‥少なくとも、僕の記憶の中では‥！！」_
+Screen Off :GCls :View 17,8,Gp517
+Line 137 :Row 1 :野笛「合成生物《キメラ》かッ！！？」
+Call Tw
+Screen On :_
+Screen Off :GCls :View 12,8,Back4
+As 2 View 12,8,N3D0
+Screen On :Effect 24
+Col 2 :Line 136 :Row 2 :キメラは、何かを　吐き飛ばしてきた。
+Line +4 :Row 2 :野笛「ぬ！！」_
+Screen Off :GCls :View 17,8,Gp521
+GGet :Mask 59,16 20,4 255 0
+Col 7 :Line 137 :Row 1 :野笛「レイカノンッ！！」
+Call Tw
+Screen On :Pause :Copy 12,50 64,8 5,8 8 0
+Wait 17 :Cnt 11
+*L1
+Wait 4 :Copy 27,50 5,8 6,8 8 0
+Loop L1
+Copy 19,30 59,128 17,33 7 0 :Effect 39
+Wait 13 :Cls :Copy 18,70 62,58 18,8 8 0
+Line 136 :Row 2 :野笛「！？」_
+Screen Off :GCls :View 17,8,Gp515
+Mask 59,16 20,4 0 0
+Screen On :Effect 26
+Col 8 :Line 136 :Row 2 :野笛「酸だと！！？」
+Wait 8 :Palette 4,9A8 5,BCA 6,DEC 7,DEC
+Copy 46,120 17,8 18,6 4 0
+Wait 8 :Palette 4,675 5,9A8 6,CDB 7,BCA
+Copy 46,120 17,8 18,6 4 0
+Wait 8 :Palette 4,342 5,786 6,BCA 7,9A8
+Copy 46,120 17,8 18,6 4 0
+Wait 8 :Palette 4,000 5,564 7,786
+_:Screen Off :GCls :View 17,8,Gp516
+GGet :Screen On :Col 7 :Line 136 :Row 2 :野笛「‥困るな、そんな物騒なものを　そうそう、口から、吐かれては‥
+Row 2 :　この重分子コートを　着ていなかったら、服から　皮膚にまで、浸透していた事
+Row 2 :　だろう‥！！」
+Pause :Line 136 :Row 2 :そう言いながら、野笛は『光粒子一点集中発射装置』の出力を　調節していた。
+Pause :Line 136 :Row 2 :野笛「本来なら、このレイカノンは　手動での調節は　一切、行わない…
+Row 2 :　僕の生体信号（バイヴレーション）と　シンクロさせて、自動的に行うのだが、
+Row 2 :　ニューロ・システムが　まだ、未完成なままなものでね！
+Row 2 :　…よし、これでいい‥奴等が、酸の玉を撃ってきても　空中に　分散させる事なく
+Row 2 :　瞬時に　蒸発させる事が、出来る！」
+Pause :Line 137 :Row 1 :野笛「さぁ来ォい、番犬共ォ！！
+Row 1 :　相手に　なってやるぞォ！！」
+Call Tw
+_:Screen Off :GCls :View 12,8,Back4
+GGet :Mask 0,0 80,25 0 0
+As 2 View 12,8,N3D0
+Screen On :Effect 24
+Col 2 :Line 136 :Row 2 :野笛「きたッ！！酸の玉ッ！」
+Pause :As 2 View 12,8,N3D1
+Effect 37 :Line 136 :Row 2 :野笛「くうっ！！油断しました‥
+Row 2 :　一体、こいつらは　何匹、潜んでいるのかッ！？」
+Pause :As 2 View 12,8,N3D2
+Line 146 :Row 1 :　ヘガスは　もう、目の前だァ！！」
+Call Tw
+Line 136 :Row 2 :野笛「時間…時間が　せまっている‥突破しなければ！！
+Pause :As 2 View 12,8,N3D3
+Effect 38 :Pause :As 2 View 12,8,N3D4
+_:Grp 0 :Screen Off :Cls :Mask 0,0 80,17 255 0
+Mask 17,1 46,15 0 0
+Screen On :Grp 1 :Line 136 :Row 2 :野笛「第二関門突破といったところかな‥？」_
+GCls :View 17,8,Gp517
+GGet :Effect 42
+Col 7 :Line 136 :Row 2 :ヘガス『見事だな、野笛裕一』
+Row 2 :野笛「！！ヘガスか！！」
+Pause :Line 136 :Row 2 :ヘガス『個は、種としての自分を守る為に　他種を淘汰する…君も“人間”だな』
+Row 2 :野笛「他種だって？　こいつらの事かい！？」
+Pause :Line 136 :Row 2 :ヘガス『…‥‥‥…』
+Row 2 :野笛「冗談は　よせ！　こいつらは、君という“人間”によって、造られた　合成の
+Row 2 :　生き物だ。奇形に過ぎん…生物分類の基本から、外れているよ！！
+Row 2 :　こいつらは、種として　認められん！！」
+Pause :Line 136 :Row 2 :ヘガス『…‥‥‥…』
+Row 2 :野笛「こいつらは　何だ！？　この化け物共は！！？　トカゲと　人間の遺伝子を
+Row 2 :　組み合わせでもしたのかい！？　それこそ、神への冒涜だとは　思わないのか！！
+Row 2 :　ヘガス！！　君は　一体、どうしてしまったんだ！！　僕が　アメリカを去ってから、
+Row 2 :　君に　何が、あったというのだ！！」
+Pause :Line 136 :Row 2 :ヘガス『教えてやる…来い、来るがいい…』
+Pause :Line 136 :Row 2 :野笛「！！」
+Line +4 :Row 2 :野笛は、その時　初めて、聴こえてくる　それが『音声』でない事に　気付いた。
+Pause :Line 136 :Row 2 :野笛（‥‥テレパシィ！？…ヘガスが‥？）
+Pause :Line 136 :Row 2 :ヘガス『来るんだ』
+Line +4 :Row 2 :それは、野笛の頭の中に　直接、響いた。
+Pause :Line 136 :Row 2 :野笛（躊躇している場合ではない！…か、）_
+Screen Off :GCls :View 12,8,Back4
+As 3 View 42,43,Gp513f
+Screen On :Effect 31
+Col 2 :Line 136 :Row 2 :野笛「ヘガス！！」_
+Screen Off :GCls :View 17,8,Gp352
+Mask 0,0 80,25 0 0
+Screen On :_
+Palette 0,231 1,786 2,FFF 3,BCA
+Wait 7 :Palette 0,564 1,9A8 3,DEC
+Wait 7 :Palette 0,897 1,BCA 3,FFF
+Wait 7 :Palette 0,BCA 1,DEC
+Wait 7 :Palette 0,FFF 1,FFF
+Mask 0,0 80,25 255 7
+View 17,8,Gp215
+Call Fi
+Col 7 :Line 136 :Row 2 :野笛「ハロー」
+Row 2 :ヘガス「‥‥ハロー」
+Pause :Line 136 :Row 2 :野笛「君の名は？」
+Row 2 :ヘガス「ヘガス我狼陰。ヘガスで、いい」
+Pause :Line 136 :Row 2 :野笛「東洋人のようだね」
+Row 2 :ヘガス「父が、日本人だった」
+Pause :Line 136 :Row 2 :野笛「僕も　日本人だよ、野笛裕一だ。友達になろう」
+Row 2 :ヘガス「…Ｏｋ」_
+Palette 0,231
+Wait 7 :Palette 0,564 4,FFF
+Wait 7 :Palette 0,897
+Wait 7 :Palette 0,BCA
+Wait 7 :Palette 0,FFF
+Mask 0,0 80,25 255 7
+GCls :View 17,8,Gp217
+Palette 0,FFF 4,FFF 5,FFF
+Call Fi
+Line 136 :Row 2 :ヘガス「野笛‥君という男は　全く、いつ何時ともいえど、本ばかり　読みあさって
+Row 2 :　いるなあ…その貪欲な　知識吸収と、それを受け入れる　頭脳の容量を考えると
+Row 2 :　ぞっとするよ、やはり　君は、天才なのだろうな‥‥」
+Pause :Line 136 :Row 2 :野笛「君だって、昔は、本の虫だったろう」
+Pause :Line 136 :Row 2 :ヘガス「外に目を向ける事にしたのさ、本の中とは違う　現実の刺激がある」
+Row 2 :野笛「ほう、例えば？」
+Pause :Line 136 :Row 2 :ヘガス「例えば…彼女だ」
+Row 2 :野笛「ん？」_
+View 17,8,Gp216
+Palette 5,000
+Pause :Line 136 :Row 2 :野笛「…‥‥‥…」
+Row 2 :ヘガス「ナンシー・ネイル。新しく、開発部に参入する事になった　学生だ」
+Pause :View 17,8,Gp216
+GGet :Line 136 :Row 2 :ナンシー「お早うございます、我狼陰博士」
+Row 2 :ヘガス「お早う、ナンシー。
+Row 2 :　紹介しよう。　こちらは、開発部主任のドクター・ノブエだ。
+Row 2 :　君も　名前だけは、聞いているだろう」
+Pause :Line 136 :Row 2 :ナンシー「初めまして、ドクター・野笛。よろしく、お願いします」
+Row 2 :野笛「あ、あああこちらこそ、よろしくどうぞ‥」
+Pause :Line 136 :Row 2 :ナンシー「ドクター・ノブエは、ＩＱ２００００の超頭脳の持ち主だって、研究所の
+Row 2 :　皆さんから、おどかされました。どうか、お手柔らかに！」
+Row 2 :野笛「あ、ああああもちろんだよ、君みたいな　美人を　いじめたりはしない」
+Pause :View 17,8,Gp217
+GGet :Line 136 :Row 2 :ヘガス「フフ‥人気者だな、ノブエ‥！」
+Row 2 :野笛「まさか！」
+Pause :Line 136 :Row 2 :ヘガス「フフフ」
+Pause :Line 136 :Row 2 :ハハハハハハハハハ‥…_
+Grp 0 :GCls :Grp 1 :Scn Act1D7
+
+*E.
+
